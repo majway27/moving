@@ -11,8 +11,14 @@
 ## Setup
 
 `pip install folium`
+`pip install -U homeharvest`
 
 ## Data
 
+- https://www.iconfinder.com/search?q=apartment&price=free
 - [Denver, CO](denver.kml)
+
+## Tools
+
+- https://github.com/Bunsly/HomeHarvest
 
