@@ -15,8 +15,14 @@
 
 ## Data
 
+### Google Maps
+
+- https://www.google.com/maps/d/u/0/edit?hl=en&mid=1SwUVhSDn-FrbsdcOgQBo0W9CkoCZmQw&ll=40.18451415415679%2C-105.13961781809083&z=13
+  - [Denver, CO](denver.kml)
+
+### Icons
+
 - https://www.iconfinder.com/search?q=apartment&price=free
-- [Denver, CO](denver.kml)
 
 ## Tools
 

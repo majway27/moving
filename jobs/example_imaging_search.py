@@ -1,14 +1,14 @@
-from healthcare_jobs import RadiologyJobSearch
+from healthcare_jobs import ImagingJobSearch
 
 def main():
     # Create radiology job search instance
-    job_search = RadiologyJobSearch()
+    job_search = ImagingJobSearch()
     
     # Example 1: Search for MRI jobs in Chicago
-    print("Searching for MRI jobs in Chicago...")
+    print(f"Searching for MRI jobs in Denver...")
     mri_jobs = job_search.search_by_modality(
         modality="mri",
-        location="Chicago, IL"
+        location="Denver, CO"
     )
     
     if mri_jobs:
