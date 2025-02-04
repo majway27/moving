@@ -54,8 +54,8 @@ def create_house_markers():
                     sale_markers.append(marker)
                     sale_layer_group.append(marker_var)
     
-    # Write the markers and layer group to map.html
-    with open('map.html', 'r') as file:
+    # Write the markers and layer group to index.html
+    with open('index.html', 'r') as file:
         content = file.read()
     
     # Find the position to insert markers (before the hospitals layer group)
@@ -83,7 +83,7 @@ def create_house_markers():
         '"Care Facilities": hospitals,\n\t\t"Houses": houses,\n\t\t"Rentals": rentals,'
     )
     
-    with open('map.html', 'w') as file:
+    with open('index.html', 'w') as file:
         file.write(new_content)
 
 if __name__ == '__main__':

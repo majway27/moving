@@ -22,4 +22,4 @@ for placemark in root.findall('.//kml:Placemark', namespace):
     folium.Marker(location=[lat, lon], popup=name).add_to(m)
 
 # Save the map to an HTML file
-m.save('map.html')
+m.save('index.html')
