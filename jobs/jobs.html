@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Listings</title>
     
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/map/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/map/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/map/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/map/favicon_io/site.webmanifest">
+    
     <!-- Tabulator CSS -->
     <link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
     <!-- Tabulator JavaScript -->
     <script type="text/javascript" src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
+    <!-- Luxon JavaScript, used for date formatting in the table, dependency of Tabulator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.3.0/luxon.min.js"></script>
 
     <style>
         .tabulator {
@@ -19,6 +27,10 @@
             white-space: pre-wrap;
             max-height: 100px;
             overflow-y: auto;
+        }
+        .job-title {
+            white-space: normal;
+            word-wrap: break-word;
         }
     </style>
 </head>
@@ -38,17 +50,16 @@
                 {column: "date_posted", dir: "desc"}
             ],
             columns: [
-                {title: "Title", field: "title", width: 200},
-                {title: "Company", field: "company", width: 150},
-                {title: "Location", field: "location", width: 150},
+                {title: "Title", field: "title", width: 100, formatter: function(cell) {
+                    var url = cell.getRow().getData().url;
+                    return "<a href='" + url + "' target='_blank' class='job-title'>" + cell.getValue() + "</a>";
+                }},
+                {title: "Provider", field: "company", width: 150},
+                {title: "Location", field: "location", width: 100},
                 {title: "Date Posted", field: "date_posted", width: 120, sorter: "date"},
                 {title: "Description", field: "description", formatter: function(cell) {
                     return "<div class='job-description'>" + cell.getValue() + "</div>";
                 }},
-                {title: "URL", field: "url", formatter: "link", formatterParams: {
-                    target: "_blank",
-                    labelField: "url"
-                }}
             ]
         });
 

@@ -13,6 +13,10 @@
 `pip install folium`
 `pip install -U homeharvest`
 
+## Local Development
+
+`python -m http.server 8000`
+
 ## Data
 
 ### Google Maps
@@ -23,6 +27,7 @@
 ### Icons
 
 - https://www.iconfinder.com/search?q=apartment&price=free
+-https://favicon.io/favicon-generator/
 
 ## Tools
 
