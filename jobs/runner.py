@@ -1,5 +1,5 @@
 from intake_postings import ImagingJobSearch
-from generate_jobs_page import generate_jobs_data, save_filtered_jobs
+from format_postings import generate_jobs_data, save_filtered_jobs
 import json
 from pathlib import Path
 from datetime import datetime
