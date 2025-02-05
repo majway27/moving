@@ -10,7 +10,7 @@ class ImagingJobSearch:
     
     def __init__(self):
         self.client = JobSearchClient()
-        self.companies_file = "imaging_companies.json"
+        self.companies_file = "../employer/employers.json"
         self.output_dir = "job_results"
         self.job_types = {
             "cat_scan": ["CT Technologist", "CAT Scan Technician", "CT Tech"],
