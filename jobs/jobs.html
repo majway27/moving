@@ -80,16 +80,43 @@
                 {column: "date_posted", dir: "desc"}
             ],
             columns: [
-                {title: "Title", field: "title", width: 100, formatter: function(cell) {
-                    var url = cell.getRow().getData().url;
-                    return "<a href='" + url + "' target='_blank' class='job-title'>" + cell.getValue() + "</a>";
-                }},
-                {title: "Provider", field: "company", width: 150},
-                {title: "Location", field: "location", width: 100},
-                {title: "Date Posted", field: "date_posted", width: 120, sorter: "date"},
-                {title: "Description", field: "description", formatter: function(cell) {
-                    return "<div class='job-description'>" + cell.getValue() + "</div>";
-                }},
+                {
+                    title: "Title", 
+                    field: "title", 
+                    width: 100,
+                    headerFilter: "input",
+                    formatter: function(cell) {
+                        var url = cell.getRow().getData().url;
+                        return "<a href='" + url + "' target='_blank' class='job-title'>" + cell.getValue() + "</a>";
+                    }
+                },
+                {
+                    title: "Provider", 
+                    field: "company", 
+                    width: 150,
+                    headerFilter: "input"
+                },
+                {
+                    title: "Location", 
+                    field: "location", 
+                    width: 100,
+                    headerFilter: "input"
+                },
+                {
+                    title: "Date Posted", 
+                    field: "date_posted", 
+                    width: 120, 
+                    sorter: "date",
+                    headerFilter: "input"
+                },
+                {
+                    title: "Description", 
+                    field: "description",
+                    headerFilter: "input",
+                    formatter: function(cell) {
+                        return "<div class='job-description'>" + cell.getValue() + "</div>";
+                    }
+                },
             ]
         });
 

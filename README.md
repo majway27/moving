@@ -27,10 +27,11 @@
 ### Icons
 
 - https://www.iconfinder.com/search?q=apartment&price=free
--https://favicon.io/favicon-generator/
+- https://favicon.io/favicon-generator/
 
 ## Tools
 
 - https://github.com/Bunsly/HomeHarvest
 - https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch
 - https://leafletjs.com/examples/quick-start/
+- https://tabulator.info/
