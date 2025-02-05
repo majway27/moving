@@ -9,24 +9,24 @@
 
 ### Technical Design (by layer)
 
-1. **Client**  `jobs/client/rapid_api_client.py`
+1. *Client*  `jobs/client/rapid_api_client.py`
     - This is the client for the JSearch API. It is the entry point for multi-source postings.
     - Additional clients could be defined here.
-2. **Intake**  `jobs/intake_postings.py` - The responsibility of this file is:
+2. *Intake*  `jobs/intake_postings.py` - The responsibility of this file is:
     - Abstract and wrap 1+ API clients (JSearch, etc.)
     - Specify key search parameters (modality, location, etc.)
     - Bucket results by modality (CT, MR, etc.) and location (Denver, Phoenix, etc.)
     - Coarsely filter client responses
     - Output both a raw and a filtered result set as csv files in the job_results subdirectory (mode: overwrite) `jobs/jobs_results/`
     - Maintain a list of employers in `employer/employers.json`
-3. **Transform**  `jobs/format_postings.py` - The responsibility of this file is:
+3. *Transform*  `jobs/format_postings.py` - The responsibility of this file is:
     - Load posting data from filtered csv files
     - For each filtered csv, output similarly named json file  in the job_results subdirectory (mode: overwrite) `jobs/jobs_results/`
     - Finally, combine all json files into a single consolidated json file `jobs/job_data.json` (which is expected by the view layer)
-4. **View**  `jobs/jobs.html` - The responsibility of this file is:
+4. *View*  `jobs/jobs.html` - The responsibility of this file is:
     - This is the end user view of the enhanced (filtered and formated) posting data.
     - This html file is not directly altered by the pipeline, rather it expects a consolidated json file (`jobs/job_data.json`)
-5. **Control** - runner.py - The responsibility of this file is:
+5. *Control* - `jobs/runner.py` - The responsibility of this file is:
     - Execution & pipeline management logic
     - Abstract surface for overarching orchestration
 
