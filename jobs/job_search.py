@@ -8,11 +8,16 @@ def save_filtered_jobs(filtered_jobs, modality, location):
     """Save filtered jobs in the format expected by generate_jobs_page.py"""
     jobs_to_save = []
     for job in filtered_jobs:
+        # Ensure we have a valid date, default to empty string if missing
+        date_posted = job.get('job_posted_at_datetime_utc', '')
+        if not date_posted:
+            date_posted = datetime.now().isoformat()
+            
         formatted_job = {
             'title': job.get('job_title', 'N/A'),
             'company': job.get('employer_name', 'N/A'),
             'location': f"{job.get('job_city', '')}, {job.get('job_state', '')}",
-            'date_posted': job.get('job_posted_at_datetime_utc', ''),
+            'date_posted': date_posted,
             'description': job.get('job_description', ''),
             'url': job.get('job_apply_link', '#')
         }

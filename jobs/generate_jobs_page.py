@@ -45,8 +45,11 @@ def generate_jobs_data():
         formatted_jobs = [format_job(job) for job in job_data]
         all_jobs.extend(formatted_jobs)
 
-    # Sort jobs by date (newest first)
-    all_jobs.sort(key=lambda x: x['date_posted'], reverse=True)
+    # Sort jobs by date (newest first), handling missing dates
+    all_jobs.sort(
+        key=lambda x: x.get('date_posted', '') or '',  # Use empty string if date is None
+        reverse=True
+    )
     
     # Write the combined job data to a JSON file
     with open(output_file, 'w', encoding='utf-8') as f:
