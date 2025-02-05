@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Phoenix Opportunities</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="denver.html">Denver</a></li>
+            <li><a href="#" class="active">Phoenix</a></li>
+            <li><a href="minneapolis.html">Minneapolis</a></li>
+        </ul>
+    </nav>
+
+    <div id="map"></div>
+    <script>
+    var BuildingIcon = L.Icon.extend({
+        options: {
+            iconSize: [18, 15]
+        }
+    });
+    
+    var careBuilding = new BuildingIcon({iconUrl: 'icon/hospital.png'});
+    var houseBuilding = new BuildingIcon({iconUrl: 'icon/house.png'});
+    var rentalBuilding = new BuildingIcon({iconUrl: 'icon/rental.png'});
+
+    var hospitals = L.layerGroup([]);
+    var houses = L.layerGroup([]);
+    var rentals = L.layerGroup([]);
+
+    var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    });
+
+    var map = L.map('map', {
+        center: [33.4484, -112.0740], // Phoenix coordinates
+        zoom: 10,
+        layers: [osm]
+    });
+
+    var baseMaps = {
+        "OpenStreetMap": osm,
+    };
+
+    var overlayMaps = {
+        "Care Facilities": hospitals,
+        "Houses": houses,
+        "Rentals": rentals,
+    };
+
+    var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+    // Major Hospitals with Imaging
+    var marker_banner_university = L.marker([33.4757, -112.0436], {icon: careBuilding}).bindPopup('Banner University Medical Center Phoenix');
+    var marker_st_josephs = L.marker([33.4789, -112.0668], {icon: careBuilding}).bindPopup('St. Joseph\'s Hospital and Medical Center');
+    var marker_banner_estrella = L.marker([33.4933, -112.2607], {icon: careBuilding}).bindPopup('Banner Estrella Medical Center');
+    var marker_honor_health_deer_valley = L.marker([33.6800, -112.0279], {icon: careBuilding}).bindPopup('HonorHealth Deer Valley Medical Center');
+    var marker_mayo_clinic = L.marker([33.5817, -111.9642], {icon: careBuilding}).bindPopup('Mayo Clinic Hospital');
+
+    // Dedicated Imaging Centers
+    var marker_simon_med_central = L.marker([33.4982, -112.0738], {icon: careBuilding}).bindPopup('SimonMed Imaging - Central Phoenix');
+    var marker_valley_rad_downtown = L.marker([33.4789, -112.0731], {icon: careBuilding}).bindPopup('Valley Radiologists - Downtown Phoenix');
+    var marker_arizona_diagnostic = L.marker([33.5081, -112.0731], {icon: careBuilding}).bindPopup('Arizona Diagnostic Radiology');
+    var marker_simon_med_scottsdale = L.marker([33.5722, -111.9277], {icon: careBuilding}).bindPopup('SimonMed Imaging - Scottsdale');
+    var marker_valley_rad_glendale = L.marker([33.5317, -112.1859], {icon: careBuilding}).bindPopup('Valley Radiologists - Glendale');
+
+    // Update the hospitals layer group
+    var hospitals = L.layerGroup([
+        marker_banner_university,
+        marker_st_josephs,
+        marker_banner_estrella,
+        marker_honor_health_deer_valley,
+        marker_mayo_clinic,
+        marker_simon_med_central,
+        marker_valley_rad_downtown,
+        marker_arizona_diagnostic,
+        marker_simon_med_scottsdale,
+        marker_valley_rad_glendale
+    ]);
+    </script>
+</body>
+</html> 

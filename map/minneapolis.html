@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Minneapolis Opportunities</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="denver.html">Denver</a></li>
+            <li><a href="phoenix.html">Phoenix</a></li>
+            <li><a href="#" class="active">Minneapolis</a></li>
+        </ul>
+    </nav>
+
+    <div id="map"></div>
+    <script>
+    var BuildingIcon = L.Icon.extend({
+        options: {
+            iconSize: [18, 15]
+        }
+    });
+    
+    var careBuilding = new BuildingIcon({iconUrl: 'icon/hospital.png'});
+    var houseBuilding = new BuildingIcon({iconUrl: 'icon/house.png'});
+    var rentalBuilding = new BuildingIcon({iconUrl: 'icon/rental.png'});
+
+    // Major Hospitals with Imaging
+    var marker_abbott = L.marker([44.9563, -93.2629], {icon: careBuilding}).bindPopup('Abbott Northwestern Hospital');
+    var marker_hennepin = L.marker([44.9702, -93.2631], {icon: careBuilding}).bindPopup('Hennepin County Medical Center');
+    var marker_ummc = L.marker([44.9717, -93.2322], {icon: careBuilding}).bindPopup('University of Minnesota Medical Center');
+    var marker_regions = L.marker([44.9520, -93.0873], {icon: careBuilding}).bindPopup('Regions Hospital');
+    var marker_methodist = L.marker([44.9267, -93.3507], {icon: careBuilding}).bindPopup('Methodist Hospital');
+
+    // Dedicated Imaging Centers
+    var marker_cdi_st_louis = L.marker([44.9847, -93.2273], {icon: careBuilding}).bindPopup('Center for Diagnostic Imaging - St. Louis Park');
+    var marker_mri_central = L.marker([44.9547, -93.2721], {icon: careBuilding}).bindPopup('Twin Cities MRI - Central');
+    var marker_suburban_imaging = L.marker([45.0794, -93.2677], {icon: careBuilding}).bindPopup('Suburban Imaging - Fridley');
+    var marker_minnesota_imaging = L.marker([44.9776, -93.2778], {icon: careBuilding}).bindPopup('Minnesota Diagnostic Imaging');
+    var marker_rayus_edina = L.marker([44.8897, -93.3502], {icon: careBuilding}).bindPopup('RAYUS Radiology - Edina');
+
+    var hospitals = L.layerGroup([
+        marker_abbott,
+        marker_hennepin,
+        marker_ummc,
+        marker_regions,
+        marker_methodist,
+        marker_cdi_st_louis,
+        marker_mri_central,
+        marker_suburban_imaging,
+        marker_minnesota_imaging,
+        marker_rayus_edina
+    ]);
+    
+    var houses = L.layerGroup([]);
+    var rentals = L.layerGroup([]);
+
+    var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    });
+
+    var map = L.map('map', {
+        center: [44.9778, -93.2650], // Minneapolis coordinates
+        zoom: 11,
+        layers: [osm]
+    });
+
+    var baseMaps = {
+        "OpenStreetMap": osm,
+    };
+
+    var overlayMaps = {
+        "Care Facilities": hospitals,
+        "Houses": houses,
+        "Rentals": rentals,
+    };
+
+    var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+    </script>
+</body>
+</html> 

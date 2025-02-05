@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,34 +5,26 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Quick Start - Leaflet</title>
+	<title>Denver Opportunities</title>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+	<link rel="stylesheet" href="../styles.css">
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-	<style>
-		html, body {
-			height: 100%;
-			margin: 0;
-		}
-		.leaflet-container {
-			height: 400px;
-			width: 600px;
-			max-width: 100%;
-			max-height: 100%;
-		}
-	</style>
-
-	
 </head>
 <body>
+	<nav class="navbar">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="#" class="active">Denver</a></li>
+			<li><a href="phoenix.html">Phoenix</a></li>
+			<li><a href="minneapolis.html">Minneapolis</a></li>
+		</ul>
+	</nav>
 
-
-
-<div id="map" style="width: 1000px; height: 1000px;"></div>
-<script>
+	<div id="map"></div>
+	<script>
 
 	var BuildingIcon = L.Icon.extend({
 		options: {
@@ -313,48 +304,48 @@
 	var houses = L.layerGroup([marker_3164891363374874266, marker_6356970073918225306, marker_1366429735587325399, marker_4594703158292055254, marker_3524170084204867688, marker_7428613612916669081, marker_2454830118190436047, marker_8443215191787216804, marker_843685200487184693, marker_6599493349368982471, marker_4815917164432891831, marker_4797397225951891074, marker_3315731531433973835, marker_3430640526608618593, marker_398273962464766029, marker_1256695958916901963, marker_3027352765042918731, marker_7174478621491402694, marker_4830498110799415590, marker_348020508654706249, marker_948320266242076133, marker_5790296549895115611, marker_1791285716445794984, marker_4616217497342704147, marker_1982841401256189137, marker_4743739629949048698, marker_6894884594063402993, marker_5790296549895115611, marker_6183415981771902111, marker_5716860680382036826, marker_3492347080016829705, marker_2186274307872944584, marker_8846360226536420315, marker_6710163918776851964, marker_127188527594928342, marker_2815512418758182555, marker_6273741166564645907, marker_8427455353817330505, marker_2356138494423433782, marker_6730297721029121001, marker_813358846021893430, marker_8089621972629955973, marker_4542111495740804180, marker_3604661977931385159, marker_1627447541428052001, marker_4900250612074129730, marker_5246453815663015844, marker_3359124053096416261, marker_8427455353817330505, marker_6147894595664844658, marker_215300157443466372, marker_1851384864315375789, marker_3157001366854702877, marker_757189259833282742, marker_757189259833282742, marker_189965627872046310, marker_4722622432195959594, marker_5523721891487520248, marker_1240107964488096688, marker_937928626163894712, marker_3080384796383109086, marker_5184883903686588758, marker_7581317932494239553, marker_7013788462036112810, marker_8337420403130571835, marker_5100946436375806886, marker_132270854913327801, marker_4037850919266729943, marker_8721008488712058547, marker_1436183242031783861, marker_2306569955055498913, marker_1173178521430035222, marker_3759379120012926622, marker_3578004057038994677, marker_6776123017487393463, marker_2297053055632368977, marker_5827787104166971639, marker_5559240414897240117, marker_4613750963146875258, marker_2874017582934449102, marker_3142384795743427628, marker_1618934601588876047, marker_805289845164240234, marker_4957666819550869900, marker_613470760250535952, marker_898908489271120625, marker_3636957778254300685, marker_6753348318143615792, marker_846673116169038028, marker_224916540500341323, marker_1159508098113479259, marker_4481319045889395805, marker_3948374165364002691, marker_6827689901849679077, marker_7399301466020774843, marker_1632303139740670396, marker_9036061931532520842, marker_4564164461501169184, marker_1127722316267503227, marker_8243575000157770301, marker_8100250100889165550, marker_4012012455949200008, marker_1002077516778457530, marker_5682350974419106198, marker_7135197363899016723, marker_4371110409507186758, marker_7244582723193867722, marker_7619132146190157556, marker_1204493554418228925, marker_910875103818297405, marker_8063119676786384948, marker_287677782373436499, marker_6671678490924581163, marker_2235902489575519327, marker_4313588698188300587, marker_7528222980061102435, marker_1248597712778451131, marker_4461821821947496800, marker_6770691793537215236, marker_2161460908060206257, marker_6179265856175983507, marker_8358168703094737004, marker_5694396850431182972, marker_7291227796287423833, marker_495071058233383790, marker_7200055727680956526, marker_8160769360972810474, marker_6975729949648248116, marker_7719920976519724175, marker_8092221846680021285, marker_7286119007443802250, marker_3810421422241281880, marker_1452085887922505144, marker_3810421422241281880, marker_947110913814334382, marker_8918526800678145023, marker_2675621523856025176, marker_4977214004555326247, marker_7101992356999963906, marker_6424420053305484051, marker_624049427755844138, marker_5400091495892511417, marker_6926041064530966986, marker_3353211511748596480, marker_6571863198678530181, marker_5348987732901386779, marker_286606414039769708, marker_8684951544664880365, marker_8161767371260779905, marker_6780972275150687341, marker_2793086164020607292, marker_4177571496489130093, marker_1586674187193580365, marker_3679334771980806884, marker_3771521421037131136, marker_9013758667309472603, marker_3881029412559876409, marker_554007363878279305, marker_7197180216826423334, marker_6008648077322436951, marker_523181867176580861, marker_3055613043027149635, marker_3748902530699679113, marker_5915858981554774457, marker_1245068184044959630, marker_8549003989973557127, marker_427328216711759952, marker_156148823407660333, marker_6798107266779160133, marker_5727364887815664108, marker_9118125614307690268, marker_8552981069972925862, marker_2274501788955599584, marker_6136708869606479832, marker_7842494626511298480, marker_6359598993686161671, marker_3167892467898743654, marker_7301865169948137269, marker_1250837273412063894, marker_5147681068743050873, marker_3315246858757411221, marker_3144118749363077920, marker_1621585198847374384, marker_7928914906314744032, marker_1504031751772449438, marker_1075410504767064522, marker_802490516546681622, marker_193659444396589311, marker_5169550172833583953, marker_1454509999152670363, marker_6452231714429355652, marker_71782867436432504, marker_6384432001896667750]);
 	var rentals = L.layerGroup([marker_3097178147750084106, marker_5212647519189774872, marker_239663064869089570, marker_3080722110596887171, marker_1504031751772449438, marker_3839625363341553379, marker_2184934077339818473, marker_8842912312592145195, marker_1266472297789947259, marker_2825630148248630478, marker_318954604525132681, marker_7758764657328243042, marker_5359171241898235077, marker_9007497058532864450, marker_1518832187487785091, marker_7024365347853677872, marker_432602696932347924, marker_2961444623180872525, marker_864862481176433415, marker_3752001888775591844, marker_5362339943550535847, marker_4651809092468739261, marker_7832645812013091804, marker_230436131862428940, marker_3558451640749026759, marker_884704346620907741, marker_6654505790126081737, marker_8657598993962722204, marker_6478408579278725268]);
 
-var hospitals = L.layerGroup([
-		marker_3161c886b9c5d8dd580e9af12a6f3b71,  // Health Images at North Denver
-		marker_9dd665383e67c987664084997f6dfd43,  // Touchstone Imaging Lafayett
-		marker_41dd7d90cf4197ee568f7b9a59886c17,  // Touchstone Imaging Superio
-		marker_9632ac0091f4e76ad5d6f0ad26b2edb6,  // Health Images at Church Ranch
-		marker_a0879165218404dbc0432962de65618a,  // Touchstone Imaging Thornton
+	var hospitals = L.layerGroup([
+			marker_3161c886b9c5d8dd580e9af12a6f3b71,  // Health Images at North Denver
+			marker_9dd665383e67c987664084997f6dfd43,  // Touchstone Imaging Lafayett
+			marker_41dd7d90cf4197ee568f7b9a59886c17,  // Touchstone Imaging Superio
+			marker_9632ac0091f4e76ad5d6f0ad26b2edb6,  // Health Images at Church Ranch
+			marker_a0879165218404dbc0432962de65618a,  // Touchstone Imaging Thornton
 
-		marker_714e77578d1c58ca4730ad42059d943b,  // Imaging & Radiology at CommonSpirit St. Anthony North Hospital
-		marker_934fda2e739f3210d1a74e9798c432b1,  // Spectrum Medical Imaging Center
-		marker_5627e65dcc496998f7a85d61cc9b6fbd,  // Health Images at Longmont
-		marker_0a1f5ca0507d55be2439fa9873231c00,  // Touchstone Imaging Wheat Ridge
-		marker_9536cc33d1b5ddd3c1968658faf73490,  // Imaging & Radiology at CommonSpirit Longmont United Hospital
+			marker_714e77578d1c58ca4730ad42059d943b,  // Imaging & Radiology at CommonSpirit St. Anthony North Hospital
+			marker_934fda2e739f3210d1a74e9798c432b1,  // Spectrum Medical Imaging Center
+			marker_5627e65dcc496998f7a85d61cc9b6fbd,  // Health Images at Longmont
+			marker_0a1f5ca0507d55be2439fa9873231c00,  // Touchstone Imaging Wheat Ridge
+			marker_9536cc33d1b5ddd3c1968658faf73490,  // Imaging & Radiology at CommonSpirit Longmont United Hospital
 
-		marker_813e66360c6b297e87dea5ee9eac0594,  // UCHealth Broomfield Hospital
-		marker_146085f1cdb625db1926f2a43399cd1b,  // AdventHealth Avista
-		marker_5ec97362227b3a64238421399c208b62,  // HCA HealthONE Mountain Ridge
-		marker_a180203f8a2c1c7dc790cffdf5747160,  // Childrens Hospital Colorado North Campus, Broomfield
-		marker_4f3e3d78b03f67896726a5d47a9f3584,  // Foothills Hospital
+			marker_813e66360c6b297e87dea5ee9eac0594,  // UCHealth Broomfield Hospital
+			marker_146085f1cdb625db1926f2a43399cd1b,  // AdventHealth Avista
+			marker_5ec97362227b3a64238421399c208b62,  // HCA HealthONE Mountain Ridge
+			marker_a180203f8a2c1c7dc790cffdf5747160,  // Childrens Hospital Colorado North Campus, Broomfield
+			marker_4f3e3d78b03f67896726a5d47a9f3584,  // Foothills Hospital
 
-		marker_31142551ba2edbd59197de4fff16871c,  // CommonSpirit St. Anthony North Hospital
-		marker_e187eac33edfaa45604af8eb8a82c9cc,  // Intermountain Health Good Samaritan Hospital
-		marker_eb788a7625b788435d549bf5a9a125c5,  // Vibra Hospital of Denver
-		marker_cf0d0c536bfd2694d36c1a0cef6dcea1,  // Denver Regional Rehabilitation Hospital
-		marker_bd1cc31aaf85dbe9d675fcce92610a71,  // UCHealth Emergency Care - Broomfield Hospital (Hospital based)
+			marker_31142551ba2edbd59197de4fff16871c,  // CommonSpirit St. Anthony North Hospital
+			marker_e187eac33edfaa45604af8eb8a82c9cc,  // Intermountain Health Good Samaritan Hospital
+			marker_eb788a7625b788435d549bf5a9a125c5,  // Vibra Hospital of Denver
+			marker_cf0d0c536bfd2694d36c1a0cef6dcea1,  // Denver Regional Rehabilitation Hospital
+			marker_bd1cc31aaf85dbe9d675fcce92610a71,  // UCHealth Emergency Care - Broomfield Hospital (Hospital based)
 
-		marker_1ca6ccd10d1b2fc029bb4a85102492fe,  // Intermountain Health Platte Valley Hospital
-		marker_7222fdf7209bba7175b6f3d5297550b9,  // HCA HealthONE Presbyterian St. Lukes
-		marker_12cbf6d399fbdadaba9904176970a795,  // Intermountain Health Saint Joseph Hospital
-		marker_921ca71b751478699ebb4256ea762d90,  // UCHealth University of Colorado Hospital UCH
-		marker_65f0081ae7dc6d270538e795fabfd126,  // HCA HealthONE Aurora
+			marker_1ca6ccd10d1b2fc029bb4a85102492fe,  // Intermountain Health Platte Valley Hospital
+			marker_7222fdf7209bba7175b6f3d5297550b9,  // HCA HealthONE Presbyterian St. Lukes
+			marker_12cbf6d399fbdadaba9904176970a795,  // Intermountain Health Saint Joseph Hospital
+			marker_921ca71b751478699ebb4256ea762d90,  // UCHealth University of Colorado Hospital UCH
+			marker_65f0081ae7dc6d270538e795fabfd126,  // HCA HealthONE Aurora
 
-		marker_19a4264ed721326287e517ec12632565,  // HCA HealthONE Swedish
-		marker_b7555e88680d2f6848da010e172cb0b9,  // HCA HealthONE Centennial, A part of Aurora Hospital
-		marker_b8332ca232e89bf145e287abc1e7940c,  // UCHealth Highlands Ranch Hospital
-		marker_5242584ba7aa0e10ff458fd5459fee04,  // HCA HealthONE Rose
-		marker_0aed4736111b660b9673b6f5d4ccc283,  // HCA HealthONE Sky Ridge
+			marker_19a4264ed721326287e517ec12632565,  // HCA HealthONE Swedish
+			marker_b7555e88680d2f6848da010e172cb0b9,  // HCA HealthONE Centennial, A part of Aurora Hospital
+			marker_b8332ca232e89bf145e287abc1e7940c,  // UCHealth Highlands Ranch Hospital
+			marker_5242584ba7aa0e10ff458fd5459fee04,  // HCA HealthONE Rose
+			marker_0aed4736111b660b9673b6f5d4ccc283,  // HCA HealthONE Sky Ridge
 
-		marker_90b7aa66b88747694048f9b8869e90c5,  // AdventHealth Porter
-		marker_7bd19b382285337b42a084b16e97789a,  // Kindred Hospital Aurora
-		marker_166919c6ac88c384436fe8bdcccee403,  // Kindred Hospital Denver
-		marker_ac5bc329e56cfe45c7a315b9b29fba38,  // AdventHealth Parker
-	]);
+			marker_90b7aa66b88747694048f9b8869e90c5,  // AdventHealth Porter
+			marker_7bd19b382285337b42a084b16e97789a,  // Kindred Hospital Aurora
+			marker_166919c6ac88c384436fe8bdcccee403,  // Kindred Hospital Denver
+			marker_ac5bc329e56cfe45c7a315b9b29fba38,  // AdventHealth Parker
+		]);
 
 	var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
