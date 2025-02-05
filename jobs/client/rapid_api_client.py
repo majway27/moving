@@ -1,6 +1,6 @@
 import requests
 from typing import Dict, Any, Optional
-from credentials import RAPID_API_KEY
+from credentials.credentials import RAPID_API_KEY
 
 class JobSearchClient:
     """Client for interacting with the JSearch RapidAPI."""

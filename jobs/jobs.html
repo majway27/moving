@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    
+    <!-- Tabulator CSS -->
+    <link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
+    <!-- Tabulator JavaScript -->
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
+
+    <style>
+        .tabulator {
+            margin: 20px;
+            width: calc(100% - 40px);
+        }
+        .job-description {
+            white-space: pre-wrap;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="jobs-table"></div>
+
+    <script>
+        // Initialize Tabulator
+        var table = new Tabulator("#jobs-table", {
+            layout: "fitColumns",
+            responsiveLayout: "hide",
+            pagination: "local",
+            paginationSize: 15,
+            paginationCounter: "rows",
+            movableColumns: true,
+            initialSort: [
+                {column: "date_posted", dir: "desc"}
+            ],
+            columns: [
+                {title: "Title", field: "title", width: 200},
+                {title: "Company", field: "company", width: 150},
+                {title: "Location", field: "location", width: 150},
+                {title: "Date Posted", field: "date_posted", width: 120, sorter: "date"},
+                {title: "Description", field: "description", formatter: function(cell) {
+                    return "<div class='job-description'>" + cell.getValue() + "</div>";
+                }},
+                {title: "URL", field: "url", formatter: "link", formatterParams: {
+                    target: "_blank",
+                    labelField: "url"
+                }}
+            ]
+        });
+
+        // Load the job data
+        fetch('job_data.json')
+            .then(response => response.json())
+            .then(data => {
+                table.setData(data);
+            })
+            .catch(error => console.error('Error loading job data:', error));
+    </script>
+</body>
+</html> 

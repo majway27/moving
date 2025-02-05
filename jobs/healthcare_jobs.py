@@ -1,5 +1,5 @@
 from typing import List, Dict, Any, Optional
-from rapid_api_client import JobSearchClient
+from client.rapid_api_client import JobSearchClient
 import json
 import os
 import csv

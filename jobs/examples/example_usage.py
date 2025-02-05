@@ -1,4 +1,4 @@
-from rapid_api_client import JobSearchClient
+from jobs.client.rapid_api_client import JobSearchClient
 
 def main():
     # Create client instance
