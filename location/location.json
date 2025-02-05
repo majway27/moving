@@ -1,0 +1,160 @@
+{
+  "metro_areas": [
+    {
+      "hub_city": {
+        "name": "Denver",
+        "state": "CO",
+        "coordinates": {
+          "lat": 39.7392,
+          "lng": -104.9903
+        }
+      },
+      "suburbs": [
+        {
+          "name": "Aurora",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.7294,
+            "lng": -104.8319
+          }
+        },
+        {
+          "name": "Lakewood",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.7047,
+            "lng": -105.0814
+          }
+        }
+      ],
+      "metrics": {
+        "cost_of_living_index": 128.7,
+        "median_home_price": 535000,
+        "median_rent_1br": 1750,
+        "public_transit_score": 85,
+        "average_commute_time": 27,
+        "job_market": {
+          "major_industries": [
+            "Technology",
+            "Aerospace",
+            "Healthcare"
+          ],
+          "unemployment_rate": 3.2
+        },
+        "climate": {
+          "annual_snowfall": 60,
+          "annual_sunny_days": 300,
+          "avg_summer_high": 88,
+          "avg_winter_low": 22
+        }
+      }
+    },
+    {
+      "hub_city": {
+        "name": "Phoenix",
+        "state": "AZ",
+        "coordinates": {
+          "lat": 33.4484,
+          "lng": -112.0740
+        }
+      },
+      "suburbs": [
+        {
+          "name": "Scottsdale",
+          "state": "AZ",
+          "coordinates": {
+            "lat": 33.4942,
+            "lng": -111.9261
+          }
+        },
+        {
+          "name": "Mesa",
+          "state": "AZ",
+          "coordinates": {
+            "lat": 33.4152,
+            "lng": -111.8315
+          }
+        }
+      ],
+      "metrics": {
+        "cost_of_living_index": 103.7,
+        "median_home_price": 450000,
+        "median_rent_1br": 1500,
+        "public_transit_score": 72,
+        "average_commute_time": 25,
+        "job_market": {
+          "major_industries": [
+            "Healthcare",
+            "Tourism",
+            "Financial Services"
+          ],
+          "unemployment_rate": 3.4
+        },
+        "climate": {
+          "annual_snowfall": 0,
+          "annual_sunny_days": 330,
+          "avg_summer_high": 107,
+          "avg_winter_low": 45
+        }
+      }
+    },
+    {
+      "hub_city": {
+        "name": "Minneapolis",
+        "state": "MN",
+        "coordinates": {
+          "lat": 44.9778,
+          "lng": -93.2650
+        }
+      },
+      "suburbs": [
+        {
+          "name": "St. Paul",
+          "state": "MN",
+          "coordinates": {
+            "lat": 44.9537,
+            "lng": -93.0900
+          }
+        },
+        {
+          "name": "Bloomington",
+          "state": "MN",
+          "coordinates": {
+            "lat": 44.8408,
+            "lng": -93.2983
+          }
+        },
+        {
+          "name": "Eden Prairie",
+          "state": "MN",
+          "coordinates": {
+            "lat": 44.8547,
+            "lng": -93.4708
+          }
+        }
+      ],
+      "metrics": {
+        "cost_of_living_index": 106.5,
+        "median_home_price": 375000,
+        "median_rent_1br": 1450,
+        "public_transit_score": 87,
+        "average_commute_time": 24,
+        "job_market": {
+          "major_industries": [
+            "Healthcare",
+            "Manufacturing",
+            "Financial Services",
+            "Technology"
+          ],
+          "unemployment_rate": 2.8
+        },
+        "climate": {
+          "annual_snowfall": 52,
+          "annual_sunny_days": 198,
+          "avg_summer_high": 83,
+          "avg_winter_low": 7
+        }
+      }
+    }
+  ]
+}
