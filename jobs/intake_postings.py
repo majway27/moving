@@ -4,13 +4,18 @@ import json
 import os
 import csv
 import datetime
+import sys
+from pathlib import Path
+
+# Add project root to Python path
+sys.path.append(str(Path(__file__).parent.parent))
+from employer.employer import update_employers
 
 class ImagingJobSearch:
     """Specialized job search class for medical imaging positions."""
     
     def __init__(self):
         self.client = JobSearchClient()
-        self.companies_file = "../employer/employers.json"
         self.output_dir = "job_results"
         self.job_types = {
             "cat_scan": ["CT Technologist", "CAT Scan Technician", "CT Tech"],
@@ -19,28 +24,7 @@ class ImagingJobSearch:
             #"ultrasound": ["Sonographer", "Ultrasound Technician", "Ultrasound Tech"],
             #"nuclear_medicine": ["Nuclear Medicine Technologist", "Nuclear Med Tech"]
         }
-        self._load_companies()
         os.makedirs(self.output_dir, exist_ok=True)
-
-    def _load_companies(self) -> None:
-        """Load existing companies from JSON file or create empty set if file doesn't exist."""
-        try:
-            with open(self.companies_file, 'r') as f:
-                self.companies = set(json.load(f))
-        except (FileNotFoundError, json.JSONDecodeError):
-            self.companies = set()
-
-    def _save_companies(self) -> None:
-        """Save companies set to JSON file."""
-        with open(self.companies_file, 'w') as f:
-            json.dump(list(self.companies), f, indent=2)
-
-    def _update_companies(self, jobs: List[Dict[str, Any]]) -> None:
-        """Update companies set with new companies from job results."""
-        for job in jobs:
-            if company := job.get('employer_name'):
-                self.companies.add(company)
-        self._save_companies()
 
     def _generate_csv_filename(self, modality: str, location: str) -> str:
         """Generate a filename for the CSV based on modality and location."""
@@ -89,26 +73,13 @@ class ImagingJobSearch:
                           location: str = "",
                           page: int = 1,
                           num_pages: int = 1) -> Optional[List[Dict[str, Any]]]:
-        """
-        Search for jobs by specific imaging modality.
-        
-        Args:
-            modality (str): Type of radiology job ("cat_scan", "mri", "radiology", "ultrasound", "nuclear_medicine")
-            location (str): Location for the search (e.g. "Chicago, IL")
-            page (int): Page number to fetch
-            num_pages (int): Number of pages to fetch
-            
-        Returns:
-            List of jobs matching the criteria, or None if the request failed
-        """
+        """Search for jobs by specific imaging modality."""
         if modality not in self.job_types:
             raise ValueError(f"Invalid modality. Must be one of: {list(self.job_types.keys())}")
 
-        # Get search terms for the modality
         search_terms = self.job_types[modality]
         all_results = []
 
-        # Search for each term
         for term in search_terms:
             query = f"{term} {location}".strip()
             results = self.client.search_jobs(
@@ -121,7 +92,7 @@ class ImagingJobSearch:
                 all_results.extend(results["data"])
 
         if all_results:
-            self._update_companies(all_results)
+            update_employers(all_results)
             self._save_to_csv(all_results, modality, location)
             
         return all_results if all_results else None
