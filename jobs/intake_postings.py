@@ -9,7 +9,15 @@ from pathlib import Path
 
 # Add project root to Python path
 sys.path.append(str(Path(__file__).parent.parent))
-from employer.employer import update_employers
+
+# Now we can import from employer module
+from employer.employer import (
+    update_employers, 
+    load_excluded_employers,
+    load_employer_map,
+    normalize_employer_name,
+    remap_employer_name
+)
 
 class ImagingJobSearch:
     """Specialized job search class for medical imaging positions."""
@@ -25,6 +33,8 @@ class ImagingJobSearch:
             #"nuclear_medicine": ["Nuclear Medicine Technologist", "Nuclear Med Tech"]
         }
         self.max_retries = 3
+        self.excluded_employers = load_excluded_employers()
+        self.employer_map = load_employer_map()
         os.makedirs(self.output_dir, exist_ok=True)
 
     def _generate_csv_filename(self, modality: str, location: str) -> str:
@@ -116,6 +126,11 @@ class ImagingJobSearch:
                         continue  # Move to next search term
 
         if all_results:
+            # Remap employer names before saving
+            for job in all_results:
+                if employer_name := job.get('employer_name'):
+                    job['employer_name'] = remap_employer_name(employer_name, self.employer_map)
+            
             update_employers(all_results)
             self._save_to_csv(all_results, modality, location)
             
@@ -177,6 +192,15 @@ class ImagingJobSearch:
         filtered_jobs = jobs.copy()
         original_count = len(filtered_jobs)
         
+        # Update employer exclusion filter to use normalized names
+        if self.excluded_employers:
+            before_count = len(filtered_jobs)
+            filtered_jobs = [
+                job for job in filtered_jobs
+                if normalize_employer_name(job.get("employer_name", "")) not in self.excluded_employers
+            ]
+            print(f"Excluded employers filter removed {before_count - len(filtered_jobs)} jobs")
+
         if min_salary:
             before_count = len(filtered_jobs)
             filtered_jobs = [
@@ -210,10 +234,67 @@ class ImagingJobSearch:
 
         if exclude_travel:
             before_count = len(filtered_jobs)
+            # Terms that strongly indicate a travel position
+            travel_terms = [
+                "Job Type Travel",
+                "Job Type: Travel",
+                "locum position",
+                "locum tenens",
+                "locums position",
+                "required regular travel",
+                "travel agencies",
+                "travel assignment",
+                "travel basis",
+                "travel career",
+                "travel contract",
+                "travel experience",
+                "travel experiences",
+                "travel healthcare",
+                "travel interventional",
+                "travel job",
+                "travel opportunities",
+                "travel opportunity",
+                "travel position",
+                "travel tech",
+                "traveling professional",
+                "traveling professionals",
+                "traveling tech"
+            ]
+            # Terms that might indicate a travel position if they appear alone
+            basic_travel_terms = [
+                "locum",
+                "locums",
+                "traveler",
+                "traveling"
+            ]
+            
+            # Terms that indicate it's NOT a travel position
+            non_travel_indicators = [
+                "limited travel",
+                "minimal travel",
+                "no travel",
+                "no traveling",
+                "travel hub",
+                "travel is not",
+                "travel not"
+            ]
+            
             filtered_jobs = [
                 job for job in filtered_jobs
-                if not any(term.lower() in str(job.get("job_title", "")).lower() 
-                          for term in ["travel", "locum"])
+                if (
+                    # Check if any non-travel indicators are present
+                    any(indicator.lower() in str(job.get("job_description", "")).lower() 
+                        for indicator in non_travel_indicators)
+                    or not (
+                        # Original travel position checks
+                        any(term.lower() in str(job.get("job_title", "")).lower() or
+                            term.lower() in str(job.get("job_description", "")).lower()
+                            for term in travel_terms) or
+                        any(term.lower() in str(job.get("job_title", "")).lower()
+                            for term in basic_travel_terms) or
+                        "travel" in str(job.get("job_title", "")).lower()
+                    )
+                )
             ]
             print(f"Travel filter removed {before_count - len(filtered_jobs)} jobs")
 

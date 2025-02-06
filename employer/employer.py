@@ -2,6 +2,8 @@ import json
 from pathlib import Path
 from typing import Set
 
+
+# Employer
 def load_employers() -> Set[str]:
     """Load existing employers from JSON file or create empty set if file doesn't exist."""
     employer_path = Path(__file__).parent / "employers.json"
@@ -23,4 +25,42 @@ def update_employers(jobs: list) -> None:
     for job in jobs:
         if company := job.get('employer_name'):
             employers.add(company)
-    save_employers(employers) 
+    save_employers(employers)
+
+def normalize_employer_name(employer_name: str) -> str:
+    """Normalize employer name for consistent comparison."""
+    if not employer_name:
+        return ""
+    # Remove extra spaces, convert to lowercase
+    return " ".join(employer_name.lower().split())
+
+
+# Excluded Employers
+def load_excluded_employers() -> set:
+    """Load the list of employers to exclude from searches."""
+    try:
+        exclude_path = Path(__file__).parent / "exclude-employers.json"
+        with open(exclude_path, 'r') as f:
+            # Normalize all excluded employer names
+            return {normalize_employer_name(name) for name in json.load(f)}
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("Warning: Could not load excluded employers list")
+        return set()
+
+def load_employer_map() -> dict:
+    """Load the employer name mapping dictionary."""
+    try:
+        map_path = Path(__file__).parent / "map-employers.json"
+        with open(map_path, 'r') as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("Warning: Could not load employer mapping")
+        return {}
+
+
+# Cannoical Name Re-Mapping
+def remap_employer_name(employer_name: str, employer_map: dict) -> str:
+    """Remap employer name using the mapping dictionary."""
+    if not employer_name:
+        return employer_name
+    return employer_map.get(employer_name, employer_name) 
