@@ -58,7 +58,7 @@ def generate_jobs_data():
     print(f"Generated job data file with {len(all_jobs)} jobs at {output_file}")
 
 def save_filtered_jobs(filtered_jobs, modality, location):
-    """Save filtered jobs in the format expected by generate_jobs_page.py"""
+    """Save filtered jobs to a JSON file in the job_results directory"""
     jobs_to_save = []
     for job in filtered_jobs:
         # Ensure we have a valid date, default to empty string if missing
