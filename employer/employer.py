@@ -1,30 +1,49 @@
 import json
 from pathlib import Path
-from typing import Set
+from typing import Set, Dict, List
 
 
 # Employer
-def load_employers() -> Set[str]:
-    """Load existing employers from JSON file or create empty set if file doesn't exist."""
+def load_employers() -> Dict[str, List[str]]:
+    """Load existing employers from JSON file or create empty dict if file doesn't exist."""
     employer_path = Path(__file__).parent / "employers.json"
     try:
         with open(employer_path, 'r') as f:
-            return set(json.load(f))
+            data = json.load(f)
+            # Convert to dictionary for easier lookup
+            return {emp["name"]: emp["locations"] for emp in data["employers"]}
     except (FileNotFoundError, json.JSONDecodeError):
-        return set()
+        return {}
 
-def save_employers(employers: Set[str]) -> None:
-    """Save employers set to JSON file."""
+def save_employers(employers: Dict[str, List[str]]) -> None:
+    """Save employers dictionary to JSON file."""
     employer_path = Path(__file__).parent / "employers.json"
+    # Convert to sorted list of dictionaries
+    sorted_employers = [
+        {"name": name, "locations": locations}
+        for name, locations in sorted(employers.items())
+    ]
     with open(employer_path, 'w') as f:
-        json.dump(list(employers), f, indent=2)
+        json.dump({"employers": sorted_employers}, f, indent=2)
 
 def update_employers(jobs: list) -> None:
-    """Update employers set with new companies from job results."""
+    """Update employers set with new companies and locations from job results."""
     employers = load_employers()
+    
     for job in jobs:
-        if company := job.get('employer_name'):
-            employers.add(company)
+        company = job.get('employer_name')
+        location = job.get('location')
+        
+        if not company or not location:
+            continue
+            
+        if company not in employers:
+            employers[company] = []
+            
+        if location not in employers[company]:
+            employers[company].append(location)
+            employers[company].sort()  # Keep locations sorted
+            
     save_employers(employers)
 
 def normalize_employer_name(employer_name: str) -> str:

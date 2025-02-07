@@ -31,7 +31,14 @@
 
 ## Tools
 
-- https://github.com/Bunsly/HomeHarvest
+### RapidAPI
+
 - https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch
+- https://rapidapi.com/s.mahmoud97/api/zillow56
+- https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-glassdoor-data
+
+### Other
+
+- https://github.com/Bunsly/HomeHarvest
 - https://leafletjs.com/examples/quick-start/
 - https://tabulator.info/

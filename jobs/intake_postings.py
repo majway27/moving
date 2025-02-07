@@ -10,7 +10,7 @@ from pathlib import Path
 # Add project root to Python path
 sys.path.append(str(Path(__file__).parent.parent))
 
-# Now we can import from employer module
+# Now we can import from employer and location modules
 from employer.employer import (
     update_employers, 
     load_excluded_employers,
@@ -18,6 +18,7 @@ from employer.employer import (
     normalize_employer_name,
     remap_employer_name
 )
+from location.location import get_state_from_location
 
 class ImagingJobSearch:
     """Specialized job search class for medical imaging positions."""
@@ -104,6 +105,15 @@ class ImagingJobSearch:
                     )
                     
                     if results and "data" in results:
+                        # Process each job to ensure location is properly set
+                        for job in results["data"]:
+                            if job_state := job.get('job_state'):
+                                # Set the location field for employer tracking
+                                job['location'] = job_state
+                            elif location:
+                                # If no job_state but location was provided in search
+                                job['location'] = get_state_from_location(location)
+                            
                         all_results.extend(results["data"])
                     break  # Success - exit retry loop
                     
@@ -131,6 +141,7 @@ class ImagingJobSearch:
                 if employer_name := job.get('employer_name'):
                     job['employer_name'] = remap_employer_name(employer_name, self.employer_map)
             
+            # Only update employers if we have location information
             update_employers(all_results)
             self._save_to_csv(all_results, modality, location)
             

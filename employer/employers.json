@@ -1,147 +1,1025 @@
-[
-  "KURZ Solutions",
-  "HCA HealthONE Aurora",
-  "HonorHealth Rehabilitation Hospital.",
-  "Host Healthcare",
-  "St. Anthony Hospital",
-  "Prolink",
-  "Allina Health Systems",
-  "SOUTHWEST MEDICAL IMAGING",
-  "Regions Hospital",
-  "Protouch Staffing",
-  "The CORE Institute Specialty Hospital",
-  "CommonSpirit Health",
-  "Summit Orthopedics",
-  "Med Career Solutions",
-  "Tenet-AZ Region",
-  "Hennepin Healthcare",
-  "UCHealth (Colorado)",
-  "Talent4Health",
-  "TRS Healthcare",
-  "Phoenix Children's Hospital",
-  "KPG Allied Professional Staffing",
-  "The US Oncology Network",
-  "Children's Hospital Colorado",
-  "TotalMed",
-  "Healthcare Support Permanent Placement",
-  "Gifted Healthcare",
-  "Next GenHealth Staffing",
-  "Intermountain Healthcare",
-  "Voca LLC",
-  "SurgCenter Pima Crossing",
-  "Interim HealthCare Staffing",
-  "Phoenix Children's",
-  "Indiana University Health System",
-  "Wanderly",
-  "Triage Staffing",
-  "HealthPartners",
-  "PRIDE Health",
-  "KPG Allied Staffing",
-  "Epic Travel Staffing",
-  "Aureus Medical Group",
-  "Allina Health",
-  "Supplemental Health Care",
-  "Theravita Solutions",
-  "Kaiser Permanente",
-  "beBee Professionals",
-  "FlexCare Allied",
-  "MLee Healthcare Staffing and Recruiting",
-  "Laser Spine Institute (LSI)",
-  "IYA Medical PLC",
-  "SimonMed Imaging",
-  "Touchstone Medical Imaging",
-  "Nomad Health",
-  "Orthopedic Centers of Colorado",
-  "ADVENT",
-  "Shared Medical Services",
-  "Tailored Healthcare Staffing",
-  "KA Recruiting Inc.",
-  "Banner Health",
-  "Abrazo Scottsdale Campus",
-  "Vetted",
-  "Cross Country Allied",
-  "Health Images, LLC",
-  "Aequor Healthcare",
-  "HCA Healthcare",
-  "MSSI - Medical Staffing Solutions, Inc.",
-  "Mayo Clinic",
-  "CommonSpirit Health Mountain Region",
-  "Soliant",
-  "Noran Neurological Clinic PA",
-  "Park Nicollet Health Services",
-  "Invision Sally Jobe",
-  "Russell Tobin",
-  "Intermountain Health",
-  "Valleywise Health",
-  "Siemens Healthineers AG",
-  "Mountain Vista Medical Center",
-  "Prime Time Healthcare",
-  "St. Joseph's Hospital and Medical Center",
-  "RadNet",
-  "FlexCare Imaging",
-  "Siemens Healthineers",
-  "Arizona Center for Cancer Care",
-  "Immediate Healthcare Solutions",
-  "Vivian Health",
-  "Medstaff Solutions Inc",
-  "ALOIS Healthcare",
-  "Touchstone Medical Imaging.",
-  "Abrazo Central Hospital",
-  "Soliant Health",
-  "OneStaff Medical",
-  "University of MN Physicians",
-  "AdventHealth",
-  "ADEX Healthcare Staffing LLC",
-  "Rapid Temps",
-  "Fairview Health Services",
-  "Progeny HR Solutions LLC",
-  "HonorHealth",
-  "MedPro Healthcare Staffing",
-  "City of Hope",
-  "UC Health",
-  "Medely",
-  "OneStaffMedical",
-  "Regency Hospital - Minneapolis",
-  "SimonMed Imaging MSO, LLC",
-  "LRS Healthcare - Allied",
-  "AHS MedStat",
-  "TotalMed Allied",
-  "Medical Solutions",
-  "Uniti Med",
-  "Solomon Page",
-  "AlliedTravelCareers",
-  "Children's Minnesota",
-  "Fusion Medical Staffing",
-  "HealthOp",
-  "USPI",
-  "Rayus Radiology",
-  "i4 Search Group",
-  "Genie Healthcare",
-  "AMN Healthcare Allied",
-  "Southdale Hospital",
-  "Kurz Solutions",
-  "Aureus Medical Group - Imaging",
-  "GrapeTree Medical Staffing Allied",
-  "Akumin",
-  "HealthTrust Workforce Solutions HCA",
-  "AMN Healthcare",
-  "Arizona Diagnostic Radiology",
-  "UCHealth",
-  "100 Aurora Health Care Metro, Inc.",
-  "Denver Health",
-  "i4 Search Group Healthcare",
-  "HCA HealthONE Presbyterian St. Luke's",
-  "University of Colorado",
-  "RAYUS Radiology",
-  "Triage Staffing LLC",
-  "Health Images",
-  "Simonmed Imgaging",
-  "Zenex Partners, Inc",
-  "Coast Medical Service",
-  "Core Staffing",
-  "Surf Search",
-  "Jobot",
-  "GQR Healthcare",
-  "Twin Cities Orthopedics",
-  "Advantis Medical"
-]
+{
+  "employers": [
+    {
+      "name": "100 Aurora Health Care Metro, Inc.",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "ADEX Healthcare Staffing LLC",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "ADVENT",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "AHS MedStat",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "ALOIS Healthcare",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "AMN Healthcare",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "AMN Healthcare Allied",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Abrazo Central Hospital",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "Abrazo Scottsdale Campus",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "Advantis Medical",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "AdventHealth",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Aequor Healthcare",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Akumin",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "AlliedTravelCareers",
+      "locations": [
+        "Arizona",
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Allina Health",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Allina Health Systems",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Arizona Center for Cancer Care",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "Arizona Diagnostic Radiology",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "Aureus Medical Group",
+      "locations": [
+        "Arizona",
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Aureus Medical Group - Imaging",
+      "locations": [
+        "Arizona",
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Axis Medical Staffing",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Banner Health",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Children's Hospital Colorado",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Children's Minnesota",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "City of Hope",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Coast Medical Service",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Colorado State University",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "CommonSpirit Health",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "CommonSpirit Health Mountain Region",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Core Staffing",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Cross Country Allied",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Della Infotech",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Denver Health",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Epic Travel Staffing",
+      "locations": [
+        "Arizona",
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Fairview Health Services",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "FlexCare Allied",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "FlexCare Imaging",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "FlexCare Medical Staffing",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "Fusion Medical Staffing",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "GQR Healthcare",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Genie Healthcare",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Gifted Healthcare",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "GrapeTree Medical Staffing Allied",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "HCA HealthONE Aurora",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "HCA HealthONE Presbyterian St. Luke's",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "HCA Healthcare",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Health Images",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "HealthOp",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "HealthPartners",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "HealthTrust Workforce Solutions HCA",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Healthcare Support Permanent Placement",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Hennepin Healthcare",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "HonorHealth",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "HonorHealth Rehabilitation Hospital.",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "Host Healthcare",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "IYA Medical PLC",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Immediate Healthcare Solutions",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Indiana University Health System",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Interim HealthCare Staffing",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Interim Healthcare Staffing",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Intermountain Health",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Intermountain Healthcare",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Invision Sally Jobe",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Jobot",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "KA Recruiting Inc.",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "KPG Allied Professional Staffing",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "KPG Allied Staffing",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "KURZ Solutions",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Kaiser Permanente",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Kurz Solutions",
+      "locations": [
+        "Arizona",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "LRS Healthcare - Allied",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Laser Spine Institute (LSI)",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "MLee Healthcare Staffing and Recruiting",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "MLee Healthcare Staffing and Recruiting, Inc",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "MSSI - Medical Staffing Solutions, Inc.",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Mayo Clinic",
+      "locations": [
+        "Arizona",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Med Career Solutions",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "MedPro Healthcare Staffing",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Medasource",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Medely",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Medical Solutions",
+      "locations": [
+        "Arizona",
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Medstaff Solutions Inc",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Mountain Vista Medical Center",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Next GenHealth Staffing",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Nomad Health",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Noran Neurological Clinic PA",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "NurseRecruiter",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "Odyssey Staffing",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "OneStaff Medical",
+      "locations": [
+        "Arizona",
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Orthopedic Centers of Colorado",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "PRIDE Health",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Park Nicollet Health Services",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Phoenix Children's",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "Phoenix Children's Hospital",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "Prime Time Healthcare",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Progeny HR Solutions LLC",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Prolink",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Protouch Staffing",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "RAYUS Radiology",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "RadNet",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Rapid Temps",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Rayus Radiology",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Regency Hospital - Minneapolis",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Regions Hospital",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Russell Tobin",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "SOUTHWEST MEDICAL IMAGING",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "SOUTHWEST MEDICAL IMAGING.",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "Shared Medical Services",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Sharp Nursing Medical Staffing",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Siemens Healthineers",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Siemens Healthineers AG",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "SimonMed Imaging",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "SimonMed Imaging MSO, LLC",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Simonmed Imgaging",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Soliant",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Soliant Health",
+      "locations": [
+        "Arizona",
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Solomon Page",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Southdale Hospital",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Southwest Medical Imaging",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "St. Anthony Hospital",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "St. Joseph's Hospital and Medical Center",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Stability Healthcare",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "Summit Orthopedics",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Supplemental Health Care",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Surf Search",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "SurgCenter Pima Crossing",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "TRS Healthcare",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Tailored Healthcare Staffing",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Talent4Health",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Tate",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Tenet-AZ Region",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "The CORE Institute Specialty Hospital",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "The US Oncology Network",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Theravita Solutions",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "TotalMed",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "TotalMed Allied",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Touchstone Medical Imaging",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Touchstone Medical Imaging.",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Travel Nurses, Inc.",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Triage Staffing",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Triage Staffing LLC",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Twin Cities Orthopedics",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "UC Health",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "UCHealth",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "UCHealth (Colorado)",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "USPI",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Uniti Med",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "University of Colorado",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "University of MN Physicians",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Valleywise Health",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Ventura MedStaff",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Vivian Health",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Voca LLC",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Wanderly",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Zenex Partners, Inc",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "beBee Professionals",
+      "locations": [
+        "Arizona",
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "i4 Search Group",
+      "locations": [
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "i4 Search Group Healthcare",
+      "locations": [
+        "Colorado"
+      ]
+    }
+  ]
+}
