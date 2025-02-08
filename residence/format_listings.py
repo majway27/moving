@@ -48,7 +48,9 @@ def format_listing(listing):
         'location': f"{listing.get('city', '')}, {listing.get('state', '')}",
         'list_date': listing.get('timeOnZillow', ''),
         'primary_photo': listing.get('imgSrc', ''),
-        'alt_photos': []  # We'll need to handle additional photos differently if available
+        'alt_photos': [],  # We'll need to handle additional photos differently if available
+        'latitude': listing.get('latitude', None),  # Extract latitude
+        'longitude': listing.get('longitude', None)  # Extract longitude
     }
     
     #print(f"Successfully formatted listing for: {formatted['address']}")

@@ -124,45 +124,44 @@ class ResidenceSearch:
         
         return None
 
-    def filter_results(self, 
-                      results: List[Dict[str, Any]], 
-                      modality: str,
-                      exclude_pending: bool = True,
-                      exclude_new_construction: bool = False) -> List[Dict[str, Any]]:
-        """
-        Filter results based on various criteria.
+    def filter_results(self, results, modality, exclude_pending=True, exclude_new_construction=False):
+        """Filter raw search results based on specified criteria"""
+        filtered = []
         
-        Args:
-            results: List of property results to filter
-            modality: "own" or "rent"
-            exclude_pending: Remove pending sales/applications
-            exclude_new_construction: Remove new construction properties
-        """
-        if not results:
-            return []
-
-        original_count = len(results)
-        filtered_results = results.copy()
-
-        # Remove pending listings if requested
-        if exclude_pending:
-            before_count = len(filtered_results)
-            filtered_results = [
-                result for result in filtered_results
-                if not any(status.lower() in str(result.get("status", "")).lower() 
-                          for status in ["pending", "application pending", "under contract"])
-            ]
-            print(f"Pending filter removed {before_count - len(filtered_results)} listings")
-
-        # Remove new construction if requested
-        if exclude_new_construction:
-            before_count = len(filtered_results)
-            filtered_results = [
-                result for result in filtered_results
-                if not result.get("new_construction", False)
-            ]
-            print(f"New construction filter removed {before_count - len(filtered_results)} listings")
-
-        print(f"Total: Started with {original_count} listings, ended with {len(filtered_results)} listings")
+        for result in results:
+            # Skip if missing critical data
+            if not result:
+                continue
+            
+            # Get the price based on modality
+            if modality == "rent":
+                price = result.get('price')
+            else:  # own
+                price = result.get('price')
+            
+            # Skip if no price
+            if not price:
+                continue
+            
+            # Apply price range filters
+            if modality == "rent":
+                if not (1500 <= price <= 2700):  # Hard-coded for now, could be parameterized
+                    continue
+            else:  # own
+                if not (450000 <= price <= 500000):
+                    continue
+                
+            # Skip pending if specified
+            if exclude_pending:
+                status = result.get('homeStatus', '').upper()
+                if 'PENDING' in status or 'UNDER_CONTRACT' in status:
+                    continue
+                
+            # Skip new construction if specified
+            if exclude_new_construction:
+                if result.get('isNewConstruction', False):
+                    continue
+                
+            filtered.append(result)
         
-        return filtered_results 
+        return filtered 
