@@ -18,7 +18,7 @@ url = "https://zillow56.p.rapidapi.com/search"
 querystring = {"location":"houston, tx","output":"json","status":"forSale","sortSelection":"priorityscore","listing_type":"by_agent","doz":"any"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -17825,7 +17825,7 @@ url = "https://zillow56.p.rapidapi.com/search_address"
 querystring = {"address":"1161 Natchez Dr College Station Texas 77845"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -28040,7 +28040,7 @@ url = "https://zillow56.p.rapidapi.com/search"
 querystring = {"polygon":"34.03959576441558 -118.50636536779786,34.0418716916327 -118.50276047888184,34.042440663894304 -118.49846894445801,34.04201393505594 -118.49417741003418,34.04087598099002 -118.4897142142334,34.03945351693672 -118.48525101843262,34.03788877892429 -118.48095948400879,34.03618175908096 -118.47683961096192,34.034190192514366 -118.47271973791504,34.031629538228394 -118.46962983312989,34.02835747861639 -118.4677415579834,34.02465847668084 -118.46671158972168,34.02081703478521 -118.46636826696778,34.01697541902413 -118.46636826696778,34.01341821237762 -118.4673982352295,34.011283816847104 -118.47100312414551,34.01057233974687 -118.47563798132325,34.01043004361143 -118.47992951574707,34.01071463564384 -118.48439271154786,34.01156840601794 -118.48868424597168,34.01270675316253 -118.49297578039551,34.01398737545716 -118.49709565344239,34.01555255425154 -118.50104386511231,34.01754455825562 -118.50464875402832,34.02039019717532 -118.50756699743653,34.02352028980117 -118.50962693395996,34.02707707311613 -118.51065690222168,34.03063370735633 -118.50997025671387,34.034190192514366 -118.5091119498291,34.03774652858273 -118.50825364294434,34.03959576441558 -118.50636536779786","output":"json","status":"forSale","sortSelection":"priorityscore","listing_type":"by_agent","doz":"any"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -45847,7 +45847,7 @@ url = "https://zillow56.p.rapidapi.com/search_mls"
 querystring = {"mls":"1773438"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -45877,7 +45877,7 @@ url = "https://zillow56.p.rapidapi.com/search_coordinates"
 querystring = {"status":"forSale","output":"json","sort":"priorityscore","listing_type":"by_agent","doz":"any","long":"-118.504744","lat":"34.01822","d":"0.1"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -45980,7 +45980,7 @@ url = "https://zillow56.p.rapidapi.com/search_url"
 querystring = {"url":"https://www.zillow.com/homes/for_sale/2_p/?searchQueryState=%7B%22pagination%22%3A%7B%22currentPage%22%3A2%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-112.39143704189931%2C%22east%22%3A-110.78468655361806%2C%22south%22%3A32.79032628812945%2C%22north%22%3A33.7227901388417%7D%2C%22isMapVisible%22%3Atrue%2C%22filterState%22%3A%7B%22con%22%3A%7B%22value%22%3Afalse%7D%2C%22apa%22%3A%7B%22value%22%3Afalse%7D%2C%22mf%22%3A%7B%22value%22%3Afalse%7D%2C%22ah%22%3A%7B%22value%22%3Atrue%7D%2C%22sort%22%3A%7B%22value%22%3A%22globalrelevanceex%22%7D%2C%22land%22%3A%7B%22value%22%3Afalse%7D%2C%22manu%22%3A%7B%22value%22%3Afalse%7D%2C%22apco%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isListVisible%22%3Atrue%7D","page":"3","output":"json","listing_type":"by_agent"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -47485,7 +47485,7 @@ url = "https://zillow56.p.rapidapi.com/propertyV2"
 querystring = {"zpid":"7594920"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -56370,7 +56370,7 @@ url = "https://zillow56.p.rapidapi.com/photos"
 querystring = {"zpid":"2110846380"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -57783,7 +57783,7 @@ url = "https://zillow56.p.rapidapi.com/walk_transit_bike_score"
 querystring = {"zpid":"20485700"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -57829,7 +57829,7 @@ url = "https://zillow56.p.rapidapi.com/zestimate_history"
 querystring = {"zpid":"20476226"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -58460,7 +58460,7 @@ url = "https://zillow56.p.rapidapi.com/price_tax_history"
 querystring = {"zpid":"2057208081"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -58483,7 +58483,7 @@ url = "https://zillow56.p.rapidapi.com/rent_estimate"
 querystring = {"address":"1545 Yale St, Santa Monica, CA 90404"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -60835,7 +60835,7 @@ url = "https://zillow56.p.rapidapi.com/similar_properties"
 querystring = {"zpid":"28253016"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -61403,7 +61403,7 @@ url = "https://zillow56.p.rapidapi.com/similar_sold_properties"
 querystring = {"zpid":"28401079"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -61826,7 +61826,7 @@ url = "https://zillow56.p.rapidapi.com/similar_rent_properties"
 querystring = {"zpid":"49020292"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -62384,7 +62384,7 @@ url = "https://zillow56.p.rapidapi.com/market_data"
 querystring = {"location":"houston, tx"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
@@ -63160,7 +63160,7 @@ url = "https://zillow56.p.rapidapi.com/mortgage/rates"
 querystring = {"program":"Fixed30Year","state":"US","refinance":"false","loanType":"Conventional","loanAmount":"Conforming","loanToValue":"Normal","creditScore":"Low","duration":"30"}
 
 headers = {
-	"x-rapidapi-key": "a598c3550amshbbce5cf4069a6bcp12875cjsn3e7a28e955c8",
+	"x-rapidapi-key": "YOUR-KEY-HERE",
 	"x-rapidapi-host": "zillow56.p.rapidapi.com"
 }
 
