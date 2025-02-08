@@ -1,5 +1,5 @@
 from typing import List, Dict, Any, Optional
-from client.rapid_api_client import ZillowClient
+from client.rapid_api_client_residence import ZillowClient
 import json
 import os
 import csv

@@ -15,7 +15,16 @@ except ImportError:
     RAPID_API_KEY = os.getenv("RAPID_API_KEY")
 
 class ZillowClient:
-    """Client for interacting with the Zillow Rapid API."""
+    """
+    Client for interacting with the Zillow Rapid API.
+    
+    This client provides methods to search for residential properties
+    for both sale and rent through the Zillow API interface.
+    
+    Attributes:
+        base_url (str): The base URL for the Zillow API endpoint
+        headers (dict): Headers required for API authentication
+    """
     
     def __init__(self):
         if not RAPID_API_KEY:
@@ -35,19 +44,29 @@ class ZillowClient:
                          page: int = 1,
                          num_pages: int = 1) -> Dict[str, Any]:
         """
-        Search for properties using the Zillow API.
+        Search for residential properties using the Zillow API.
         
         Args:
             location: City and state (e.g., "Denver, CO")
-            property_type: "sale" or "rent"
-            min_price: Minimum price filter
-            max_price: Maximum price filter
-            page: Starting page number
+            property_type: Type of listing - either "sale" or "rent"
+            min_price: Minimum price filter in USD
+            max_price: Maximum price filter in USD
+            page: Starting page number for pagination
             num_pages: Number of pages to retrieve
             
         Returns:
-            Dict containing search results and metadata
+            Dict containing:
+                - data: List of property results
+                - total_results: Number of results found
+                - pages_retrieved: Number of pages successfully retrieved
+                
+        Raises:
+            ValueError: If property_type is invalid
+            Exception: For API-related errors (rate limits, server errors, etc.)
         """
+        if property_type.lower() not in ["sale", "rent"]:
+            raise ValueError("property_type must be either 'sale' or 'rent'")
+            
         all_results = []
         
         for current_page in range(page, page + num_pages):
@@ -85,17 +104,15 @@ class ZillowClient:
                     time.sleep(1)  # Basic rate limiting between pages
                     
             except requests.exceptions.RequestException as e:
-                if response.status_code == 429:
-                    raise Exception("429: Rate limit exceeded")
-                elif response.status_code == 500:
-                    raise Exception("500: Server error")
-                else:
-                    raise Exception(f"API request failed: {str(e)}")
+                if hasattr(e, 'response') and e.response is not None:
+                    if e.response.status_code == 429:
+                        raise Exception("429: Rate limit exceeded") from e
+                    elif e.response.status_code == 500:
+                        raise Exception("500: Server error") from e
+                raise Exception(f"API request failed: {str(e)}") from e
         
         return {
             "data": all_results,
             "total_results": len(all_results),
             "pages_retrieved": num_pages
-        }
-
-    
+        } 
