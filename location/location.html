@@ -16,32 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">Relocation Planner</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Metro
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item active" href="#">Profiles</a></li>
-                            <li><a class="dropdown-item" href="map/denver.html">Denver</a></li>
-                            <li><a class="dropdown-item" href="map/phoenix.html">Phoenix</a></li>
-                            <li><a class="dropdown-item" href="map/minneapolis.html">Minneapolis</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../jobs/jobs.html">Jobs</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- The navigation will be inserted here automatically -->
 
     <div class="container mt-4">
         <h1>Metro Area Profiles</h1>
@@ -52,6 +27,8 @@
         </div>
     </div>
 
+    <!-- Add the navigation script before your other scripts -->
+    <script src="../shared/navigation.js"></script>
     <script>
         async function loadMetroAreas() {
             try {
