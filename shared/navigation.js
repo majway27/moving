@@ -125,8 +125,14 @@ function getRelativePath(targetPath) {
         const depth = (relativePath.match(/\//g) || []).length - 1;
         return '../'.repeat(depth) + 'index.html';
     }
-    const currentDepth = (relativePath.match(/\//g) || []).length - 1;
-    const prefix = '../'.repeat(Math.max(0, currentDepth - 1));
+
+    // Calculate the current directory depth
+    const currentParts = relativePath.split('/').filter(Boolean);
+    // Remove the filename from the count
+    const currentDepth = currentParts.length - 1;
+    
+    // Calculate relative path prefix
+    const prefix = '../'.repeat(currentDepth);
     return prefix + targetPath.replace(/^\//, '');
 }
 

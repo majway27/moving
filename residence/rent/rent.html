@@ -35,17 +35,34 @@
             white-space: normal;
             word-wrap: break-word;
         }
+        .filters-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: flex-start;
+            max-width: 100%;
+        }
     </style>
 </head>
 <body>
     <!-- The navigation will be inserted here automatically -->
     
     <div class="container mt-3">
-        <div class="btn-group" role="group" aria-label="Download controls">
-            <button id="download-csv" class="btn btn-outline-primary">Download CSV</button>
-            <button id="download-json" class="btn btn-outline-primary">Download JSON</button>
-            <button id="download-xlsx" class="btn btn-outline-primary">Download XLSX</button>
-            <button id="download-pdf" class="btn btn-outline-primary">Download PDF</button>
+        <div class="d-flex flex-column gap-2">
+            <div class="btn-group" role="group" aria-label="Download controls">
+                <button id="download-csv" class="btn btn-outline-primary">Download CSV</button>
+                <button id="download-json" class="btn btn-outline-primary">Download JSON</button>
+                <button id="download-xlsx" class="btn btn-outline-primary">Download XLSX</button>
+                <button id="download-pdf" class="btn btn-outline-primary">Download PDF</button>
+            </div>
+            <div class="filters-container">
+                <span class="badge bg-info">🐕 Pet-Friendly</span>
+                <span class="badge bg-secondary">🏠 Single Family Homes Only</span>
+                <span class="badge bg-secondary">❌ No Apartments</span>
+                <span class="badge bg-secondary">❌ No Condos</span>
+                <span class="badge bg-secondary">❌ No Townhouses</span>
+                <span class="badge bg-secondary">❌ No Manufactured Homes</span>
+            </div>
         </div>
     </div>
 
@@ -92,19 +109,19 @@
                 },
                 {
                     title: "Beds", 
-                    field: "bedrooms", 
+                    field: "beds", 
                     width: 80,
                     headerFilter: "input"
                 },
                 {
                     title: "Baths", 
-                    field: "bathrooms", 
+                    field: "baths", 
                     width: 80,
                     headerFilter: "input"
                 },
                 {
                     title: "Sqft", 
-                    field: "livingArea", 
+                    field: "sqft", 
                     width: 100,
                     headerFilter: "input"
                 },

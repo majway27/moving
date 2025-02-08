@@ -94,6 +94,8 @@ class ZillowClient:
                 querystring["isCondo"] = "false"
                 querystring["isManufactured"] = "false"
                 querystring["isTownhouse"] = "false"
+                # Add filter for pet-friendly rentals
+                querystring["onlyRentalLargeDogsAllowed"] = "true"
             else:  # sale
                 querystring["status"] = "forSale"
             
