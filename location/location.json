@@ -19,11 +19,83 @@
           }
         },
         {
+          "name": "Brighton",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.9852,
+            "lng": -104.8205
+          }
+        },
+        {
+          "name": "Broomfield",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.9205,
+            "lng": -105.0867
+          }
+        },
+        {
+          "name": "Centennial",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.5792,
+            "lng": -104.8768
+          }
+        },
+        {
+          "name": "Erie",
+          "state": "CO",
+          "coordinates": {
+            "lat": 40.0505,
+            "lng": -105.0497
+          }
+        },
+        {
+          "name": "Lafayette",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.9994,
+            "lng": -105.0897
+          }
+        },
+        {
           "name": "Lakewood",
           "state": "CO",
           "coordinates": {
             "lat": 39.7047,
             "lng": -105.0814
+          }
+        },
+        {
+          "name": "Longmont",
+          "state": "CO",
+          "coordinates": {
+            "lat": 40.1672,
+            "lng": -105.1019
+          }
+        },
+        {
+          "name": "Parker",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.5186,
+            "lng": -104.7613
+          }
+        },
+        {
+          "name": "Thornton",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.8680,
+            "lng": -104.9719
+          }
+        },
+        {
+          "name": "Westminster",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.8366,
+            "lng": -105.0372
           }
         }
       ],

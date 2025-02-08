@@ -1,0 +1,18 @@
+[
+  {
+    "address": "3227 Billington Dr, Erie, CO",
+    "price": 2600.0,
+    "beds": 3.0,
+    "baths": 3.0,
+    "sqft": 1486.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/54989093_zpid/",
+    "location": "Erie, CO",
+    "list_date": 5684015000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/a6c28faa7c3602f5b2804b219a1e43e8-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 40.015926,
+    "longitude": -105.09775
+  }
+]

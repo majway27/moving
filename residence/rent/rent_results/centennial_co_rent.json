@@ -1,0 +1,18 @@
+[
+  {
+    "address": "7293 S Sherman St, Centennial, CO",
+    "price": 2700.0,
+    "beds": 4.0,
+    "baths": 2.0,
+    "sqft": 1188.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/13165750_zpid/",
+    "location": "Centennial, CO",
+    "list_date": 17475712000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/b3fa41d00c2fdbdb9fe4d9c95999dc94-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 39.585064,
+    "longitude": -104.986496
+  }
+]

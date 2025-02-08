@@ -1,0 +1,18 @@
+[
+  {
+    "address": "10247 Nottingham Trl, Eden Prairie, MN",
+    "price": 2700.0,
+    "beds": 3.0,
+    "baths": 3.0,
+    "sqft": 2058.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/1928626_zpid/",
+    "location": "Eden Prairie, MN",
+    "list_date": 4556400000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/eeb7c4c3b7adb87fb3b3bdbe7b449e81-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 44.82697,
+    "longitude": -93.40559
+  }
+]

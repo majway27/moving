@@ -1,0 +1,34 @@
+[
+  {
+    "address": "19624 E Hollow Creek Dr, Parker, CO",
+    "price": 2699.0,
+    "beds": 3.0,
+    "baths": 3.0,
+    "sqft": 1569.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/13475591_zpid/",
+    "location": "Parker, CO",
+    "list_date": 1878304000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/d2fe0629ebf66bebf323c1ddd356fb93-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 39.49061,
+    "longitude": -104.760765
+  },
+  {
+    "address": "19648 E Elk Creek Dr, Parker, CO",
+    "price": 2645.0,
+    "beds": 3.0,
+    "baths": 3.0,
+    "sqft": 1403.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/13475736_zpid/",
+    "location": "Parker, CO",
+    "list_date": 2820275000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/ba63de41717bf91bfbeb7ef4c0eba911-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 39.488216,
+    "longitude": -104.76076
+  }
+]

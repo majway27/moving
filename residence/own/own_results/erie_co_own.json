@@ -1,0 +1,34 @@
+[
+  {
+    "address": "257 Jackson Dr, Erie, CO",
+    "price": 480000.0,
+    "beds": 3.0,
+    "baths": 3.0,
+    "sqft": 1368.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/109686115_zpid/",
+    "location": "Erie, CO",
+    "list_date": 263760000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/dc6a6e1d649695c030cbcfc266981795-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 40.04537,
+    "longitude": -105.05802
+  },
+  {
+    "address": "Randem Plan, Erie Highlands, Erie, CO",
+    "price": 494900.0,
+    "beds": 2.0,
+    "baths": 3.0,
+    "sqft": 1438.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/2065796912_zpid/",
+    "location": "Erie, CO",
+    "list_date": 990695000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/8e6997321bca8bb667d71d268bdd2589-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 40.041683,
+    "longitude": -105.02737
+  }
+]

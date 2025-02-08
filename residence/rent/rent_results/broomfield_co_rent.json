@@ -1,0 +1,34 @@
+[
+  {
+    "address": "2843 Calkins Pl, Broomfield, CO",
+    "price": 2595.0,
+    "beds": 3.0,
+    "baths": 3.0,
+    "sqft": 1921.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/60232161_zpid/",
+    "location": "Broomfield, CO",
+    "list_date": 701094000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/98e5d13d9318c5a20d6b64d97709e91f-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 39.926033,
+    "longitude": -105.02286
+  },
+  {
+    "address": "345 Main St, Broomfield, CO",
+    "price": 2600.0,
+    "beds": 3.0,
+    "baths": 2.0,
+    "sqft": 1800.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/60237736_zpid/",
+    "location": "Broomfield, CO",
+    "list_date": 2511948000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/8202903c52058b505963ed2c6e1e0ba6-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 39.922848,
+    "longitude": -105.072235
+  }
+]
