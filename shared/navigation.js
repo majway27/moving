@@ -24,6 +24,9 @@ const navigationLinks = [
     },
 ];
 
+// Auto-detect environment and set path prefix
+const PATH_PREFIX = window.location.hostname === 'majway27.github.io' ? '/moving' : '';
+
 function createNavigation() {
     const nav = document.createElement('nav');
     nav.className = 'navbar navbar-expand-lg navbar-dark bg-primary';
@@ -114,12 +117,15 @@ function createNavigation() {
 // Helper function to calculate relative path based on current page depth
 function getRelativePath(targetPath) {
     const currentPath = window.location.pathname;
+    // Remove the production path prefix if it exists
+    const relativePath = currentPath.replace(PATH_PREFIX, '');
+    
     // If it's the home link, calculate path to root
     if (targetPath === '/index.html') {
-        const depth = (currentPath.match(/\//g) || []).length - 1;
+        const depth = (relativePath.match(/\//g) || []).length - 1;
         return '../'.repeat(depth) + 'index.html';
     }
-    const currentDepth = (currentPath.match(/\//g) || []).length - 1;
+    const currentDepth = (relativePath.match(/\//g) || []).length - 1;
     const prefix = '../'.repeat(Math.max(0, currentDepth - 1));
     return prefix + targetPath.replace(/^\//, '');
 }
