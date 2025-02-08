@@ -72,7 +72,11 @@ class ZillowClient:
         for current_page in range(page, page + num_pages):
             querystring = {
                 "location": location,
-                "page": str(current_page)
+                "page": str(current_page),
+                "output": "json",
+                "sortSelection": "priorityscore",
+                "listing_type": "by_agent",
+                "doz": "any"
             }
             
             # Add optional filters if provided
@@ -83,9 +87,15 @@ class ZillowClient:
             
             # Add property type filter
             if property_type.lower() == "rent":
-                querystring["status_type"] = "ForRent"
+                querystring["status"] = "forRent"
+                # Add filters for single-family homes only
+                querystring["isMultiFamily"] = "false"
+                querystring["isApartment"] = "false"
+                querystring["isCondo"] = "false"
+                querystring["isManufactured"] = "false"
+                querystring["isTownhouse"] = "false"
             else:  # sale
-                querystring["status_type"] = "ForSale"
+                querystring["status"] = "forSale"
             
             try:
                 response = requests.get(
