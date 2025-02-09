@@ -1,0 +1,983 @@
+[
+  {
+    "id": "98",
+    "name": "AdventHealth Avista",
+    "city": "Louisville",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.9520900",
+    "longitude": "-105.1516546"
+  },
+  {
+    "id": "314",
+    "name": "AdventHealth Castle Rock",
+    "city": "Castle Rock",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.4047309",
+    "longitude": "-104.8866840"
+  },
+  {
+    "id": "131",
+    "name": "AdventHealth Littleton",
+    "city": "Littleton",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.5762884",
+    "longitude": "-104.9861040"
+  },
+  {
+    "id": "148",
+    "name": "AdventHealth Parker",
+    "city": "Parker",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.5486133",
+    "longitude": "-104.7710383"
+  },
+  {
+    "id": "154",
+    "name": "AdventHealth Porter",
+    "city": "Denver",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.6701020",
+    "longitude": "-104.9748268"
+  },
+  {
+    "id": "893",
+    "name": "Animas Surgical Hospital",
+    "city": "Durango",
+    "serviceType": "Acute Hospital",
+    "locationType": "Rural",
+    "latitude": "37.249470",
+    "longitude": "-107.871230"
+  },
+  {
+    "id": "97",
+    "name": "Arkansas Valley Regional Medical Center",
+    "city": "La Junta",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "37.9789099",
+    "longitude": "-103.5487219"
+  },
+  {
+    "id": "192",
+    "name": "Aspen Valley Hospital",
+    "city": "Aspen",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "39.1916149",
+    "longitude": "-106.8385534"
+  },
+  {
+    "id": "763",
+    "name": "Banner Fort Collins Medical Center",
+    "city": "Fort Collins",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.5209072",
+    "longitude": "-105.0107695"
+  },
+  {
+    "id": "133",
+    "name": "Banner McKee Medical Center",
+    "city": "Loveland",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.4134003",
+    "longitude": "-105.0535514"
+  },
+  {
+    "id": "99",
+    "name": "Banner North Colorado Medical Center",
+    "city": "Greeley",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.4148060",
+    "longitude": "-104.7089000"
+  },
+  {
+    "id": "100",
+    "name": "Boulder Community Health",
+    "city": "Boulder",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.0261255",
+    "longitude": "-105.2836696"
+  },
+  {
+    "id": "101",
+    "name": "Cedar Springs Hospital",
+    "city": "Colorado Springs",
+    "serviceType": "Psychiatric Hospital",
+    "locationType": "Urban",
+    "latitude": "38.8024360",
+    "longitude": "-104.8176767"
+  },
+  {
+    "id": "102",
+    "name": "Centennial Peaks Hospital",
+    "city": "Louisville",
+    "serviceType": "Psychiatric Hospital",
+    "locationType": "Urban",
+    "latitude": "39.9518160",
+    "longitude": "-105.1482627"
+  },
+  {
+    "id": "323",
+    "name": "Children's Hospital Colorado",
+    "city": "Aurora",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "",
+    "longitude": ""
+  },
+  {
+    "id": "1136",
+    "name": "Children's Hospital Colorado - Colorado Springs",
+    "city": "Colorado Springs",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "",
+    "longitude": ""
+  },
+  {
+    "id": "132",
+    "name": "CommonSpirit - Longmont United Hospital",
+    "city": "Longmont",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.1821652",
+    "longitude": "-105.1268534"
+  },
+  {
+    "id": "137",
+    "name": "CommonSpirit - Mercy Hospital",
+    "city": "Durango",
+    "serviceType": "Acute Hospital",
+    "locationType": "Rural",
+    "latitude": "37.2361245",
+    "longitude": "-107.8257685"
+  },
+  {
+    "id": "150",
+    "name": "CommonSpirit - Penrose Hospital",
+    "city": "Colorado Springs",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "38.8655900",
+    "longitude": "-104.8218190"
+  },
+  {
+    "id": "169",
+    "name": "CommonSpirit - St. Anthony Hospital",
+    "city": "Lakewood",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7170296",
+    "longitude": "-105.1287058"
+  },
+  {
+    "id": "170",
+    "name": "CommonSpirit - St. Anthony North Hospital",
+    "city": "Westminster",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.8501177",
+    "longitude": "-105.0181551"
+  },
+  {
+    "id": "171",
+    "name": "CommonSpirit - St. Anthony Summit Hospital",
+    "city": "Frisco",
+    "serviceType": "Acute Hospital",
+    "locationType": "Rural",
+    "latitude": "39.5744309",
+    "longitude": "-106.0975203"
+  },
+  {
+    "id": "106",
+    "name": "CommonSpirit - St. Elizabeth Hospital",
+    "city": "Fort Morgan",
+    "serviceType": "Acute Hospital",
+    "locationType": "Rural",
+    "latitude": "40.2599360",
+    "longitude": "-103.7956107"
+  },
+  {
+    "id": "172",
+    "name": "CommonSpirit - St. Francis Hospital",
+    "city": "Colorado Springs",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "38.9381149",
+    "longitude": "-104.7171510"
+  },
+  {
+    "id": "1430",
+    "name": "CommonSpirit - St. Francis Hospital \u2013 Interquest",
+    "city": "Colorado Springs",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "",
+    "longitude": ""
+  },
+  {
+    "id": "173",
+    "name": "CommonSpirit - St. Mary-Corwin Hospital",
+    "city": "Pueblo",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "38.2336856",
+    "longitude": "-104.6230732"
+  },
+  {
+    "id": "175",
+    "name": "CommonSpirit - St. Thomas More Hospital",
+    "city": "Ca\u00f1on City",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "38.4557388",
+    "longitude": "-105.2297338"
+  },
+  {
+    "id": "108",
+    "name": "Community Hospital",
+    "city": "Grand Junction",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.0859300",
+    "longitude": "-108.5535710"
+  },
+  {
+    "id": "110",
+    "name": "Craig Hospital",
+    "city": "Englewood",
+    "serviceType": "Long Term Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.6543050",
+    "longitude": "-104.9786790"
+  },
+  {
+    "id": "111",
+    "name": "Delta Health",
+    "city": "Delta",
+    "serviceType": "Acute Hospital",
+    "locationType": "Rural",
+    "latitude": "38.7453999",
+    "longitude": "-108.0470000"
+  },
+  {
+    "id": "112",
+    "name": "Denver Health",
+    "city": "Denver",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7277853",
+    "longitude": "-104.9912632"
+  },
+  {
+    "id": "971",
+    "name": "Denver Regional Rehabilitation Hospital",
+    "city": "Thornton",
+    "serviceType": "Rehabilitation Hospital",
+    "locationType": "Urban",
+    "latitude": "39.850260",
+    "longitude": "-104.980414"
+  },
+  {
+    "id": "933",
+    "name": "Denver Springs",
+    "city": "Englewood",
+    "serviceType": "Psychiatric Hospital",
+    "locationType": "Urban",
+    "latitude": "39.558623",
+    "longitude": "-104.826663"
+  },
+  {
+    "id": "113",
+    "name": "East Morgan County Hospital",
+    "city": "Brush",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "40.2556764",
+    "longitude": "-103.6494749"
+  },
+  {
+    "id": "124",
+    "name": "Encompass Health Rehabilitation Hospital of Colorado Springs",
+    "city": "Colorado Springs",
+    "serviceType": "Rehabilitation Hospital",
+    "locationType": "Urban",
+    "latitude": "38.8280320",
+    "longitude": "-104.7914420"
+  },
+  {
+    "id": "313",
+    "name": "Encompass Health Rehabilitation Hospital of Littleton",
+    "city": "Littleton",
+    "serviceType": "Rehabilitation Hospital",
+    "locationType": "Urban",
+    "latitude": "39.5735943",
+    "longitude": "-105.0002630"
+  },
+  {
+    "id": "114",
+    "name": "Estes Park Health",
+    "city": "Estes Park",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "40.3715998",
+    "longitude": "-105.5155413"
+  },
+  {
+    "id": "119",
+    "name": "Family Health West",
+    "city": "Fruita",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "39.1636150",
+    "longitude": "-108.7368600"
+  },
+  {
+    "id": "120",
+    "name": "Grand River Hospital District",
+    "city": "Rifle",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "39.5211688",
+    "longitude": "-107.7700483"
+  },
+  {
+    "id": "318",
+    "name": "Gunnison Valley Health",
+    "city": "Gunnison",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "38.5510948",
+    "longitude": "-106.9243342"
+  },
+  {
+    "id": "179",
+    "name": "HCA HealthONE Aurora",
+    "city": "Aurora",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.6900823",
+    "longitude": "-104.8323774"
+  },
+  {
+    "id": "1274",
+    "name": "HCA HealthONE Centennial",
+    "city": "Centennial",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.593990",
+    "longitude": "-104.824738"
+  },
+  {
+    "id": "143",
+    "name": "HCA HealthONE Mountain Ridge",
+    "city": "Thornton",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.8636115",
+    "longitude": "-104.9855352"
+  },
+  {
+    "id": "155",
+    "name": "HCA HealthONE Presbyterian St. Luke's",
+    "city": "Denver",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7471816",
+    "longitude": "-104.9666818"
+  },
+  {
+    "id": "159",
+    "name": "HCA HealthONE Rose",
+    "city": "Denver",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7323080",
+    "longitude": "-104.9339610"
+  },
+  {
+    "id": "164",
+    "name": "HCA HealthONE Sky Ridge",
+    "city": "Lone Tree",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.5292432",
+    "longitude": "-104.8741150"
+  },
+  {
+    "id": "167",
+    "name": "HCA HealthONE Spalding",
+    "city": "Aurora",
+    "serviceType": "Rehabilitation Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7310930",
+    "longitude": "-104.8274030"
+  },
+  {
+    "id": "178",
+    "name": "HCA HealthONE Swedish",
+    "city": "Englewood",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.6541278",
+    "longitude": "-104.9815827"
+  },
+  {
+    "id": "1453",
+    "name": "Harmony Foundation, Inc.",
+    "city": "Estes Park",
+    "serviceType": "",
+    "locationType": "Rural",
+    "latitude": "",
+    "longitude": ""
+  },
+  {
+    "id": "122",
+    "name": "Haxtun Health",
+    "city": "Haxtun",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "40.6414060",
+    "longitude": "-102.6304082"
+  },
+  {
+    "id": "125",
+    "name": "Heart of the Rockies Regional Medical Center",
+    "city": "Salida",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "38.5430338",
+    "longitude": "-106.0095432"
+  },
+  {
+    "id": "126",
+    "name": "Highlands Behavioral Health System",
+    "city": "Littleton",
+    "serviceType": "Psychiatric Hospital",
+    "locationType": "Urban",
+    "latitude": "39.5627982",
+    "longitude": "-104.9077032"
+  },
+  {
+    "id": "116",
+    "name": "Intermountain Health Good Samaritan Hospital",
+    "city": "Lafayette",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.9706128",
+    "longitude": "-105.0861132"
+  },
+  {
+    "id": "117",
+    "name": "Intermountain Health Lutheran Hospital",
+    "city": "Wheat Ridge",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7681121",
+    "longitude": "-105.0898988"
+  },
+  {
+    "id": "153",
+    "name": "Intermountain Health Platte Valley Hospital",
+    "city": "Brighton",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.9645491",
+    "longitude": "-104.7685472"
+  },
+  {
+    "id": "118",
+    "name": "Intermountain Health Saint Joseph Hospital",
+    "city": "Denver",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7460056",
+    "longitude": "-104.9690877"
+  },
+  {
+    "id": "321",
+    "name": "Intermountain Health St. Mary's Regional Hospital",
+    "city": "Grand Junction",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.090485",
+    "longitude": "-108.562727"
+  },
+  {
+    "id": "1105",
+    "name": "Johnstown Heights Behavioral Health",
+    "city": "Johnstown",
+    "serviceType": "Psychiatric Hospital",
+    "locationType": "Urban",
+    "latitude": "40.404530",
+    "longitude": "-104.975310"
+  },
+  {
+    "id": "127",
+    "name": "Keefe Memorial Health Service District",
+    "city": "Cheyenne Wells",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "38.8257206",
+    "longitude": "-102.3555888"
+  },
+  {
+    "id": "128",
+    "name": "Kindred Hospital - Aurora",
+    "city": "Aurora",
+    "serviceType": "Long Term Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7542465",
+    "longitude": "-104.7871004"
+  },
+  {
+    "id": "129",
+    "name": "Kindred Hospital - Denver",
+    "city": "Denver",
+    "serviceType": "Long Term Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7462730",
+    "longitude": "-104.9643670"
+  },
+  {
+    "id": "130",
+    "name": "Kit Carson County Health Service District",
+    "city": "Burlington",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "39.3033052",
+    "longitude": "-102.2706428"
+  },
+  {
+    "id": "191",
+    "name": "Lincoln Health",
+    "city": "Hugo",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "39.1375482",
+    "longitude": "-103.4728526"
+  },
+  {
+    "id": "135",
+    "name": "Melissa Memorial Hospital",
+    "city": "Holyoke",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "40.5784653",
+    "longitude": "-102.2917193"
+  },
+  {
+    "id": "180",
+    "name": "Memorial Regional Health",
+    "city": "Craig",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "40.5186546",
+    "longitude": "-107.5802156"
+  },
+  {
+    "id": "138",
+    "name": "Middle Park Health - Kremmling/Granby",
+    "city": "Kremmling",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "40.0570253",
+    "longitude": "-106.3905021"
+  },
+  {
+    "id": "140",
+    "name": "Montrose Regional Health",
+    "city": "Montrose",
+    "serviceType": "Acute Hospital",
+    "locationType": "Rural",
+    "latitude": "38.4801120",
+    "longitude": "-107.8688830"
+  },
+  {
+    "id": "141",
+    "name": "Mt. San Rafael Hospital",
+    "city": "Trinidad",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "37.1736682",
+    "longitude": "-104.4878435"
+  },
+  {
+    "id": "142",
+    "name": "National Jewish Health",
+    "city": "Denver",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7391231",
+    "longitude": "-104.9420712"
+  },
+  {
+    "id": "144",
+    "name": "Northern Colorado Long Term Acute Hospital",
+    "city": "Johnstown",
+    "serviceType": "Long Term Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.4062380",
+    "longitude": "-104.9713110"
+  },
+  {
+    "id": "145",
+    "name": "Northern Colorado Rehabilitation Hospital",
+    "city": "Johnstown",
+    "serviceType": "Rehabilitation Hospital",
+    "locationType": "Urban",
+    "latitude": "40.4062380",
+    "longitude": "-104.9713110"
+  },
+  {
+    "id": "146",
+    "name": "OrthoColorado Hospital",
+    "city": "Lakewood",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7173480",
+    "longitude": "-105.1295420"
+  },
+  {
+    "id": "105",
+    "name": "PAM Health Specialty Hospital of Denver",
+    "city": "Denver",
+    "serviceType": "Long Term Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7435455",
+    "longitude": "-105.0350914"
+  },
+  {
+    "id": "147",
+    "name": "Pagosa Springs Medical Center",
+    "city": "Pagosa Springs",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "37.2521429",
+    "longitude": "-107.0791370"
+  },
+  {
+    "id": "930",
+    "name": "Peak View Behavioral Health",
+    "city": "Colorado Springs",
+    "serviceType": "Psychiatric Hospital",
+    "locationType": "Urban",
+    "latitude": "38.937750",
+    "longitude": "-104.712900"
+  },
+  {
+    "id": "889",
+    "name": "Pioneers Medical Center",
+    "city": "Meeker",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "40.046285",
+    "longitude": "-107.881105"
+  },
+  {
+    "id": "156",
+    "name": "Prowers Medical Center",
+    "city": "Lamar",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "38.0700127",
+    "longitude": "-102.6084133"
+  },
+  {
+    "id": "157",
+    "name": "Rangely District Hospital",
+    "city": "Rangely",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "40.0807736",
+    "longitude": "-108.8048318"
+  },
+  {
+    "id": "158",
+    "name": "Rio Grande Hospital",
+    "city": "Del Norte",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "37.6740885",
+    "longitude": "-106.3644340"
+  },
+  {
+    "id": "320",
+    "name": "San Luis Valley Health",
+    "city": "Alamosa",
+    "serviceType": "Acute Hospital",
+    "locationType": "Rural",
+    "latitude": "37.4714994",
+    "longitude": "-105.8835031"
+  },
+  {
+    "id": "316",
+    "name": "San Luis Valley Health Conejos County Hospital",
+    "city": "La Jara",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "37.2395009",
+    "longitude": "-105.9343089"
+  },
+  {
+    "id": "161",
+    "name": "Sedgwick County Health Center",
+    "city": "Julesburg",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "40.9932979",
+    "longitude": "-102.2687808"
+  },
+  {
+    "id": "165",
+    "name": "Southeast Colorado Hospital District",
+    "city": "Springfield",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "37.4041649",
+    "longitude": "-102.6124196"
+  },
+  {
+    "id": "166",
+    "name": "Southwest Health System, Inc.",
+    "city": "Cortez",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "37.3622710",
+    "longitude": "-108.5743520"
+  },
+  {
+    "id": "168",
+    "name": "Spanish Peaks Regional Health Center & Veterans Community Living Center",
+    "city": "Walsenburg",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "37.6281014",
+    "longitude": "-104.7722536"
+  },
+  {
+    "id": "176",
+    "name": "St. Vincent Health",
+    "city": "Leadville",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "39.2447937",
+    "longitude": "-106.3016021"
+  },
+  {
+    "id": "177",
+    "name": "Sterling Regional MedCenter",
+    "city": "Sterling",
+    "serviceType": "Acute Hospital",
+    "locationType": "Rural",
+    "latitude": "40.6124440",
+    "longitude": "-103.2206320"
+  },
+  {
+    "id": "896",
+    "name": "Telluride Regional Medical Center",
+    "city": "Telluride",
+    "serviceType": "Acute Hospital",
+    "locationType": "Rural",
+    "latitude": "37.937425",
+    "longitude": "-107.816355"
+  },
+  {
+    "id": "862",
+    "name": "UCHealth Broomfield Hospital",
+    "city": "Broomfield",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.910368",
+    "longitude": "-105.091499"
+  },
+  {
+    "id": "885",
+    "name": "UCHealth Grandview Hospital",
+    "city": "Colorado Springs",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "38.911022",
+    "longitude": "-104.816877"
+  },
+  {
+    "id": "917",
+    "name": "UCHealth Greeley Hospital",
+    "city": "Greeley",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.389978",
+    "longitude": "-104.760835"
+  },
+  {
+    "id": "869",
+    "name": "UCHealth Highlands Ranch Hospital",
+    "city": "Highlands Ranch",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.552120",
+    "longitude": "-105.005119"
+  },
+  {
+    "id": "891",
+    "name": "UCHealth Longs Peak Hospital",
+    "city": "Longmont",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.161380",
+    "longitude": "-105.060599"
+  },
+  {
+    "id": "134",
+    "name": "UCHealth Medical Center of the Rockies",
+    "city": "Loveland",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.4155562",
+    "longitude": "-104.9972996"
+  },
+  {
+    "id": "136",
+    "name": "UCHealth Memorial Hospital Central/UCHealth Memorial Hospital North",
+    "city": "Colorado Springs",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "38.8393845",
+    "longitude": "-104.7994262"
+  },
+  {
+    "id": "149",
+    "name": "UCHealth Parkview Medical Center",
+    "city": "Pueblo",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "38.2818350",
+    "longitude": "-104.6125580"
+  },
+  {
+    "id": "1471",
+    "name": "UCHealth Parkview Pueblo West",
+    "city": "Pueblo West",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "38.348019",
+    "longitude": "-104.709129"
+  },
+  {
+    "id": "151",
+    "name": "UCHealth Pikes Peak Regional Hospital",
+    "city": "Woodland Park",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "38.9744850",
+    "longitude": "-105.0744490"
+  },
+  {
+    "id": "319",
+    "name": "UCHealth Poudre Valley Hospital",
+    "city": "Fort Collins",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.5717564",
+    "longitude": "-105.0568925"
+  },
+  {
+    "id": "181",
+    "name": "UCHealth University of Colorado Hospital",
+    "city": "Aurora",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.742324",
+    "longitude": "-104.841665"
+  },
+  {
+    "id": "189",
+    "name": "UCHealth Yampa Valley Medical Center",
+    "city": "Steamboat Springs",
+    "serviceType": "Acute Hospital",
+    "locationType": "Rural",
+    "latitude": "40.4633902",
+    "longitude": "-106.8150962"
+  },
+  {
+    "id": "184",
+    "name": "VA Eastern Colorado Health Care System, Rocky Mountain Regional VA Medical Center",
+    "city": "Aurora",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7321194",
+    "longitude": "-104.9359022"
+  },
+  {
+    "id": "183",
+    "name": "Vail Health",
+    "city": "Vail",
+    "serviceType": "Acute Hospital",
+    "locationType": "Rural",
+    "latitude": "39.6400000",
+    "longitude": "-106.3700000"
+  },
+  {
+    "id": "185",
+    "name": "Valley View Hospital",
+    "city": "Glenwood Springs",
+    "serviceType": "Acute Hospital",
+    "locationType": "Rural",
+    "latitude": "39.532091",
+    "longitude": "-107.321607"
+  },
+  {
+    "id": "324",
+    "name": "Weisbrod Health",
+    "city": "Eads",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "38.4805615",
+    "longitude": "-102.7818628"
+  },
+  {
+    "id": "1476",
+    "name": "West Pines Behavioral Health",
+    "city": "Westminster",
+    "serviceType": "Psychiatric Hospital",
+    "locationType": "Urban",
+    "latitude": "",
+    "longitude": ""
+  },
+  {
+    "id": "315",
+    "name": "West Springs Hospital",
+    "city": "Grand Junction",
+    "serviceType": "Psychiatric Hospital",
+    "locationType": "Urban",
+    "latitude": "39.0790497",
+    "longitude": "-108.5203958"
+  },
+  {
+    "id": "188",
+    "name": "Wray Community District Hospital",
+    "city": "Wray",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "40.0754308",
+    "longitude": "-102.2341883"
+  },
+  {
+    "id": "190",
+    "name": "Yuma District Hospital",
+    "city": "Yuma",
+    "serviceType": "Critical Access Hospital",
+    "locationType": "Rural",
+    "latitude": "40.1184589",
+    "longitude": "-102.7363958"
+  }
+]

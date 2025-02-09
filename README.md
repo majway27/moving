@@ -10,14 +10,19 @@
 
 ## Setup
 
-`pip install folium`
-`pip install -U homeharvest`
+### Python VENV
 
-## Local Development
+1. `pip install folium`
+
+Optional: `pip install -U homeharvest`
+
+### Local Development
 
 `python -m http.server 8000`
 
 ## Data
+
+- https://cha.com/find-a-hospital/
 
 ### Google Maps
 
@@ -36,6 +41,19 @@
 - https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch
 - https://rapidapi.com/s.mahmoud97/api/zillow56
 - https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-glassdoor-data
+
+### Healthcare Data Sets
+
+- https://data.cms.gov/provider-data/topics/hospitals
+  - https://data.cms.gov/provider-data/topics/provider-data/
+    - "A list of the state averages for the HCAHPS survey responses. HCAHPS is a national, standardized survey of hospital patients about their experiences during a recent inpatient hospital stay."
+    - "The national average for the HCAHPS survey categories. HCAHPS is a national, standardized survey of hospital patients about their experiences during a recent inpatient hospital stay."
+    - "The Medicare Spending Per Beneficiary (MSPB) Measure shows whether Medicare spends more, less, or about the same for an episode of care (episode) at a specific hospital compared to all hospitals nationally. An MSPB episode..."
+    - "A list of ambulatory surgical center ratings for the Outpatient and Ambulatory Surgery Consumer Assessment of Healthcare Providers and Systems (OAS CAHPS) survey. The OAS CAHPS survey collects information about patients' experiences of care in..."
+  - https://data.cms.gov/provider-data/about
+    - "Centers for Medicare & Medicaid Services’ (CMS) official data that are used on the Medicare Care Compare website and directories. Our goal is to make our data readily available in open, accessible, and machine-readable formats."
+    - "Works of the U.S. Government are in the public domain and you don’t need permission to reuse them, but an attribution to the agency as the source is appreciated. Your materials, however, shouldn’t give the false impression that the government’s endorsing your commercial products or services. See [42 U.S.C 1320b-10](https://www.ssa.gov/OP_Home/ssact/title11/1140.htm)."
+
 
 ### Other
 

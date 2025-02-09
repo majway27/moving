@@ -1,4 +1,5 @@
 venv
 residence/credentials/credentials.py
 jobs/credentials/credentials.py
+employer/source/data-cms-gov/hospitals_current_data/
 __pycache__

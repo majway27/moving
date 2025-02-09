@@ -1,0 +1,308 @@
+[
+  {
+    "id": "",
+    "name": "AdventHealth Avista",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.9515206",
+    "longitude": "-105.1513772"
+  },
+  {
+    "id": "",
+    "name": "AdventHealth Parker",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.5482517",
+    "longitude": "-104.7702808"
+  },
+  {
+    "id": "",
+    "name": "AdventHealth Porter",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.6701533",
+    "longitude": "-104.9754693"
+  },
+  {
+    "id": "",
+    "name": "Children's Hospital Colorado North Campus, Broomfield",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.0013751",
+    "longitude": "-104.9931946"
+  },
+  {
+    "id": "",
+    "name": "CommonSpirit St. Anthony North Hospital",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.9557354",
+    "longitude": "-104.9913554"
+  },
+  {
+    "id": "",
+    "name": "Denver Regional Rehabilitation Hospital",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.8502597",
+    "longitude": "-104.9804143"
+  },
+  {
+    "id": "",
+    "name": "Foothills Hospital",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.0163695",
+    "longitude": "-105.2363882"
+  },
+  {
+    "id": "",
+    "name": "HCA HealthONE Aurora",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.6899801",
+    "longitude": "-104.8321279"
+  },
+  {
+    "id": "",
+    "name": "HCA HealthONE Centennial, A part of Aurora Hospital",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.5941814",
+    "longitude": "-104.8239663"
+  },
+  {
+    "id": "",
+    "name": "HCA HealthONE Mountain Ridge",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.8631925",
+    "longitude": "-104.9849814"
+  },
+  {
+    "id": "",
+    "name": "HCA HealthONE Presbyterian St. Luke's",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7466017",
+    "longitude": "-104.9666911"
+  },
+  {
+    "id": "",
+    "name": "HCA HealthONE Rose",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7319825",
+    "longitude": "-104.933581"
+  },
+  {
+    "id": "",
+    "name": "HCA HealthONE Sky Ridge",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.5291233",
+    "longitude": "-104.8708522"
+  },
+  {
+    "id": "",
+    "name": "HCA HealthONE Swedish",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.6538817",
+    "longitude": "-104.980537"
+  },
+  {
+    "id": "",
+    "name": "Health Images at Church Ranch",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.884133",
+    "longitude": "-105.076717"
+  },
+  {
+    "id": "",
+    "name": "Health Images at Longmont",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "40.1396097",
+    "longitude": "-105.1015223"
+  },
+  {
+    "id": "",
+    "name": "Health Images at North Denver",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.8603445",
+    "longitude": "-104.9842694"
+  },
+  {
+    "id": "",
+    "name": "Imaging & Radiology at CommonSpirit Longmont United Hospital",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "40.1823019",
+    "longitude": "-105.1261424"
+  },
+  {
+    "id": "",
+    "name": "Imaging & Radiology at CommonSpirit St. Anthony North Hospital",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.9554593",
+    "longitude": "-104.9913602"
+  },
+  {
+    "id": "",
+    "name": "Intermountain Health Good Samaritan Hospital",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.9699031",
+    "longitude": "-105.0869388"
+  },
+  {
+    "id": "",
+    "name": "Intermountain Health Platte Valley Hospital",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.9645491",
+    "longitude": "-104.7685472"
+  },
+  {
+    "id": "",
+    "name": "Intermountain Health Saint Joseph Hospital",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.746693",
+    "longitude": "-104.9712458"
+  },
+  {
+    "id": "",
+    "name": "Kindred Hospital Aurora",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7281238",
+    "longitude": "-104.8270471"
+  },
+  {
+    "id": "",
+    "name": "Kindred Hospital Denver",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7463953",
+    "longitude": "-104.9644783"
+  },
+  {
+    "id": "",
+    "name": "Spectrum Medical Imaging Center",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.9632718",
+    "longitude": "-104.7679969"
+  },
+  {
+    "id": "",
+    "name": "Touchstone Imaging Lafayette",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.9713813",
+    "longitude": "-105.0945063"
+  },
+  {
+    "id": "",
+    "name": "Touchstone Imaging Superior",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.9530395",
+    "longitude": "-105.1597827"
+  },
+  {
+    "id": "",
+    "name": "Touchstone Imaging Thornton",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.9151371",
+    "longitude": "-104.9823919"
+  },
+  {
+    "id": "",
+    "name": "Touchstone Imaging Wheat Ridge",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.7697663",
+    "longitude": "-105.0823859"
+  },
+  {
+    "id": "",
+    "name": "UCHealth Broomfield Hospital",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.9104107",
+    "longitude": "-105.091616"
+  },
+  {
+    "id": "",
+    "name": "UCHealth Emergency Care - Broomfield Hospital (Hospital based)",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.9103789",
+    "longitude": "-105.0914542"
+  },
+  {
+    "id": "",
+    "name": "UCHealth Highlands Ranch Hospital",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.5524741",
+    "longitude": "-105.0058856"
+  },
+  {
+    "id": "",
+    "name": "UCHealth University of Colorado Hospital (UCH)",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.7421191",
+    "longitude": "-104.8414959"
+  },
+  {
+    "id": "",
+    "name": "Vibra Hospital of Denver",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.8508844",
+    "longitude": "-104.9806956"
+  }
+]

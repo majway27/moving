@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from typing import Set, Dict, List
+from typing import Set, Dict, List, Tuple, Optional, Any
 
 
 # Employer
@@ -82,4 +82,32 @@ def remap_employer_name(employer_name: str, employer_map: dict) -> str:
     """Remap employer name using the mapping dictionary."""
     if not employer_name:
         return employer_name
-    return employer_map.get(employer_name, employer_name) 
+    return employer_map.get(employer_name, employer_name)
+
+def sort_facilities_json(file_path: Optional[Path] = None) -> None:
+    """Sort facilities JSON file alphabetically by facility name.
+    
+    Args:
+        file_path: Optional path to facilities JSON file. If None, uses default path.
+    """
+    if file_path is None:
+        file_path = Path(__file__).parent / "source" / "facilities-denver.json"
+        
+    try:
+        # Read the facilities file
+        with open(file_path, 'r') as f:
+            facilities = json.load(f)
+            
+        # Sort facilities by name
+        facilities.sort(key=lambda x: x["name"])
+        
+        # Write back sorted facilities
+        with open(file_path, 'w') as f:
+            json.dump(facilities, f, indent=2)
+            
+    except FileNotFoundError:
+        print(f"Error: Could not find facilities file at {file_path}")
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON in facilities file at {file_path}")
+    except Exception as e:
+        print(f"Error sorting facilities: {str(e)}")
