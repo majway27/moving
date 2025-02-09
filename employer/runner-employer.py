@@ -1,7 +1,7 @@
 import employer
 
 def main():
-    employer.sort_facilities_json()
+    employer.assign_missing_facility_ids()
     
 if __name__ == "__main__":
     main() 

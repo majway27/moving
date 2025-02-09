@@ -144,6 +144,15 @@
     "longitude": ""
   },
   {
+    "id": "1485",
+    "name": "Children's Hospital Colorado North Campus, Broomfield",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.0013751",
+    "longitude": "-104.9931946"
+  },
+  {
     "id": "132",
     "name": "CommonSpirit - Longmont United Hospital",
     "city": "Longmont",
@@ -151,6 +160,15 @@
     "locationType": "Urban",
     "latitude": "40.1821652",
     "longitude": "-105.1268534"
+  },
+  {
+    "id": "1486",
+    "name": "CommonSpirit - Longmont United Hospital - Imaging & Radiology",
+    "city": "Longmont",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "40.1823019",
+    "longitude": "-105.1261424"
   },
   {
     "id": "137",
@@ -189,6 +207,15 @@
     "longitude": "-105.0181551"
   },
   {
+    "id": "1487",
+    "name": "CommonSpirit - St. Anthony North Hospital - Imaging & Radiology",
+    "city": "Westminster",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.9554593",
+    "longitude": "-104.9913602"
+  },
+  {
     "id": "171",
     "name": "CommonSpirit - St. Anthony Summit Hospital",
     "city": "Frisco",
@@ -217,7 +244,7 @@
   },
   {
     "id": "1430",
-    "name": "CommonSpirit - St. Francis Hospital \u2013 Interquest",
+    "name": "CommonSpirit - St. Francis Hospital - Interquest",
     "city": "Colorado Springs",
     "serviceType": "Acute Hospital",
     "locationType": "Urban",
@@ -342,6 +369,15 @@
     "longitude": "-108.7368600"
   },
   {
+    "id": "1488",
+    "name": "Foothills Hospital",
+    "city": "",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "40.0163695",
+    "longitude": "-105.2363882"
+  },
+  {
     "id": "120",
     "name": "Grand River Hospital District",
     "city": "Rifle",
@@ -448,6 +484,33 @@
     "locationType": "Rural",
     "latitude": "40.6414060",
     "longitude": "-102.6304082"
+  },
+  {
+    "id": "1477",
+    "name": "Health Images at Church Ranch",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.884133",
+    "longitude": "-105.076717"
+  },
+  {
+    "id": "1478",
+    "name": "Health Images at Longmont",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "40.1396097",
+    "longitude": "-105.1015223"
+  },
+  {
+    "id": "1479",
+    "name": "Health Images at North Denver",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.8603445",
+    "longitude": "-104.9842694"
   },
   {
     "id": "125",
@@ -765,6 +828,15 @@
     "longitude": "-104.7722536"
   },
   {
+    "id": "1480",
+    "name": "Spectrum Medical Imaging Center",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.9632718",
+    "longitude": "-104.7679969"
+  },
+  {
     "id": "176",
     "name": "St. Vincent Health",
     "city": "Leadville",
@@ -790,6 +862,42 @@
     "locationType": "Rural",
     "latitude": "37.937425",
     "longitude": "-107.816355"
+  },
+  {
+    "id": "1481",
+    "name": "Touchstone Imaging Lafayette",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.9713813",
+    "longitude": "-105.0945063"
+  },
+  {
+    "id": "1482",
+    "name": "Touchstone Imaging Superior",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.9530395",
+    "longitude": "-105.1597827"
+  },
+  {
+    "id": "1483",
+    "name": "Touchstone Imaging Thornton",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.9151371",
+    "longitude": "-104.9823919"
+  },
+  {
+    "id": "1484",
+    "name": "Touchstone Imaging Wheat Ridge",
+    "city": "",
+    "serviceType": "Imaging Center",
+    "locationType": "Urban",
+    "latitude": "39.7697663",
+    "longitude": "-105.0823859"
   },
   {
     "id": "862",
@@ -934,6 +1042,15 @@
     "locationType": "Rural",
     "latitude": "39.532091",
     "longitude": "-107.321607"
+  },
+  {
+    "id": "1489",
+    "name": "Vibra Hospital of Denver",
+    "city": "Denver",
+    "serviceType": "Acute Hospital",
+    "locationType": "Urban",
+    "latitude": "39.8508844",
+    "longitude": "-104.9806956"
   },
   {
     "id": "324",

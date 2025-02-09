@@ -111,3 +111,46 @@ def sort_facilities_json(file_path: Optional[Path] = None) -> None:
         print(f"Error: Invalid JSON in facilities file at {file_path}")
     except Exception as e:
         print(f"Error sorting facilities: {str(e)}")
+
+def assign_missing_facility_ids(file_path: Optional[Path] = None) -> None:
+    """Assign unique IDs to facilities that don't have one.
+    
+    Args:
+        file_path: Optional path to facilities JSON file. If None, uses default path.
+    """
+    if file_path is None:
+        file_path = Path(__file__).parent / "source" / "facilities-colorado.json"
+        
+    try:
+        # Read the facilities file
+        with open(file_path, 'r') as f:
+            facilities = json.load(f)
+            
+        # Find max existing numeric ID
+        max_id = 0
+        for facility in facilities:
+            if facility.get("id", "").isdigit():
+                max_id = max(max_id, int(facility["id"]))
+                
+        # Assign new IDs to facilities without one
+        new_id = max_id + 1
+        for facility in facilities:
+            if not facility.get("id"):
+                facility["id"] = str(new_id)
+                new_id += 1
+                
+        # Sort facilities by name
+        facilities.sort(key=lambda x: x["name"])
+        
+        # Write back facilities
+        with open(file_path, 'w') as f:
+            json.dump(facilities, f, indent=2)
+            
+    except FileNotFoundError:
+        print(f"Error: Could not find facilities file at {file_path}")
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON in facilities file at {file_path}")
+    except Exception as e:
+        print(f"Error assigning facility IDs: {str(e)}")
+
+
