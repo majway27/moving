@@ -22,7 +22,7 @@ const navigationLinks = [
         title: 'Work',
         type: 'dropdown',
         items: [
-            { title: 'Jobs', path: '/jobs/jobs.html' },
+            { title: 'Jobs', path: '/job/job.html' },
             { title: 'Facilities', path: '/employer/facility/facility.html' },
             { title: 'Employers', path: '/employer/employer.html' },
         ]

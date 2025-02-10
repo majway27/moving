@@ -21,9 +21,21 @@
       ]
     },
     {
+      "name": "AH Rocky Mountain",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "AHS MedStat",
       "locations": [
         "Colorado"
+      ]
+    },
+    {
+      "name": "AHS Staffing",
+      "locations": [
+        "Minnesota"
       ]
     },
     {
@@ -71,6 +83,36 @@
       ]
     },
     {
+      "name": "AdventHealth Avista",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "AdventHealth Parker",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Adventhealth",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Advocate Aurora Health",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Aequor Allied",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "Aequor Healthcare",
       "locations": [
         "Arizona",
@@ -82,6 +124,12 @@
       "locations": [
         "Colorado",
         "Minnesota"
+      ]
+    },
+    {
+      "name": "All Med Search",
+      "locations": [
+        "Colorado"
       ]
     },
     {
@@ -100,7 +148,38 @@
       ]
     },
     {
+      "name": "Allina Health System",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
       "name": "Allina Health Systems",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "American Family Care Centennial",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "American Traveler",
+      "locations": [
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "American Traveler Allied Health",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Anders Group",
       "locations": [
         "Colorado"
       ]
@@ -115,6 +194,12 @@
       "name": "Arizona Diagnostic Radiology",
       "locations": [
         "Arizona"
+      ]
+    },
+    {
+      "name": "Aura Staffing Partners",
+      "locations": [
+        "Colorado"
       ]
     },
     {
@@ -140,9 +225,33 @@
       ]
     },
     {
+      "name": "Aya Healthcare, Inc.",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "Banner Health",
       "locations": [
         "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Bestica",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Boulder Community Health",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Cambay Healthcare LLC",
+      "locations": [
         "Colorado"
       ]
     },
@@ -159,9 +268,27 @@
       ]
     },
     {
+      "name": "Childrens Hospital Colorado",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "City of Hope",
       "locations": [
         "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Clinical Management Consultants",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "ClubStaffing",
+      "locations": [
         "Colorado"
       ]
     },
@@ -192,9 +319,16 @@
       ]
     },
     {
-      "name": "Core Staffing",
+      "name": "Core Medical Group",
       "locations": [
         "Colorado"
+      ]
+    },
+    {
+      "name": "Core Staffing",
+      "locations": [
+        "Colorado",
+        "Minnesota"
       ]
     },
     {
@@ -216,6 +350,12 @@
       ]
     },
     {
+      "name": "Dignity Health",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
       "name": "Epic Travel Staffing",
       "locations": [
         "Arizona",
@@ -224,10 +364,28 @@
       ]
     },
     {
+      "name": "Epic Travel Staffing Allied",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Ethos Veterinary Health",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "Fairview Health Services",
       "locations": [
         "Colorado",
         "Minnesota"
+      ]
+    },
+    {
+      "name": "First Look MRI",
+      "locations": [
+        "Colorado"
       ]
     },
     {
@@ -246,13 +404,32 @@
     {
       "name": "FlexCare Medical Staffing",
       "locations": [
-        "Arizona"
+        "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Focus Staff Services",
+      "locations": [
+        "Colorado"
       ]
     },
     {
       "name": "Fusion Medical Staffing",
       "locations": [
         "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "GLC On-The-Go",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "GQR",
+      "locations": [
         "Colorado"
       ]
     },
@@ -264,7 +441,19 @@
       ]
     },
     {
+      "name": "GQR Healthcare-Allied",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
       "name": "Genie Healthcare",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "GetMed Staffing, Inc.",
       "locations": [
         "Colorado"
       ]
@@ -283,13 +472,37 @@
       ]
     },
     {
+      "name": "HAN Staff",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "HCA HealthONE Aurora",
       "locations": [
         "Colorado"
       ]
     },
     {
+      "name": "HCA HealthONE Centennial",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "HCA HealthONE Mountain Ridge",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "HCA HealthONE Presbyterian St. Luke's",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "HCA HealthONE Sky Ridge",
       "locations": [
         "Colorado"
       ]
@@ -309,6 +522,7 @@
     {
       "name": "HealthOp",
       "locations": [
+        "Arizona",
         "Colorado"
       ]
     },
@@ -320,6 +534,12 @@
     },
     {
       "name": "HealthTrust Workforce Solutions HCA",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Healthcare Support",
       "locations": [
         "Colorado"
       ]
@@ -338,6 +558,12 @@
       ]
     },
     {
+      "name": "Highmark Health",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "HonorHealth",
       "locations": [
         "Arizona"
@@ -353,6 +579,12 @@
       "name": "Host Healthcare",
       "locations": [
         "Arizona",
+        "Colorado"
+      ]
+    },
+    {
+      "name": "IDR Healthcare",
+      "locations": [
         "Colorado"
       ]
     },
@@ -414,6 +646,12 @@
       ]
     },
     {
+      "name": "K.A. Recruiting",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "KA Recruiting Inc.",
       "locations": [
         "Colorado",
@@ -466,6 +704,18 @@
       ]
     },
     {
+      "name": "LocumJobsOnline",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "LocumJobsOnline Careers",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
       "name": "MLee Healthcare Staffing and Recruiting",
       "locations": [
         "Colorado",
@@ -485,6 +735,12 @@
       ]
     },
     {
+      "name": "Maple Grove Hospital",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
       "name": "Mayo Clinic",
       "locations": [
         "Arizona",
@@ -499,6 +755,12 @@
     },
     {
       "name": "MedPro Healthcare Staffing",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "MedPro Staffing",
       "locations": [
         "Colorado"
       ]
@@ -531,6 +793,12 @@
       ]
     },
     {
+      "name": "Monument Health",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "Mountain Vista Medical Center",
       "locations": [
         "Arizona",
@@ -538,7 +806,25 @@
       ]
     },
     {
+      "name": "NavitsPartners",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
       "name": "Next GenHealth Staffing",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "NextCare",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Nightingale Nurses",
       "locations": [
         "Colorado"
       ]
@@ -560,6 +846,18 @@
       "name": "NurseRecruiter",
       "locations": [
         "Arizona"
+      ]
+    },
+    {
+      "name": "OHS Healthcare",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Ochsner Health System",
+      "locations": [
+        "Colorado"
       ]
     },
     {
@@ -609,8 +907,33 @@
       ]
     },
     {
+      "name": "Phoenix Children\u2019s",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
+      "name": "Platte Valley Medical Center",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Please Contact for Facility Info",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Presbyterian St Luke's Medical Center",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "Prime Time Healthcare",
       "locations": [
+        "Arizona",
         "Colorado"
       ]
     },
@@ -674,6 +997,12 @@
       ]
     },
     {
+      "name": "Rhino Medical Services",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
       "name": "Russell Tobin",
       "locations": [
         "Colorado",
@@ -691,6 +1020,12 @@
       "name": "SOUTHWEST MEDICAL IMAGING.",
       "locations": [
         "Arizona"
+      ]
+    },
+    {
+      "name": "Select Medical",
+      "locations": [
+        "Colorado"
       ]
     },
     {
@@ -723,7 +1058,8 @@
       "name": "SimonMed Imaging",
       "locations": [
         "Arizona",
-        "Colorado"
+        "Colorado",
+        "Minnesota"
       ]
     },
     {
@@ -734,6 +1070,18 @@
     },
     {
       "name": "Simonmed Imgaging",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Sisters of Charity of Leavenworth Health System",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Sky Ridge South Parker ER",
       "locations": [
         "Colorado"
       ]
@@ -771,7 +1119,31 @@
       ]
     },
     {
+      "name": "Spectrum Medical Imaging",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Spectrum Medical Imaging - Brighton, CO",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Springboard Healthcare",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "St. Anthony Hospital",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "St. Anthony North Hospital",
       "locations": [
         "Colorado"
       ]
@@ -793,6 +1165,12 @@
       "locations": [
         "Colorado",
         "Minnesota"
+      ]
+    },
+    {
+      "name": "Sunbelt Staffing",
+      "locations": [
+        "Colorado"
       ]
     },
     {
@@ -854,6 +1232,18 @@
       ]
     },
     {
+      "name": "The Medical Center of Aurora",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "The Medicus Firm",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
       "name": "The US Oncology Network",
       "locations": [
         "Colorado"
@@ -864,6 +1254,12 @@
       "locations": [
         "Arizona",
         "Colorado"
+      ]
+    },
+    {
+      "name": "Titan Medical Group",
+      "locations": [
+        "Minnesota"
       ]
     },
     {
@@ -911,6 +1307,12 @@
       ]
     },
     {
+      "name": "Trustaff",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "Twin Cities Orthopedics",
       "locations": [
         "Minnesota"
@@ -941,6 +1343,12 @@
       ]
     },
     {
+      "name": "Unclassified",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "Uniti Med",
       "locations": [
         "Colorado",
@@ -961,6 +1369,12 @@
       ]
     },
     {
+      "name": "University of Minnesota",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
       "name": "Valleywise Health",
       "locations": [
         "Arizona",
@@ -974,10 +1388,30 @@
       ]
     },
     {
-      "name": "Vivian Health",
+      "name": "Vetted",
       "locations": [
         "Arizona",
         "Colorado"
+      ]
+    },
+    {
+      "name": "Vetted Health",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Vibra Healthcare",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Vivian Health",
+      "locations": [
+        "Arizona",
+        "Colorado",
+        "Minnesota"
       ]
     },
     {
@@ -1017,6 +1451,12 @@
     },
     {
       "name": "i4 Search Group Healthcare",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "\u00b0Nomad Health",
       "locations": [
         "Colorado"
       ]
