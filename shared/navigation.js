@@ -19,8 +19,13 @@ const navigationLinks = [
         ]
     },
     { 
-        title: 'Jobs', 
-        path: '/jobs/jobs.html'
+        title: 'Work',
+        type: 'dropdown',
+        items: [
+            { title: 'Jobs', path: '/jobs/jobs.html' },
+            { title: 'Facilities', path: '/employer/facility/facility.html' },
+            { title: 'Employers', path: '/employer/employer.html' },
+        ]
     },
 ];
 
@@ -122,17 +127,18 @@ function getRelativePath(targetPath) {
     
     // If it's the home link, calculate path to root
     if (targetPath === '/index.html') {
-        const depth = (relativePath.match(/\//g) || []).length - 1;
-        return '../'.repeat(depth) + 'index.html';
+        // Count the number of directory levels, ensuring it's at least 0
+        const depth = Math.max(0, (relativePath.match(/\//g) || []).length - 1);
+        return depth === 0 ? 'index.html' : '../'.repeat(depth) + 'index.html';
     }
 
     // Calculate the current directory depth
     const currentParts = relativePath.split('/').filter(Boolean);
     // Remove the filename from the count
-    const currentDepth = currentParts.length - 1;
+    const currentDepth = Math.max(0, currentParts.length - 1);
     
     // Calculate relative path prefix
-    const prefix = '../'.repeat(currentDepth);
+    const prefix = currentDepth === 0 ? '' : '../'.repeat(currentDepth);
     return prefix + targetPath.replace(/^\//, '');
 }
 
