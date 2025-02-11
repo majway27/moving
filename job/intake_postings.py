@@ -1,16 +1,15 @@
+import sys
+from pathlib import Path
 from typing import List, Dict, Any, Optional
-from job.client.rapid_api_client import JobSearchClient
 import json
 import os
 import csv
 import datetime
-import sys
-from pathlib import Path
 
 # Add project root to Python path
 sys.path.append(str(Path(__file__).parent.parent))
 
-# Now we can import from employer and location modules
+from job.client.rapid_api_client import JobSearchClient
 from employer.employer import (
     update_employers, 
     load_excluded_employers,

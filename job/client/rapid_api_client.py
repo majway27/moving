@@ -1,6 +1,11 @@
+import sys
+from pathlib import Path
 import requests
 from typing import Dict, Any, Optional
 from job.credentials.credentials import RAPID_API_KEY
+
+# Add project root to Python path
+sys.path.append(str(Path(__file__).parent.parent.parent))
 
 class JobSearchClient:
     """Client for interacting with the JSearch RapidAPI."""

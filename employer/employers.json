@@ -168,6 +168,7 @@
     {
       "name": "American Traveler",
       "locations": [
+        "Arizona",
         "Colorado",
         "Minnesota"
       ]
@@ -227,7 +228,8 @@
     {
       "name": "Aya Healthcare, Inc.",
       "locations": [
-        "Colorado"
+        "Colorado",
+        "Minnesota"
       ]
     },
     {
@@ -251,6 +253,12 @@
     },
     {
       "name": "Cambay Healthcare LLC",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "CareNow",
       "locations": [
         "Colorado"
       ]
@@ -422,6 +430,12 @@
       ]
     },
     {
+      "name": "Fusion Medical Staffing-Radiology",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
       "name": "GLC On-The-Go",
       "locations": [
         "Colorado"
@@ -455,6 +469,7 @@
     {
       "name": "GetMed Staffing, Inc.",
       "locations": [
+        "Arizona",
         "Colorado"
       ]
     },
@@ -496,6 +511,12 @@
       ]
     },
     {
+      "name": "HCA HealthONE Orthopedic Specialists",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "HCA HealthONE Presbyterian St. Luke's",
       "locations": [
         "Colorado"
@@ -529,7 +550,8 @@
     {
       "name": "HealthPartners",
       "locations": [
-        "Colorado"
+        "Colorado",
+        "Minnesota"
       ]
     },
     {
@@ -684,6 +706,12 @@
       ]
     },
     {
+      "name": "Kiwi Healthcare",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
       "name": "Kurz Solutions",
       "locations": [
         "Arizona",
@@ -692,6 +720,12 @@
     },
     {
       "name": "LRS Healthcare - Allied",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Lafayette",
       "locations": [
         "Colorado"
       ]
@@ -735,6 +769,12 @@
       ]
     },
     {
+      "name": "Magnet Medical",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "Maple Grove Hospital",
       "locations": [
         "Minnesota"
@@ -749,6 +789,12 @@
     },
     {
       "name": "Med Career Solutions",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "MedPro Healthcare Allied Staffing",
       "locations": [
         "Colorado"
       ]
@@ -793,6 +839,12 @@
       ]
     },
     {
+      "name": "Mistras Group Inc. - Services",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "Monument Health",
       "locations": [
         "Colorado"
@@ -813,6 +865,12 @@
     },
     {
       "name": "Next GenHealth Staffing",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Next Move Healthcare",
       "locations": [
         "Colorado"
       ]
@@ -839,6 +897,18 @@
       "name": "Noran Neurological Clinic PA",
       "locations": [
         "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Norman Regional Health System",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "North Memorial - Maple Grove",
+      "locations": [
         "Minnesota"
       ]
     },
@@ -888,10 +958,22 @@
       ]
     },
     {
+      "name": "PROVIDENCE ST JOHNS HEALTH CENTER",
+      "locations": [
+        "Minnesota"
+      ]
+    },
+    {
       "name": "Park Nicollet Health Services",
       "locations": [
         "Colorado",
         "Minnesota"
+      ]
+    },
+    {
+      "name": "Phaxis",
+      "locations": [
+        "Colorado"
       ]
     },
     {
@@ -1010,6 +1092,12 @@
       ]
     },
     {
+      "name": "SMI IMAGING LLC",
+      "locations": [
+        "Arizona"
+      ]
+    },
+    {
       "name": "SOUTHWEST MEDICAL IMAGING",
       "locations": [
         "Arizona",
@@ -1087,6 +1175,18 @@
       ]
     },
     {
+      "name": "Skyline Med Staff",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
+      "name": "Skyline Med Staff Allied",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "Soliant",
       "locations": [
         "Colorado"
@@ -1109,7 +1209,8 @@
     {
       "name": "Southdale Hospital",
       "locations": [
-        "Colorado"
+        "Colorado",
+        "Minnesota"
       ]
     },
     {
@@ -1170,7 +1271,14 @@
     {
       "name": "Sunbelt Staffing",
       "locations": [
-        "Colorado"
+        "Colorado",
+        "Minnesota"
+      ]
+    },
+    {
+      "name": "Superbeo",
+      "locations": [
+        "Minnesota"
       ]
     },
     {
@@ -1313,6 +1421,12 @@
       ]
     },
     {
+      "name": "Trusted Health",
+      "locations": [
+        "Colorado"
+      ]
+    },
+    {
       "name": "Twin Cities Orthopedics",
       "locations": [
         "Minnesota"
@@ -1334,6 +1448,12 @@
       "name": "UCHealth (Colorado)",
       "locations": [
         "Colorado"
+      ]
+    },
+    {
+      "name": "USA Clinics Group",
+      "locations": [
+        "Minnesota"
       ]
     },
     {

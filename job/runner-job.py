@@ -1,7 +1,12 @@
-from typing import Dict, List
-from intake_postings import ImagingJobSearch
-from format_postings import generate_jobs_data, save_filtered_jobs
+import sys
 from pathlib import Path
+
+# Add project root to Python path
+sys.path.append(str(Path(__file__).parent.parent))
+
+from typing import Dict, List
+from job.intake_postings import ImagingJobSearch
+from format_postings import generate_jobs_data, save_filtered_jobs
 from datetime import datetime
 from location.location import load_locations, format_location
 
