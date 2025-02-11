@@ -21,6 +21,8 @@
     - Maintain a list of employers in `employer/employers.json`
 3. *Transform*  `job/format_postings.py` - The responsibility of this file is:
     - Load posting data from filtered csv files
+    - Eliminate duplicate postings by comparing key fields (job title, employer, location, and description)
+    - Remove redundant job listings that represent the same position
     - For each filtered csv, output similarly named json file  in the job_results subdirectory (mode: overwrite) `job/job_results/`
     - Finally, combine all json files into a single consolidated json file `job/job_data.json` (which is expected by the view layer)
 4. *View*  `job/job.html` - The responsibility of this file is:
