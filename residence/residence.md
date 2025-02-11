@@ -32,6 +32,7 @@
 5. *Control* - `residence/runner-residence.py` - The responsibility of this file is:
     - Execution & pipeline management logic
     - Abstract surface for overarching orchestration
+    - Set the last-refreshed timestamp in `index.html` via `shared/utility.py`
 
 ### TODO
 

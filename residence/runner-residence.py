@@ -3,6 +3,7 @@ from format_listings import generate_listings_data, save_filtered_listings
 from pathlib import Path
 from datetime import datetime
 from location.location import load_locations, format_location
+from shared.utility import update_last_refreshed
 
 def main():
     # Create residence search instance
@@ -128,6 +129,13 @@ def main():
             print(f"Skipping {modality} data generation - no results found")
     
     print("\nResidence search pipeline complete!")
+    
+    # Update the last-refreshed timestamp
+    try:
+        update_last_refreshed('residence')
+        print("Updated last-refreshed timestamp")
+    except Exception as e:
+        print(f"Error updating last-refreshed timestamp: {e}")
 
 if __name__ == "__main__":
     main() 

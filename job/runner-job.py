@@ -9,6 +9,7 @@ from job.intake_postings import ImagingJobSearch
 from format_postings import generate_jobs_data, save_filtered_jobs
 from datetime import datetime
 from location.location import load_locations, format_location
+from shared.utility import update_last_refreshed
 
 def process_jobs_for_location(
     job_search: ImagingJobSearch,
@@ -82,6 +83,13 @@ def main() -> None:
 
     print("\nGenerating jobs formatted data...")
     generate_jobs_data()
+    
+    # Update the last-refreshed timestamp
+    try:
+        update_last_refreshed('job')
+        print("Updated last-refreshed timestamp")
+    except Exception as e:
+        print(f"Error updating last-refreshed timestamp: {e}")
 
 if __name__ == "__main__":
     main() 

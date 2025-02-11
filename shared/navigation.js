@@ -27,6 +27,12 @@ const navigationLinks = [
             { title: 'Employers', path: '/employer/employer.html' },
         ]
     },
+    // Add the News link
+    { 
+        title: 'News',
+        type: 'link',
+        path: '/shared/news.html'
+    },
 ];
 
 // Auto-detect environment and set path prefix
