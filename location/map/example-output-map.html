@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Denver Opportunities</title>
+	
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../../shared/favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../shared/favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../shared/	favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="../../shared/favicon_io/site.webmanifest">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+	<link rel="stylesheet" href="../../shared/styles.css">
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+	<!-- The navigation will be inserted here automatically -->
+
+	<div id="map"></div>
+	<!-- Add the navigation script before your other scripts -->
+	<script src="../../shared/navigation.js"></script>
+	<script>
+
+	var BuildingIcon = L.Icon.extend({
+		options: {
+			iconSize:     [18, 15]
+		}
+	});
+	
+	var careBuilding = new BuildingIcon({iconUrl: 'icon/hospital.png'});
+	var houseBuilding = new BuildingIcon({iconUrl: 'icon/house.png'});
+	var rentalBuilding = new BuildingIcon({iconUrl: 'icon/rental.png'});
+	var jobBuilding = new BuildingIcon({iconUrl: 'icon/job.png'});  // job
+	
+	var marker_3161c886b9c5d8dd580e9af12a6f3b71 = L.marker([39.8603445, -104.9842694], {icon: careBuilding}).bindPopup('Health Images at North Denver');
+	var marker_9dd665383e67c987664084997f6dfd43 = L.marker([39.9713813, -105.0945063], {icon: careBuilding}).bindPopup('Touchstone Imaging Lafayette');
+	var marker_41dd7d90cf4197ee568f7b9a59886c17 = L.marker([39.9530395, -105.1597827], {icon: careBuilding}).bindPopup('Touchstone Imaging Superior');
+	var marker_9632ac0091f4e76ad5d6f0ad26b2edb6 = L.marker([39.884133, -105.076717], {icon: careBuilding}).bindPopup('Health Images at Church Ranch');
+	var marker_a0879165218404dbc0432962de65618a = L.marker([39.9151371, -104.9823919], {icon: careBuilding}).bindPopup('Touchstone Imaging Thornton');
+	
+	var marker_714e77578d1c58ca4730ad42059d943b = L.marker([39.9554593, -104.9913602], {icon: careBuilding}).bindPopup('Imaging & Radiology at CommonSpirit St. Anthony North Hospital');
+	var marker_934fda2e739f3210d1a74e9798c432b1 = L.marker([39.9632718, -104.7679969], {icon: careBuilding}).bindPopup('Spectrum Medical Imaging Center');
+	var marker_5627e65dcc496998f7a85d61cc9b6fbd = L.marker([40.1396097, -105.1015223], {icon: careBuilding}).bindPopup('Health Images at Longmont');
+	var marker_0a1f5ca0507d55be2439fa9873231c00 = L.marker([39.7697663, -105.0823859], {icon: careBuilding}).bindPopup('Touchstone Imaging Wheat Ridge');
+	var marker_9536cc33d1b5ddd3c1968658faf73490 = L.marker([40.1823019, -105.1261424], {icon: careBuilding}).bindPopup('Imaging & Radiology at CommonSpirit Longmont United Hospital');
+	
+	var marker_813e66360c6b297e87dea5ee9eac0594 = L.marker([39.9104107, -105.091616], {icon: careBuilding}).bindPopup('UCHealth Broomfield Hospital');
+	var marker_146085f1cdb625db1926f2a43399cd1b = L.marker([39.9515206, -105.1513772], {icon: careBuilding}).bindPopup('AdventHealth Avista');
+	var marker_5ec97362227b3a64238421399c208b62 = L.marker([39.8631925, -104.9849814], {icon: careBuilding}).bindPopup('HCA HealthONE Mountain Ridge');
+	var marker_a180203f8a2c1c7dc790cffdf5747160 = L.marker([40.0013751, -104.9931946], {icon: careBuilding}).bindPopup('Childrens Hospital Colorado North Campus, Broomfield');
+	var marker_4f3e3d78b03f67896726a5d47a9f3584 = L.marker([40.0163695, -105.2363882], {icon: careBuilding}).bindPopup('Foothills Hospital');
+	
+	var marker_31142551ba2edbd59197de4fff16871c = L.marker([39.9557354, -104.9913554], {icon: careBuilding}).bindPopup('CommonSpirit St. Anthony North Hospital');
+	var marker_e187eac33edfaa45604af8eb8a82c9cc = L.marker([39.9699031, -105.0869388], {icon: careBuilding}).bindPopup('Intermountain Health Good Samaritan Hospital');
+	var marker_eb788a7625b788435d549bf5a9a125c5 = L.marker([39.8508844, -104.9806956], {icon: careBuilding}).bindPopup('Vibra Hospital of Denver');
+	var marker_cf0d0c536bfd2694d36c1a0cef6dcea1 = L.marker([39.8502597, -104.9804143], {icon: careBuilding}).bindPopup('Denver Regional Rehabilitation Hospital');
+	var marker_bd1cc31aaf85dbe9d675fcce92610a71 = L.marker([39.9103789, -105.0914542], {icon: careBuilding}).bindPopup('UCHealth Emergency Care - Broomfield Hospital (Hospital based)');
+	
+	var marker_1ca6ccd10d1b2fc029bb4a85102492fe = L.marker([39.9645491, -104.7685472], {icon: careBuilding}).bindPopup('Intermountain Health Platte Valley Hospital');
+	var marker_7222fdf7209bba7175b6f3d5297550b9 = L.marker([39.7466017, -104.9666911], {icon: careBuilding}).bindPopup('HCA HealthONE Presbyterian St. Lukes');
+	var marker_12cbf6d399fbdadaba9904176970a795 = L.marker([39.746693, -104.9712458], {icon: careBuilding}).bindPopup('Intermountain Health Saint Joseph Hospital');
+	var marker_921ca71b751478699ebb4256ea762d90 = L.marker([39.7421191, -104.8414959], {icon: careBuilding}).bindPopup('UCHealth University of Colorado Hospital UCH');
+	var marker_65f0081ae7dc6d270538e795fabfd126 = L.marker([39.6899801, -104.8321279], {icon: careBuilding}).bindPopup('HCA HealthONE Aurora');
+	
+	var marker_19a4264ed721326287e517ec12632565 = L.marker([39.6538817, -104.980537], {icon: careBuilding}).bindPopup('HCA HealthONE Swedish');
+	var marker_b7555e88680d2f6848da010e172cb0b9 = L.marker([39.5941814, -104.8239663], {icon: careBuilding}).bindPopup('HCA HealthONE Centennial, A part of Aurora Hospital');
+	var marker_b8332ca232e89bf145e287abc1e7940c = L.marker([39.5524741, -105.0058856], {icon: careBuilding}).bindPopup('UCHealth Highlands Ranch Hospital');
+	var marker_5242584ba7aa0e10ff458fd5459fee04 = L.marker([39.7319825, -104.933581], {icon: careBuilding}).bindPopup('HCA HealthONE Rose');
+	var marker_0aed4736111b660b9673b6f5d4ccc283 = L.marker([39.5291233, -104.8708522], {icon: careBuilding}).bindPopup('HCA HealthONE Sky Ridge');
+	
+	var marker_90b7aa66b88747694048f9b8869e90c5 = L.marker([39.6701533, -104.9754693], {icon: careBuilding}).bindPopup('AdventHealth Porter');
+	var marker_7bd19b382285337b42a084b16e97789a = L.marker([39.7281238, -104.8270471], {icon: careBuilding}).bindPopup('Kindred Hospital Aurora');
+	var marker_166919c6ac88c384436fe8bdcccee403 = L.marker([39.7463953, -104.9644783], {icon: careBuilding}).bindPopup('Kindred Hospital Denver');
+	var marker_ac5bc329e56cfe45c7a315b9b29fba38 = L.marker([39.5482517, -104.7702808], {icon: careBuilding}).bindPopup('AdventHealth Parker');
+
+	
+	var marker_3164891363374874266 = L.marker([39.955654, -104.801868], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2174-Farmlore-Dr_Brighton_CO_80601_M99752-70619\' target=\'_blank\'>$489K</a>');
+	var marker_6356970073918225306 = L.marker([39.9533, -104.789393], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2305-Serenidad-St_Brighton_CO_80601_M92319-81314\' target=\'_blank\'>$471K</a>');
+	var marker_1366429735587325399 = L.marker([39.990665, -104.753292], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/224-Kino-Ct_Brighton_CO_80601_M90467-75809\' target=\'_blank\'>$500K</a>');
+	var marker_4594703158292055254 = L.marker([39.990996, -104.754699], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/4799-Aster-Way_Brighton_CO_80601_M91999-36040\' target=\'_blank\'>$500K</a>');
+	var marker_3524170084204867688 = L.marker([39.953752, -104.789393], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2277-Serenidad-St_Brighton_CO_80601_M91075-65992\' target=\'_blank\'>$470K</a>');
+	var marker_7428613612916669081 = L.marker([39.957345, -104.80616], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2041-Barnwood-Dr_Brighton_CO_80601_M98357-81016\' target=\'_blank\'>$459K</a>');
+	var marker_2454830118190436047 = L.marker([39.953862, -104.789392], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2271-Serenidad-St_Brighton_CO_80601_M99351-14685\' target=\'_blank\'>$486K</a>');
+	var marker_8443215191787216804 = L.marker([39.996958, -104.733121], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/6077-Caribou-Dr_Brighton_CO_80603_M91407-69503\' target=\'_blank\'>$483K</a>');
+	var marker_843685200487184693 = L.marker([39.957257, -104.806161], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2049-Barnwood-Dr_Brighton_CO_80601_M96046-32687\' target=\'_blank\'>$488K</a>');
+	var marker_6599493349368982471 = L.marker([39.991002, -104.753985], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/4847-Astor-Pl_Brighton_CO_80601_M99616-45930\' target=\'_blank\'>$475K</a>');
+	var marker_4815917164432891831 = L.marker([39.955489, -104.801869], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2186-Farmlore-Dr_Brighton_CO_80601_M98491-55125\' target=\'_blank\'>$490K</a>');
+	var marker_4797397225951891074 = L.marker([40.01311, -104.743], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/889-Crest-Ave_Brighton_CO_80603_M93789-53409\' target=\'_blank\'>$490K</a>');
+	var marker_3315731531433973835 = L.marker([40.023839, -104.724607], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/567-Solano-Dr_Brighton_CO_80603_M14642-27444\' target=\'_blank\'>$475K</a>');
+	var marker_3430640526608618593 = L.marker([39.969117, -104.83358], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1090-Quail-Cir_Brighton_CO_80601_M18036-84231\' target=\'_blank\'>$485K</a>');
+	var marker_398273962464766029 = L.marker([39.954205, -104.788557], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2787-Optimista-Pl_Brighton_CO_80601_M97966-01360\' target=\'_blank\'>$481K</a>');
+	var marker_1256695958916901963 = L.marker([39.996882, -104.731304], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/6050-Hourglass-Dr_Brighton_CO_80601_M91574-42077\' target=\'_blank\'>$500K</a>');
+	var marker_3027352765042918731 = L.marker([39.959432, -104.939459], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/4100-E-145th-Ave_Brighton_CO_80602_M98912-58275\' target=\'_blank\'>$499K</a>');
+	var marker_7174478621491402694 = L.marker([39.917897, -104.911834], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/12210-Monaco-Dr_Brighton_CO_80602_M25218-36208\' target=\'_blank\'>$450K</a>');
+	var marker_4830498110799415590 = L.marker([39.979311, -104.804306], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1390-E-Southern-St_Brighton_CO_80601_M19552-75084\' target=\'_blank\'>$485K</a>');
+	var marker_348020508654706249 = L.marker([39.988265, -104.805775], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/79-N-13th-Ave_Brighton_CO_80601_M23239-09788\' target=\'_blank\'>$478K</a>');
+	var marker_948320266242076133 = L.marker([39.946467, -104.93624], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/13681-Ash-Cir_Brighton_CO_80602_M92345-70494\' target=\'_blank\'>$500K</a>');
+	var marker_5790296549895115611 = L.marker([39.953591, -104.788445], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2291-Peregrine-Dr_Brighton_CO_80601_M94611-82677\' target=\'_blank\'>$496K</a>');
+	var marker_1791285716445794984 = L.marker([39.953398, -104.788863], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2309-Peregrine-Dr_Brighton_CO_80601_M95085-08234\' target=\'_blank\'>$482K</a>');
+	var marker_4616217497342704147 = L.marker([39.970291, -104.833752], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1054-Mockingbird-St_Brighton_CO_80601_M25931-18955\' target=\'_blank\'>$490K</a>');
+	var marker_1982841401256189137 = L.marker([39.995138, -104.811218], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/453-N-9th-Pl_Brighton_CO_80601_M11527-74534\' target=\'_blank\'>$495K</a>');
+	var marker_4743739629949048698 = L.marker([39.977253, -104.79265], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/571-S-24th-Ave_Brighton_CO_80601_M15260-30214\' target=\'_blank\'>$475K</a>');
+	var marker_6894884594063402993 = L.marker([39.994347, -104.746868], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/5242-Longs-Peak-St_Brighton_CO_80601_M20920-99331\' target=\'_blank\'>$451K</a>');
+	var marker_5790296549895115611 = L.marker([39.953591, -104.788445], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2291-Peregrine-Dr_Brighton_CO_80601_M94611-82677\' target=\'_blank\'>$496K</a>');
+	var marker_6183415981771902111 = L.marker([39.912576, -104.835694], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/5108-Buckwheat-Rd_Brighton_CO_80640_M90230-95883\' target=\'_blank\'>$468K</a>');
+	var marker_5716860680382036826 = L.marker([39.975696, -104.791699], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2439-Purcell-Pl_Brighton_CO_80601_M12990-28837\' target=\'_blank\'>$500K</a>');
+	var marker_3492347080016829705 = L.marker([39.953447, -104.788712], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2303-Peregrine-Dr_Brighton_CO_80601_M93640-25650\' target=\'_blank\'>$488K</a>');
+	var marker_2186274307872944584 = L.marker([39.916789, -104.908386], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/12117-Newport-Dr_Brighton_CO_80602_M20020-69736\' target=\'_blank\'>$490K</a>');
+	var marker_8846360226536420315 = L.marker([39.985847, -104.760372], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/4552-Crestone-Peak-St_Brighton_CO_80601_M19206-76515\' target=\'_blank\'>$466K</a>');
+	var marker_6710163918776851964 = L.marker([39.986321, -104.757758], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/4715-Crestone-Peak-St_Brighton_CO_80601_M20913-55235\' target=\'_blank\'>$485K</a>');
+	var marker_127188527594928342 = L.marker([40.006993, -104.75071], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/830-Draw-St_Brighton_CO_80603_M18689-81925\' target=\'_blank\'>$465K</a>');
+	var marker_2815512418758182555 = L.marker([39.981463, -104.788264], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/327-S-29th-Ave_Brighton_CO_80601_M12301-43002\' target=\'_blank\'>$465K</a>');
+	var marker_6273741166564645907 = L.marker([39.992511, -104.764408], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/4384-Threshing-Dr_Brighton_CO_80601_M21785-95509\' target=\'_blank\'>$500K</a>');
+	var marker_8427455353817330505 = L.marker([39.880726, -105.104799], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/9318-W-100th-Cir_Broomfield_CO_80021_M23136-78957\' target=\'_blank\'>$495K</a>');
+	var marker_2356138494423433782 = L.marker([39.561452, -104.786178], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/8546-Willows-Pl_Parker_CO_80134_M10115-25576\' target=\'_blank\'>$480K</a>');
+	var marker_6730297721029121001 = L.marker([39.52213, -104.792635], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/10703-Jordan-Ct_Parker_CO_80134_M27339-60067\' target=\'_blank\'>$500K</a>');
+	var marker_813358846021893430 = L.marker([39.560694, -104.795177], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/8604-Barberry-Pl_Parker_CO_80134_M13018-64534\' target=\'_blank\'>$490K</a>');
+	var marker_8089621972629955973 = L.marker([39.612248, -104.73838], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/5737-S-Odessa-St_Centennial_CO_80015_M15648-04984\' target=\'_blank\'>$499K</a>');
+	var marker_4542111495740804180 = L.marker([39.824293, -105.058707], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/7113-Depew-Ct_Arvada_CO_80003_M18154-39786\' target=\'_blank\'>$490K</a>');
+	var marker_3604661977931385159 = L.marker([39.875967, -105.099178], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/9292-W-98th-Way_Westminster_CO_80021_M27376-34171\' target=\'_blank\'>$500K</a>');
+	var marker_1627447541428052001 = L.marker([39.858959, -105.03379], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/3569-W-89th-Ave_Westminster_CO_80031_M23925-26537\' target=\'_blank\'>$492K</a>');
+	var marker_4900250612074129730 = L.marker([39.835686, -105.044861], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/7674-Stuart-St_Westminster_CO_80030_M25299-72779\' target=\'_blank\'>$499K</a>');
+	var marker_5246453815663015844 = L.marker([39.858675, -105.04083], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/8925-Oakwood-St_Westminster_CO_80031_M16400-18509\' target=\'_blank\'>$475K</a>');
+	var marker_3359124053096416261 = L.marker([39.851512, -105.047627], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/8522-Wagner-Dr_Westminster_CO_80031_M22701-54629\' target=\'_blank\'>$488K</a>');
+	var marker_8427455353817330505 = L.marker([39.880726, -105.104799], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/9318-W-100th-Cir_Broomfield_CO_80021_M23136-78957\' target=\'_blank\'>$495K</a>');
+	var marker_6147894595664844658 = L.marker([39.835934, -105.059458], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/5783-W-76th-Dr_Arvada_CO_80003_M23890-57992\' target=\'_blank\'>$490K</a>');
+	var marker_215300157443466372 = L.marker([39.865967, -105.063197], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/9324-Ingalls-St_Westminster_CO_80031_M13132-79986\' target=\'_blank\'>$475K</a>');
+	var marker_1851384864315375789 = L.marker([39.864334, -105.02984], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/9241-Hazel-Ct_Westminster_CO_80031_M23422-92047\' target=\'_blank\'>$465K</a>');
+	var marker_3157001366854702877 = L.marker([39.83615, -105.050232], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/7711-Xavier-Ct_Westminster_CO_80030_M16414-89551\' target=\'_blank\'>$500K</a>');
+	var marker_757189259833282742 = L.marker([40.175779, -105.076327], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/927-Quartz-Ct_Longmont_CO_80504_M11982-88142\' target=\'_blank\'>$500K</a>');
+	var marker_757189259833282742 = L.marker([40.175779, -105.076327], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/927-Quartz-Ct_Longmont_CO_80504_M11982-88142\' target=\'_blank\'>$500K</a>');
+	var marker_189965627872046310 = L.marker([40.196523, -105.098037], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2117-Collyer-St_Longmont_CO_80501_M28606-54825\' target=\'_blank\'>$498K</a>');
+	var marker_4722622432195959594 = L.marker([40.180332, -105.112626], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1227-Aspen-St_Longmont_CO_80501_M29520-21470\' target=\'_blank\'>$460K</a>');
+	var marker_5523721891487520248 = L.marker([40.174144, -105.09678], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/202-9th-Ave_Longmont_CO_80501_M10975-55151\' target=\'_blank\'>$495K</a>');
+	var marker_1240107964488096688 = L.marker([40.156896, -104.987663], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/10676-Durango-Pl_Longmont_CO_80504_M23423-58324\' target=\'_blank\'>$475K</a>');
+	var marker_937928626163894712 = L.marker([40.192891, -105.119835], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1836-Juniper-St_Longmont_CO_80501_M24317-43423\' target=\'_blank\'>$500K</a>');
+	var marker_3080384796383109086 = L.marker([40.193654, -105.092168], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1922-Mount-Sneffels-St_Longmont_CO_80504_M24419-64441\' target=\'_blank\'>$497K</a>');
+	var marker_5184883903686588758 = L.marker([40.147096, -105.110591], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1022-Kansas-Ave_Longmont_CO_80501_M24926-77091\' target=\'_blank\'>$487K</a>');
+	var marker_7581317932494239553 = L.marker([40.180542, -105.11306], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1232-Lincoln-St_Longmont_CO_80501_M29968-22134\' target=\'_blank\'>$489K</a>');
+	var marker_7013788462036112810 = L.marker([40.176227, -105.107735], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1009-Pratt-St_Longmont_CO_80501_M17701-10735\' target=\'_blank\'>$475K</a>');
+	var marker_8337420403130571835 = L.marker([39.680224, -104.779861], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/17900-E-Asbury-Dr_Aurora_CO_80013_M25259-61875\' target=\'_blank\'>$459K</a>');
+	var marker_5100946436375806886 = L.marker([39.649023, -104.794074], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16786-E-Kent-Dr_Aurora_CO_80013_M17599-64280\' target=\'_blank\'>$499K</a>');
+	var marker_132270854913327801 = L.marker([39.703614, -104.799294], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16094-E-Exposition-Dr_Aurora_CO_80017_M17061-63631\' target=\'_blank\'>$459K</a>');
+	var marker_4037850919266729943 = L.marker([39.658869, -104.811652], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/3215-S-Granby-Way_Aurora_CO_80014_M19711-04886\' target=\'_blank\'>$495K</a>');
+	var marker_8721008488712058547 = L.marker([39.664322, -104.779459], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/17969-E-Brown-Pl_Aurora_CO_80013_M29270-07279\' target=\'_blank\'>$469K</a>');
+	var marker_1436183242031783861 = L.marker([39.712894, -104.685082], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/25934-E-Maple-Dr_Aurora_CO_80018_M16753-28829\' target=\'_blank\'>$469K</a>');
+	var marker_2306569955055498913 = L.marker([39.666297, -104.784939], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2750-S-Rifle-St_Aurora_CO_80013_M16061-41138\' target=\'_blank\'>$500K</a>');
+	var marker_1173178521430035222 = L.marker([39.686316, -104.774462], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1663-S-Yampa-Way_Aurora_CO_80017_M15206-42397\' target=\'_blank\'>$475K</a>');
+	var marker_3759379120012926622 = L.marker([39.666262, -104.797121], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2832-S-Mobile-St_Aurora_CO_80013_M17219-04380\' target=\'_blank\'>$495K</a>');
+	var marker_3578004057038994677 = L.marker([39.749137, -104.870192], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2094-Fulton-St_Aurora_CO_80010_M12169-60305\' target=\'_blank\'>$459K</a>');
+	var marker_6776123017487393463 = L.marker([39.763446, -104.708688], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/3355-N-Coolidge-Way_Aurora_CO_80019_M96820-08524\' target=\'_blank\'>$499K</a>');
+	var marker_2297053055632368977 = L.marker([39.790562, -104.731923], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/21927-E-51st-Dr_Aurora_CO_80019_M93445-81984\' target=\'_blank\'>$484K</a>');
+	var marker_5827787104166971639 = L.marker([39.729477, -104.727812], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22260-E-8th-Ave_Aurora_CO_80018_M99889-19622\' target=\'_blank\'>$480K</a>');
+	var marker_5559240414897240117 = L.marker([39.799835, -104.746773], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/5688-Killarnery-Ct_Aurora_CO_80019_M93269-89988\' target=\'_blank\'>$498K</a>');
+	var marker_4613750963146875258 = L.marker([39.762668, -104.709042], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/3292-N-Catawba-Way_Aurora_CO_80019_M92795-83382\' target=\'_blank\'>$499K</a>');
+	var marker_2874017582934449102 = L.marker([39.785681, -104.731687], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/5007-N-Quemoy-St_Aurora_CO_80019_M98424-02940\' target=\'_blank\'>$488K</a>');
+	var marker_3142384795743427628 = L.marker([39.690419, -104.812299], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/15037-E-Carolina-Pl_Aurora_CO_80012_M12559-71449\' target=\'_blank\'>$470K</a>');
+	var marker_1618934601588876047 = L.marker([39.728819, -104.727283], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/769-N-Tempe-St_Aurora_CO_80018_M98723-27746\' target=\'_blank\'>$500K</a>');
+	var marker_805289845164240234 = L.marker([39.632831, -104.722518], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22811-E-Stanford-Ln-Unit-A_Aurora_CO_80015_M92676-91606\' target=\'_blank\'>$485K</a>');
+	var marker_4957666819550869900 = L.marker([39.802086, -104.748086], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/5783-Jericho-Way_Aurora_CO_80019_M90891-49902\' target=\'_blank\'>$465K</a>');
+	var marker_613470760250535952 = L.marker([39.802025, -104.748086], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/5775-Jericho-Way_Aurora_CO_80019_M97415-34701\' target=\'_blank\'>$483K</a>');
+	var marker_898908489271120625 = L.marker([39.644885, -104.791734], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16851-E-Mansfield-Cir_Aurora_CO_80013_M20417-32071\' target=\'_blank\'>$450K</a>');
+	var marker_3636957778254300685 = L.marker([39.680749, -104.806873], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1962-S-Ivory-Way_Aurora_CO_80013_M29563-53246\' target=\'_blank\'>$469K</a>');
+	var marker_6753348318143615792 = L.marker([39.662339, -104.852525], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/11612-E-Cornell-Cir_Aurora_CO_80014_M16023-92502\' target=\'_blank\'>$465K</a>');
+	var marker_846673116169038028 = L.marker([39.659351, -104.764301], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/3153-S-Danube-St_Aurora_CO_80013_M19422-99536\' target=\'_blank\'>$495K</a>');
+	var marker_224916540500341323 = L.marker([39.774617, -104.707922], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/23950-E-41st-Ave_Aurora_CO_80019_M96150-39359\' target=\'_blank\'>$480K</a>');
+	var marker_1159508098113479259 = L.marker([39.63283, -104.722417], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22811-E-Stanford-Ln-Unit-B_Aurora_CO_80015_M90364-79150\' target=\'_blank\'>$485K</a>');
+	var marker_4481319045889395805 = L.marker([39.63283, -104.722318], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22821-E-Stanford-Ln-Unit-A_Aurora_CO_80015_M92112-61265\' target=\'_blank\'>$485K</a>');
+	var marker_3948374165364002691 = L.marker([39.746781, -104.867346], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1957-Hanover-St_Aurora_CO_80010_M21505-34102\' target=\'_blank\'>$470K</a>');
+	var marker_6827689901849679077 = L.marker([39.67157, -104.780966], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/17548-E-Wesley-Pl_Aurora_CO_80013_M13522-97613\' target=\'_blank\'>$475K</a>');
+	var marker_7399301466020774843 = L.marker([39.790475, -104.73116], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/5190-N-Quemoy-Ct_Aurora_CO_80019_M91502-93136\' target=\'_blank\'>$500K</a>');
+	var marker_1632303139740670396 = L.marker([39.73699, -104.86735], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1333-Hanover-St_Aurora_CO_80010_M29380-75264\' target=\'_blank\'>$450K</a>');
+	var marker_9036061931532520842 = L.marker([39.816275, -104.741824], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/6603-N-Malta-St_Aurora_CO_80019_M92148-73079\' target=\'_blank\'>$500K</a>');
+	var marker_4564164461501169184 = L.marker([39.632825, -104.721651], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22851-E-Stanford-Ln-Unit-A_Aurora_CO_80015_M96282-90064\' target=\'_blank\'>$475K</a>');
+	var marker_1127722316267503227 = L.marker([39.678292, -104.816997], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/14734-E-Evans-Pl_Aurora_CO_80014_M13071-00323\' target=\'_blank\'>$500K</a>');
+	var marker_8243575000157770301 = L.marker([39.706688, -104.84778], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/12058-E-Virginia-Pl_Aurora_CO_80012_M15427-66047\' target=\'_blank\'>$499K</a>');
+	var marker_8100250100889165550 = L.marker([39.692479, -104.797204], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1258-S-Memphis-St_Aurora_CO_80017_M26237-59081\' target=\'_blank\'>$499K</a>');
+	var marker_4012012455949200008 = L.marker([39.816015, -104.739199], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/6589-N-Netherland-St_Aurora_CO_80019_M92914-61404\' target=\'_blank\'>$470K</a>');
+	var marker_1002077516778457530 = L.marker([39.632829, -104.722219], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22821-E-Stanford-Ln-Unit-B_Aurora_CO_80015_M91808-54948\' target=\'_blank\'>$485K</a>');
+	var marker_5682350974419106198 = L.marker([39.815946, -104.7392], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/6579-N-Netherland-St_Aurora_CO_80019_M96831-73341\' target=\'_blank\'>$470K</a>');
+	var marker_7135197363899016723 = L.marker([39.816068, -104.742794], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/20982-E-66th-Ave_Aurora_CO_80019_M98130-28105\' target=\'_blank\'>$500K</a>');
+	var marker_4371110409507186758 = L.marker([39.681, -104.698613], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1958-S-Haleyville-Way_Aurora_CO_80018_M93213-05298\' target=\'_blank\'>$500K</a>');
+	var marker_7244582723193867722 = L.marker([39.816069, -104.742971], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/20972-E-66th-Ave_Aurora_CO_80019_M91344-69702\' target=\'_blank\'>$458K</a>');
+	var marker_7619132146190157556 = L.marker([39.679076, -104.698647], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2056-S-Haleyville-Way_Aurora_CO_80018_M94560-27975\' target=\'_blank\'>$475K</a>');
+	var marker_1204493554418228925 = L.marker([39.632188, -104.723273], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22792-E-Tufts-Ave-Unit-B_Aurora_CO_80015_M98978-71088\' target=\'_blank\'>$500K</a>');
+	var marker_910875103818297405 = L.marker([39.728164, -104.725795], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/743-N-Tibet-St_Aurora_CO_80018_M97572-13159\' target=\'_blank\'>$460K</a>');
+	var marker_8063119676786384948 = L.marker([39.79056, -104.731653], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/21945-E-51st-Dr_Aurora_CO_80019_M92121-56560\' target=\'_blank\'>$490K</a>');
+	var marker_287677782373436499 = L.marker([39.770007, -104.727596], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22293-E-38th-Pl_Aurora_CO_80019_M93850-09974\' target=\'_blank\'>$499K</a>');
+	var marker_6671678490924581163 = L.marker([39.694647, -104.698247], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/24758-E-Arizona-Cir_Aurora_CO_80018_M17898-19527\' target=\'_blank\'>$490K</a>');
+	var marker_2235902489575519327 = L.marker([39.667353, -104.760088], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/19573-E-Linvale-Dr_Aurora_CO_80013_M10313-58241\' target=\'_blank\'>$450K</a>');
+	var marker_4313588698188300587 = L.marker([39.72688735, -104.7276013], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/692-N-Shawnee-St_Aurora_CO_80018_M96560-71594\' target=\'_blank\'>$493K</a>');
+	var marker_7528222980061102435 = L.marker([39.723519, -104.691575], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/464-N-Jamestown-Way_Aurora_CO_80018_M12975-65285\' target=\'_blank\'>$500K</a>');
+	var marker_1248597712778451131 = L.marker([39.665926, -104.84357], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/12224-E-Amherst-Cir_Aurora_CO_80014_M15213-77566\' target=\'_blank\'>$475K</a>');
+	var marker_4461821821947496800 = L.marker([39.679189, -104.785011], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2066-S-Rifle-St_Aurora_CO_80013_M26656-71894\' target=\'_blank\'>$475K</a>');
+	var marker_6770691793537215236 = L.marker([39.640419, -104.800676], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/4169-S-Lewiston-St_Aurora_CO_80013_M21568-15599\' target=\'_blank\'>$457K</a>');
+	var marker_2161460908060206257 = L.marker([39.72854, -104.863849], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/10709-Lowry-Pl_Aurora_CO_80010_M10453-98055\' target=\'_blank\'>$499K</a>');
+	var marker_6179265856175983507 = L.marker([39.666343, -104.758214], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2808-S-Fundy-St_Aurora_CO_80013_M21260-33930\' target=\'_blank\'>$475K</a>');
+	var marker_8358168703094737004 = L.marker([39.659423, -104.803888], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/3150-S-Jasper-Way_Aurora_CO_80013_M23980-60790\' target=\'_blank\'>$485K</a>');
+	var marker_5694396850431182972 = L.marker([39.689196, -104.797793], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16305-E-Gunnison-Pl_Aurora_CO_80017_M24480-58385\' target=\'_blank\'>$499K</a>');
+	var marker_7291227796287423833 = L.marker([39.613648, -104.721368], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/5627-S-Winnipeg-St_Aurora_CO_80015_M29019-30449\' target=\'_blank\'>$495K</a>');
+	var marker_495071058233383790 = L.marker([39.744214, -104.866173], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1717-Havana-St_Aurora_CO_80010_M95139-90562\' target=\'_blank\'>$475K</a>');
+	var marker_7200055727680956526 = L.marker([39.630421, -104.790977], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16930-E-Wagon-Trail-Pkwy_Aurora_CO_80015_M92584-35949\' target=\'_blank\'>$494K</a>');
+	var marker_8160769360972810474 = L.marker([39.730362, -104.845824], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/914-Quari-Ct_Aurora_CO_80011_M11074-27477\' target=\'_blank\'>$495K</a>');
+	var marker_6975729949648248116 = L.marker([39.669323, -104.794785], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16598-E-Lasalle-Pl_Aurora_CO_80013_M15104-90836\' target=\'_blank\'>$450K</a>');
+	var marker_7719920976519724175 = L.marker([39.705763, -104.843313], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/12516-E-Alaska-Ave_Aurora_CO_80012_M26508-11709\' target=\'_blank\'>$475K</a>');
+	var marker_8092221846680021285 = L.marker([39.667831, -104.792545], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16806-E-Villanova-Cir_Aurora_CO_80013_M28691-10526\' target=\'_blank\'>$500K</a>');
+	var marker_7286119007443802250 = L.marker([39.678654, -104.698494], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2078-S-Haleyville-Way_Aurora_CO_80018_M97085-18159\' target=\'_blank\'>$500K</a>');
+	var marker_3810421422241281880 = L.marker([39.660143, -104.755954], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/19863-E-Dartmouth-Pl_Aurora_CO_80013_M14094-58494\' target=\'_blank\'>$460K</a>');
+	var marker_1452085887922505144 = L.marker([39.641645, -104.802366], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16038-E-Oxford-Dr_Aurora_CO_80013_M16681-81412\' target=\'_blank\'>$490K</a>');
+	var marker_3810421422241281880 = L.marker([39.660143, -104.755954], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/19863-E-Dartmouth-Pl_Aurora_CO_80013_M14094-58494\' target=\'_blank\'>$460K</a>');
+	var marker_947110913814334382 = L.marker([39.694535, -104.794192], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16651-E-Arizona-Pl_Aurora_CO_80017_M24257-27863\' target=\'_blank\'>$480K</a>');
+	var marker_8918526800678145023 = L.marker([39.686181, -104.762619], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1659-S-Ensenada-St_Aurora_CO_80017_M17939-13553\' target=\'_blank\'>$480K</a>');
+	var marker_2675621523856025176 = L.marker([39.644437, -104.727532], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22341-E-Mercer-Pl_Aurora_CO_80018_M18237-40828\' target=\'_blank\'>$500K</a>');
+	var marker_4977214004555326247 = L.marker([39.703008, -104.850812], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/710-S-Oakland-St_Aurora_CO_80012_M11234-21567\' target=\'_blank\'>$470K</a>');
+	var marker_7101992356999963906 = L.marker([39.811408, -104.742224], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/6310-N-Malaya-St_Aurora_CO_80019_M94092-75063\' target=\'_blank\'>$500K</a>');
+	var marker_6424420053305484051 = L.marker([39.653608, -104.749658], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/20518-E-Hamilton-Cir_Aurora_CO_80013_M25893-19908\' target=\'_blank\'>$450K</a>');
+	var marker_624049427755844138 = L.marker([39.643969, -104.726875], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22382-E-Mercer-Pl_Aurora_CO_80018_M13666-96085\' target=\'_blank\'>$500K</a>');
+	var marker_5400091495892511417 = L.marker([39.645958, -104.76355], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/19136-E-Milan-Cir_Aurora_CO_80013_M27579-94858\' target=\'_blank\'>$460K</a>');
+	var marker_6926041064530966986 = L.marker([39.632826, -104.72175], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22841-E-Stanford-Ln-Unit-B_Aurora_CO_80015_M94787-87153\' target=\'_blank\'>$475K</a>');
+	var marker_3353211511748596480 = L.marker([39.691312, -104.845306], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/12240-E-Arkansas-Ave_Aurora_CO_80012_M26993-90051\' target=\'_blank\'>$495K</a>');
+	var marker_6571863198678530181 = L.marker([39.632828, -104.72202], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22831-E-Stanford-Ln-Unit-B_Aurora_CO_80015_M94929-30701\' target=\'_blank\'>$485K</a>');
+	var marker_5348987732901386779 = L.marker([39.722823, -104.68067], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/26285-E-Canal-Pl_Aurora_CO_80018_M18206-73493\' target=\'_blank\'>$500K</a>');
+	var marker_286606414039769708 = L.marker([39.686136, -104.816612], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/14697-E-Oregon-Dr_Aurora_CO_80012_M13919-97214\' target=\'_blank\'>$496K</a>');
+	var marker_8684951544664880365 = L.marker([39.692053, -104.797129], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16357-E-Wyoming-Dr_Aurora_CO_80017_M15384-52368\' target=\'_blank\'>$479K</a>');
+	var marker_8161767371260779905 = L.marker([39.726418, -104.817156], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/640-Sable-Blvd_Aurora_CO_80011_M29651-67604\' target=\'_blank\'>$470K</a>');
+	var marker_6780972275150687341 = L.marker([39.670736, -104.820168], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2519-S-Sable-Way_Aurora_CO_80014_M14425-99290\' target=\'_blank\'>$500K</a>');
+	var marker_2793086164020607292 = L.marker([39.720437, -104.870938], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/323-Fulton-St_Aurora_CO_80010_M16084-83298\' target=\'_blank\'>$480K</a>');
+	var marker_4177571496489130093 = L.marker([39.729534, -104.867946], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/812-Geneva-St_Aurora_CO_80010_M23473-77182\' target=\'_blank\'>$460K</a>');
+	var marker_1586674187193580365 = L.marker([39.790281, -104.731162], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/5186-N-Quemoy-Ct_Aurora_CO_80019_M98381-69963\' target=\'_blank\'>$499K</a>');
+	var marker_3679334771980806884 = L.marker([39.816324, -104.739553], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/6610-N-Nepal-Ct_Aurora_CO_80019_M91464-78831\' target=\'_blank\'>$455K</a>');
+	var marker_3771521421037131136 = L.marker([39.816247, -104.739553], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/6608-N-Nepal-Ct_Aurora_CO_80019_M99945-56111\' target=\'_blank\'>$455K</a>');
+	var marker_9013758667309472603 = L.marker([39.729477, -104.727911], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22250-E-8th-Ave_Aurora_CO_80018_M91342-77928\' target=\'_blank\'>$480K</a>');
+	var marker_3881029412559876409 = L.marker([39.728819, -104.727893], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/774-N-Shawnee-St_Aurora_CO_80018_M94068-84449\' target=\'_blank\'>$500K</a>');
+	var marker_554007363878279305 = L.marker([39.788403, -104.732071], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/5128-N-Quemoy-St_Aurora_CO_80019_M99690-00576\' target=\'_blank\'>$488K</a>');
+	var marker_7197180216826423334 = L.marker([39.657922, -104.792685], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/3246-S-Nucla-St_Aurora_CO_80013_M20424-66017\' target=\'_blank\'>$475K</a>');
+	var marker_6008648077322436951 = L.marker([39.720892, -104.868056], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/358-Geneva-St_Aurora_CO_80010_M96904-78397\' target=\'_blank\'>$460K</a>');
+	var marker_523181867176580861 = L.marker([39.720992, -104.867738], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/352-Geneva-St_Aurora_CO_80010_M95595-12942\' target=\'_blank\'>$470K</a>');
+	var marker_3055613043027149635 = L.marker([39.651529, -104.749557], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/3564-S-Jebel-Cir_Aurora_CO_80013_M28534-51829\' target=\'_blank\'>$500K</a>');
+	var marker_3748902530699679113 = L.marker([39.651395, -104.80342], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/3599-S-Kalispell-St_Aurora_CO_80013_M14867-70804\' target=\'_blank\'>$450K</a>');
+	var marker_5915858981554774457 = L.marker([39.631174, -104.789626], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/4723-S-Pagosa-Way_Aurora_CO_80015_M21608-78810\' target=\'_blank\'>$470K</a>');
+	var marker_1245068184044959630 = L.marker([39.632826, -104.721849], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22841-E-Stanford-Ln-Unit-A_Aurora_CO_80015_M99521-74991\' target=\'_blank\'>$475K</a>');
+	var marker_8549003989973557127 = L.marker([39.729449, -104.726628], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22390-E-8th-Ave_Aurora_CO_80018_M99700-90520\' target=\'_blank\'>$475K</a>');
+	var marker_427328216711759952 = L.marker([39.632828, -104.722119], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/22831-E-Stanford-Ln-Unit-A_Aurora_CO_80015_M98693-87021\' target=\'_blank\'>$475K</a>');
+	var marker_156148823407660333 = L.marker([39.774127, -104.708514], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/23881-E-40th-Ave_Aurora_CO_80019_M95772-36695\' target=\'_blank\'>$475K</a>');
+	var marker_6798107266779160133 = L.marker([39.815021, -104.74327], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/20957-E-65th-Ave_Aurora_CO_80019_M92107-41811\' target=\'_blank\'>$470K</a>');
+	var marker_5727364887815664108 = L.marker([39.707874, -104.856861], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/481-S-Lima-Cir_Aurora_CO_80012_M11200-64483\' target=\'_blank\'>$451K</a>');
+	var marker_9118125614307690268 = L.marker([39.680988, -104.698291], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1950-S-Haleyville-Way_Aurora_CO_80018_M90507-56469\' target=\'_blank\'>$480K</a>');
+	var marker_8552981069972925862 = L.marker([39.665138, -104.760154], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2875-S-Espana-Ct_Aurora_CO_80013_M17878-32204\' target=\'_blank\'>$477K</a>');
+	var marker_2274501788955599584 = L.marker([39.645239, -104.792321], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16830-E-Mansfield-Cir_Aurora_CO_80013_M17343-65726\' target=\'_blank\'>$492K</a>');
+	var marker_6136708869606479832 = L.marker([39.631689, -104.790601], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/4663-S-Buckley-Way_Aurora_CO_80015_M13742-75593\' target=\'_blank\'>$498K</a>');
+	var marker_7842494626511298480 = L.marker([39.812344, -104.741839], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/21021-E-63rd-Dr_Aurora_CO_80019_M96715-44254\' target=\'_blank\'>$500K</a>');
+	var marker_6359598993686161671 = L.marker([39.703791, -104.851306], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/695-S-Oakland-St_Aurora_CO_80012_M22594-89568\' target=\'_blank\'>$499K</a>');
+	var marker_3167892467898743654 = L.marker([39.670083, -104.840312], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2553-S-Troy-Ct_Aurora_CO_80014_M11460-75408\' target=\'_blank\'>$500K</a>');
+	var marker_7301865169948137269 = L.marker([39.67088, -104.802055], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16046-E-Harvard-Ave_Aurora_CO_80013_M21330-75268\' target=\'_blank\'>$450K</a>');
+	var marker_1250837273412063894 = L.marker([39.745227, -104.803139], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/15895-E-17th-Pl_Aurora_CO_80011_M16836-89119\' target=\'_blank\'>$455K</a>');
+	var marker_5147681068743050873 = L.marker([39.743359, -104.852031], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1673-Nome-St_Aurora_CO_80010_M17468-03104\' target=\'_blank\'>$450K</a>');
+	var marker_3315246858757411221 = L.marker([39.672436, -104.799344], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16193-E-Dickenson-Pl_Aurora_CO_80013_M15779-66924\' target=\'_blank\'>$500K</a>');
+	var marker_3144118749363077920 = L.marker([39.66319, -104.791498], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2918-S-Ouray-Way_Aurora_CO_80013_M21772-60080\' target=\'_blank\'>$465K</a>');
+	var marker_1621585198847374384 = L.marker([39.722805, -104.86485], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/460-Iola-St_Aurora_CO_80010_M17416-74925\' target=\'_blank\'>$460K</a>');
+	var marker_7928914906314744032 = L.marker([39.668995, -104.823043], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2624-S-Carson-Way_Aurora_CO_80014_M17753-39889\' target=\'_blank\'>$475K</a>');
+	var marker_1504031751772449438 = L.marker([39.689479, -104.797565], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/16344-E-Carolina-Dr_Aurora_CO_80017_M25626-84053\' target=\'_blank\'>$499K</a>');
+	var marker_1075410504767064522 = L.marker([39.703915, -104.848769], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/670-S-Oswego-St_Aurora_CO_80012_M29148-06795\' target=\'_blank\'>$475K</a>');
+	var marker_802490516546681622 = L.marker([39.656453, -104.812557], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/15064-E-Floyd-Ave_Aurora_CO_80014_M10831-83795\' target=\'_blank\'>$490K</a>');
+	var marker_193659444396589311 = L.marker([39.745748, -104.877901], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/1901-Clinton-St_Aurora_CO_80010_M10623-39538\' target=\'_blank\'>$450K</a>');
+	var marker_5169550172833583953 = L.marker([39.68603, -104.81703], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/14657-E-Oregon-Dr_Aurora_CO_80012_M16413-38561\' target=\'_blank\'>$475K</a>');
+	var marker_1454509999152670363 = L.marker([39.72528, -104.854603], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/11623-E-6th-Pl_Aurora_CO_80010_M16642-70414\' target=\'_blank\'>$460K</a>');
+	var marker_6452231714429355652 = L.marker([39.701527, -104.777843], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/928-S-Ventura-St_Aurora_CO_80017_M23996-37332\' target=\'_blank\'>$487K</a>');
+	var marker_71782867436432504 = L.marker([39.639287, -104.781445], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/17769-E-Purdue-Pl_Aurora_CO_80013_M27494-86147\' target=\'_blank\'>$469K</a>');
+	var marker_6384432001896667750 = L.marker([39.802065, -104.760466], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/19556-E-58th-Pl_Aurora_CO_80019_M28756-33350\' target=\'_blank\'>$465K</a>');
+	var marker_3097178147750084106 = L.marker([39.955572, -104.801869], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/2180-Farmlore-Dr_Brighton_CO_80601_M99234-78061\' target=\'_blank\'>$2900/mo</a>');
+	var marker_5212647519189774872 = L.marker([39.66207, -104.794986], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/3008-S-Mobile-Way_Aurora_CO_80013_M12401-10679\' target=\'_blank\'>$2700/mo</a>');
+	var marker_239663064869089570 = L.marker([39.746563, -104.882598], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/1949-Alton-St_Aurora_CO_80010_M12572-82055\' target=\'_blank\'>$2195/mo</a>');
+	var marker_3080722110596887171 = L.marker([39.668933, -104.759454], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/19698-E-Lasalle-Dr_Aurora_CO_80013_M14665-73886\' target=\'_blank\'>$2650/mo</a>');
+	var marker_1504031751772449438 = L.marker([39.689479, -104.797565], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/16344-E-Carolina-Dr_Aurora_CO_80017_M25626-84053\' target=\'_blank\'>$3000/mo</a>');
+	var marker_3839625363341553379 = L.marker([39.662375, -104.85406], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/11505-E-Cornell-Cir_Aurora_CO_80014_M29401-69677\' target=\'_blank\'>$2875/mo</a>');
+	var marker_2184934077339818473 = L.marker([39.735588, -104.832413], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/1273-Xanadu-St_Aurora_CO_80011_M15443-15778\' target=\'_blank\'>$2200/mo</a>');
+	var marker_8842912312592145195 = L.marker([39.730531, -104.803693], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/15794-E-8th-Dr_Aurora_CO_80011_M14433-23790\' target=\'_blank\'>$1400/mo</a>');
+	var marker_1266472297789947259 = L.marker([39.669215, -104.800621], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/16171-E-Vassar-Ave_Aurora_CO_80013_M22442-52873\' target=\'_blank\'>$2430/mo</a>');
+	var marker_2825630148248630478 = L.marker([39.72663, -104.79834], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/16313-E-7th-Dr_Aurora_CO_80011_M26220-63220\' target=\'_blank\'>$3000/mo</a>');
+	var marker_318954604525132681 = L.marker([39.691621, -104.83962], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/12908-E-Louisiana-Ave_Aurora_CO_80012_M26700-29563\' target=\'_blank\'>$2560/mo</a>');
+	var marker_7758764657328243042 = L.marker([39.729833, -104.866234], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/825-Havana-St_Aurora_CO_80010_M15240-75938\' target=\'_blank\'>$1750/mo</a>');
+	var marker_5359171241898235077 = L.marker([39.683081, -104.824096], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/14076-E-Utah-Cir-4_Aurora_CO_80012_M14458-84285\' target=\'_blank\'>$2400/mo</a>');
+	var marker_9007497058532864450 = L.marker([39.631293, -104.793784], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/4739-S-Ouray-Way_Aurora_CO_80015_M14427-14236\' target=\'_blank\'>$2595/mo</a>');
+	var marker_1518832187487785091 = L.marker([39.729713, -104.867996], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/822-Geneva-St-B_Aurora_CO_80010_M93273-34878\' target=\'_blank\'>$2400/mo</a>');
+	var marker_7024365347853677872 = L.marker([39.573499, -104.71693], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/7884-S-Algonquian-Way_Aurora_CO_80016_M27199-81823\' target=\'_blank\'>$2900/mo</a>');
+	var marker_432602696932347924 = L.marker([39.517164, -104.784486], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/17607-Cornish-Pl_Parker_CO_80134_M28248-45403\' target=\'_blank\'>$2995/mo</a>');
+	var marker_2961444623180872525 = L.marker([40.157458, -104.987305], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/10696-Butte-Dr_Longmont_CO_80504_M13831-31222\' target=\'_blank\'>$2400/mo</a>');
+	var marker_864862481176433415 = L.marker([40.154034, -104.934789], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/10528-Sunburst-Ave_Firestone_CO_80504_M24168-87061\' target=\'_blank\'>$2550/mo</a>');
+	var marker_3752001888775591844 = L.marker([40.171848, -105.103516], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/728-Coffman-St_Longmont_CO_80501_M97323-51542\' target=\'_blank\'>$2595/mo</a>');
+	var marker_5362339943550535847 = L.marker([40.20558, -105.104775], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/12741-Woodland-Dr_Longmont_CO_80504_M11021-53383\' target=\'_blank\'>$3000/mo</a>');
+	var marker_4651809092468739261 = L.marker([40.144544, -105.096411], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/203-Cardinal-Way_Longmont_CO_80501_M21545-79181\' target=\'_blank\'>$2195/mo</a>');
+	var marker_7832645812013091804 = L.marker([39.943437, -105.028815], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/13626-Boulder-Cir-Unit-101_Broomfield_CO_80023_M26788-87761\' target=\'_blank\'>$2950/mo</a>');
+	var marker_230436131862428940 = L.marker([39.923447, -105.02464], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/12529-Elm-Ln_Broomfield_CO_80020_M16941-52075\' target=\'_blank\'>$2900/mo</a>');
+	var marker_3558451640749026759 = L.marker([39.860738, -105.037441], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/9040-Osceola-St_Westminster_CO_80031_M16800-04865\' target=\'_blank\'>$2400/mo</a>');
+	var marker_884704346620907741 = L.marker([39.858125, -105.104572], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/9724-W-89th-Way_Westminster_CO_80021_M23612-43078\' target=\'_blank\'>$1200/mo</a>');
+	var marker_6654505790126081737 = L.marker([39.918922, -104.993172], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/12196-Melody-Dr_Westminster_CO_80234_M96041-56687\' target=\'_blank\'>$2195/mo</a>');
+	var marker_8657598993962722204 = L.marker([39.936535, -105.009853], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/13131-Raritan-Ct_Denver_CO_80234_M25284-02534\' target=\'_blank\'>$2915/mo</a>');
+	var marker_6478408579278725268 = L.marker([39.999476, -105.094457], {icon: rentalBuilding}).bindPopup('<a href=\'https://www.realtor.com/rentals/details/311-W-Geneseo-St_Lafayette_CO_80026_M26361-76863\' target=\'_blank\'>$2450/mo</a>');
+
+	var houses = L.layerGroup([marker_3164891363374874266, marker_6356970073918225306, marker_1366429735587325399, marker_4594703158292055254, marker_3524170084204867688, marker_7428613612916669081, marker_2454830118190436047, marker_8443215191787216804, marker_843685200487184693, marker_6599493349368982471, marker_4815917164432891831, marker_4797397225951891074, marker_3315731531433973835, marker_3430640526608618593, marker_398273962464766029, marker_1256695958916901963, marker_3027352765042918731, marker_7174478621491402694, marker_4830498110799415590, marker_348020508654706249, marker_948320266242076133, marker_5790296549895115611, marker_1791285716445794984, marker_4616217497342704147, marker_1982841401256189137, marker_4743739629949048698, marker_6894884594063402993, marker_5790296549895115611, marker_6183415981771902111, marker_5716860680382036826, marker_3492347080016829705, marker_2186274307872944584, marker_8846360226536420315, marker_6710163918776851964, marker_127188527594928342, marker_2815512418758182555, marker_6273741166564645907, marker_8427455353817330505, marker_2356138494423433782, marker_6730297721029121001, marker_813358846021893430, marker_8089621972629955973, marker_4542111495740804180, marker_3604661977931385159, marker_1627447541428052001, marker_4900250612074129730, marker_5246453815663015844, marker_3359124053096416261, marker_8427455353817330505, marker_6147894595664844658, marker_215300157443466372, marker_1851384864315375789, marker_3157001366854702877, marker_757189259833282742, marker_757189259833282742, marker_189965627872046310, marker_4722622432195959594, marker_5523721891487520248, marker_1240107964488096688, marker_937928626163894712, marker_3080384796383109086, marker_5184883903686588758, marker_7581317932494239553, marker_7013788462036112810, marker_8337420403130571835, marker_5100946436375806886, marker_132270854913327801, marker_4037850919266729943, marker_8721008488712058547, marker_1436183242031783861, marker_2306569955055498913, marker_1173178521430035222, marker_3759379120012926622, marker_3578004057038994677, marker_6776123017487393463, marker_2297053055632368977, marker_5827787104166971639, marker_5559240414897240117, marker_4613750963146875258, marker_2874017582934449102, marker_3142384795743427628, marker_1618934601588876047, marker_805289845164240234, marker_4957666819550869900, marker_613470760250535952, marker_898908489271120625, marker_3636957778254300685, marker_6753348318143615792, marker_846673116169038028, marker_224916540500341323, marker_1159508098113479259, marker_4481319045889395805, marker_3948374165364002691, marker_6827689901849679077, marker_7399301466020774843, marker_1632303139740670396, marker_9036061931532520842, marker_4564164461501169184, marker_1127722316267503227, marker_8243575000157770301, marker_8100250100889165550, marker_4012012455949200008, marker_1002077516778457530, marker_5682350974419106198, marker_7135197363899016723, marker_4371110409507186758, marker_7244582723193867722, marker_7619132146190157556, marker_1204493554418228925, marker_910875103818297405, marker_8063119676786384948, marker_287677782373436499, marker_6671678490924581163, marker_2235902489575519327, marker_4313588698188300587, marker_7528222980061102435, marker_1248597712778451131, marker_4461821821947496800, marker_6770691793537215236, marker_2161460908060206257, marker_6179265856175983507, marker_8358168703094737004, marker_5694396850431182972, marker_7291227796287423833, marker_495071058233383790, marker_7200055727680956526, marker_8160769360972810474, marker_6975729949648248116, marker_7719920976519724175, marker_8092221846680021285, marker_7286119007443802250, marker_3810421422241281880, marker_1452085887922505144, marker_3810421422241281880, marker_947110913814334382, marker_8918526800678145023, marker_2675621523856025176, marker_4977214004555326247, marker_7101992356999963906, marker_6424420053305484051, marker_624049427755844138, marker_5400091495892511417, marker_6926041064530966986, marker_3353211511748596480, marker_6571863198678530181, marker_5348987732901386779, marker_286606414039769708, marker_8684951544664880365, marker_8161767371260779905, marker_6780972275150687341, marker_2793086164020607292, marker_4177571496489130093, marker_1586674187193580365, marker_3679334771980806884, marker_3771521421037131136, marker_9013758667309472603, marker_3881029412559876409, marker_554007363878279305, marker_7197180216826423334, marker_6008648077322436951, marker_523181867176580861, marker_3055613043027149635, marker_3748902530699679113, marker_5915858981554774457, marker_1245068184044959630, marker_8549003989973557127, marker_427328216711759952, marker_156148823407660333, marker_6798107266779160133, marker_5727364887815664108, marker_9118125614307690268, marker_8552981069972925862, marker_2274501788955599584, marker_6136708869606479832, marker_7842494626511298480, marker_6359598993686161671, marker_3167892467898743654, marker_7301865169948137269, marker_1250837273412063894, marker_5147681068743050873, marker_3315246858757411221, marker_3144118749363077920, marker_1621585198847374384, marker_7928914906314744032, marker_1504031751772449438, marker_1075410504767064522, marker_802490516546681622, marker_193659444396589311, marker_5169550172833583953, marker_1454509999152670363, marker_6452231714429355652, marker_71782867436432504, marker_6384432001896667750]);
+	var rentals = L.layerGroup([marker_3097178147750084106, marker_5212647519189774872, marker_239663064869089570, marker_3080722110596887171, marker_1504031751772449438, marker_3839625363341553379, marker_2184934077339818473, marker_8842912312592145195, marker_1266472297789947259, marker_2825630148248630478, marker_318954604525132681, marker_7758764657328243042, marker_5359171241898235077, marker_9007497058532864450, marker_1518832187487785091, marker_7024365347853677872, marker_432602696932347924, marker_2961444623180872525, marker_864862481176433415, marker_3752001888775591844, marker_5362339943550535847, marker_4651809092468739261, marker_7832645812013091804, marker_230436131862428940, marker_3558451640749026759, marker_884704346620907741, marker_6654505790126081737, marker_8657598993962722204, marker_6478408579278725268]);
+
+	var hospitals = L.layerGroup([
+			marker_3161c886b9c5d8dd580e9af12a6f3b71,  // Health Images at North Denver
+			marker_9dd665383e67c987664084997f6dfd43,  // Touchstone Imaging Lafayett
+			marker_41dd7d90cf4197ee568f7b9a59886c17,  // Touchstone Imaging Superio
+			marker_9632ac0091f4e76ad5d6f0ad26b2edb6,  // Health Images at Church Ranch
+			marker_a0879165218404dbc0432962de65618a,  // Touchstone Imaging Thornton
+
+			marker_714e77578d1c58ca4730ad42059d943b,  // Imaging & Radiology at CommonSpirit St. Anthony North Hospital
+			marker_934fda2e739f3210d1a74e9798c432b1,  // Spectrum Medical Imaging Center
+			marker_5627e65dcc496998f7a85d61cc9b6fbd,  // Health Images at Longmont
+			marker_0a1f5ca0507d55be2439fa9873231c00,  // Touchstone Imaging Wheat Ridge
+			marker_9536cc33d1b5ddd3c1968658faf73490,  // Imaging & Radiology at CommonSpirit Longmont United Hospital
+
+			marker_813e66360c6b297e87dea5ee9eac0594,  // UCHealth Broomfield Hospital
+			marker_146085f1cdb625db1926f2a43399cd1b,  // AdventHealth Avista
+			marker_5ec97362227b3a64238421399c208b62,  // HCA HealthONE Mountain Ridge
+			marker_a180203f8a2c1c7dc790cffdf5747160,  // Childrens Hospital Colorado North Campus, Broomfield
+			marker_4f3e3d78b03f67896726a5d47a9f3584,  // Foothills Hospital
+
+			marker_31142551ba2edbd59197de4fff16871c,  // CommonSpirit St. Anthony North Hospital
+			marker_e187eac33edfaa45604af8eb8a82c9cc,  // Intermountain Health Good Samaritan Hospital
+			marker_eb788a7625b788435d549bf5a9a125c5,  // Vibra Hospital of Denver
+			marker_cf0d0c536bfd2694d36c1a0cef6dcea1,  // Denver Regional Rehabilitation Hospital
+			marker_bd1cc31aaf85dbe9d675fcce92610a71,  // UCHealth Emergency Care - Broomfield Hospital (Hospital based)
+
+			marker_1ca6ccd10d1b2fc029bb4a85102492fe,  // Intermountain Health Platte Valley Hospital
+			marker_7222fdf7209bba7175b6f3d5297550b9,  // HCA HealthONE Presbyterian St. Lukes
+			marker_12cbf6d399fbdadaba9904176970a795,  // Intermountain Health Saint Joseph Hospital
+			marker_921ca71b751478699ebb4256ea762d90,  // UCHealth University of Colorado Hospital UCH
+			marker_65f0081ae7dc6d270538e795fabfd126,  // HCA HealthONE Aurora
+
+			marker_19a4264ed721326287e517ec12632565,  // HCA HealthONE Swedish
+			marker_b7555e88680d2f6848da010e172cb0b9,  // HCA HealthONE Centennial, A part of Aurora Hospital
+			marker_b8332ca232e89bf145e287abc1e7940c,  // UCHealth Highlands Ranch Hospital
+			marker_5242584ba7aa0e10ff458fd5459fee04,  // HCA HealthONE Rose
+			marker_0aed4736111b660b9673b6f5d4ccc283,  // HCA HealthONE Sky Ridge
+
+			marker_90b7aa66b88747694048f9b8869e90c5,  // AdventHealth Porter
+			marker_7bd19b382285337b42a084b16e97789a,  // Kindred Hospital Aurora
+			marker_166919c6ac88c384436fe8bdcccee403,  // Kindred Hospital Denver
+			marker_ac5bc329e56cfe45c7a315b9b29fba38,  // AdventHealth Parker
+		]);
+
+	var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '© OpenStreetMap'
+	});
+
+	var map = L.map('map', {
+		center: [39.73, -104.99],
+		zoom: 10,
+		layers: [osm]
+	});
+
+	var baseMaps = {
+    	"OpenStreetMap": osm,
+	};
+
+	var overlayMaps = {
+		"Care Facilities": hospitals,
+		"Houses": houses,
+		"Rentals": rentals,
+	};
+
+	var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+</script>
+
+
+
+</body>
+</html>

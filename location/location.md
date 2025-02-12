@@ -1,66 +1,120 @@
-# Location
+# location
 
-## location.html
+## Location Module
 
-- The location profiles page presents the data in an easy-to-compare format, helping users make informed decisions about potential relocation destinations.
-- Each metro area card includes:
-  - Cost of living metrics
-  - Housing costs
-  - Transit information
-  - Job market details
-  - Climate data
-  - Major suburbs
+### Functional Description
 
-## location.json
+- This module manages cartographically plotted data relevant to core residence, job, and healthcare facility data.
 
-### This file structure offers several advantages
+### Technical Design (by layer)
 
-#### Hierarchical Organization
+1. *Data Management* `location/location.py`
+    - Handles loading and saving of location data
+    - Writing to `location/maps/*.html` maps.
+    - General geo-orriented utility functions.
 
-- Each metro area is organized with its hub city and related suburbs, making it easy to search within a geographic region.
+2. *Data Files*
+    - `location/location.json` - Stores location data
+    - `icon/*.png` - Icon files for map markers.
 
-#### Detailed Location Data
+3. *View*  `location/location.html` - The responsibility of this file is:
+    - This is the end user view of the combined residence and job data.
+    - This html file is directly altered by the pipeline, showing calculated metro profile scores.
 
-- Includes coordinates for each city, which can be useful for:
-  - Mapping visualizations
-  - Distance calculations
-  - Commute time estimations
+3A. *View*  `location/map/denver.html` - The responsibility of this file is:
+    - This is the *output* file; the end user view of the combined residence and job data for location: *Denver, CO*.
+    - `location/map/template/base-denver.html` is the base map for Denver, CO.  The base map is used as a *template* for `location/map/denver.html` during pipeline map generation.
+    - This html file is directly altered by the pipeline, coordinates are plotted on a map for for residence (rent|own), healthcare facilities, and job postings.
 
-#### Comprehensive Metrics
+3B. *View*  `location/map/phoenix.html` - The responsibility of this file is:
+    - This is the *output* file; the end user view of the combined residence and job data for location: *Phoenix, AZ*.
+    - `location/map/template/base-phoenix.html` is the base map for Phoenix, AZ.  The base map is used as a *template* for `location/map/phoenix.html` during pipeline map generation.
+    - This html file is directly altered by the pipeline, coordinates are plotted on a map for for residence (rent|own), healthcare facilities, and job postings.
 
-- Includes key factors that people consider when relocating:
-  - Cost of living metrics
-  - Housing costs (both buying and renting)
-  - Transportation information
-  - Job market data
-  - Climate information
+3C. *View*  `location/map/minneapolis.html` - The responsibility of this file is:
+    - This is the *output* file; the end user view of the combined residence and job data for location: *Minneapolis, MN*.
+    - `location/map/template/base-minneapolis.html` is the base map for Minneapolis, MN.  The base map is used as a *template* for `location/map/minneapolis.html` during pipeline map generation.
+    - This html file is directly altered by the pipeline, coordinates are plotted on a map for for residence (rent|own), healthcare facilities, and job postings.
 
-#### Extensible Structure
+4. *Control* `location/runner-location.py`
+    - Execution & pipeline management logic
+    - Abstract surface for overarching orchestration
+    - Set the last-refreshed timestamp in `index.html` via `shared/utility.py`
 
-- The structure can be easily extended to include:
-  - More suburbs
-  - Additional metrics
-  - School district ratings
-  - Crime statistics
-  - Cultural amenities
-  - Healthcare facility ratings
-    - Tax information
+### Leaflet.js
 
-#### You could use this data structure to:
+- Leaflet.js is a JavaScript library for creating interactive maps.
+- Leaflet.js is used to create the output maps in `location/map/*.html`.
 
-- Power a comparison tool between different metro areas
-- Filter locations based on specific criteria (e.g., max home price, climate preferences)
-- Calculate commute times from suburbs to hub cities
-- Generate detailed reports for different locations
-- Create interactive maps showing the relationship between hub cities and suburbs
+#### Example Leaflet.js Code
 
-## Comparison Notes
+```javascript
 
-### Denver, CO
+// Icon files
+var careBuilding = new BuildingIcon({iconUrl: 'icon/hospital.png'});  // healthcare facility
+var houseBuilding = new BuildingIcon({iconUrl: 'icon/house.png'});  // residence (own)
+var rentalBuilding = new BuildingIcon({iconUrl: 'icon/rental.png'});  // residence (rent)
+var jobBuilding = new BuildingIcon({iconUrl: 'icon/job.png'});  // job
 
-### Phoenix, AZ
+// Major Hospitals with Imaging
+var marker_banner_university = L.marker([33.4757, -112.0436], {icon: careBuilding}).bindPopup('Banner University Medical Center Phoenix');
+var marker_st_josephs = L.marker([33.4789, -112.0668], {icon: careBuilding}).bindPopup('St. Joseph\'s Hospital and Medical Center');
+var marker_banner_estrella = L.marker([33.4933, -112.2607], {icon: careBuilding}).bindPopup('Banner Estrella Medical Center');
+var marker_honor_health_deer_valley = L.marker([33.6800, -112.0279], {icon: careBuilding}).bindPopup('HonorHealth Deer Valley Medical Center');
+var marker_mayo_clinic = L.marker([33.5817, -111.9642], {icon: careBuilding}).bindPopup('Mayo Clinic Hospital');
 
-### Minneapolis, MN
+// Dedicated Imaging Centers
+var marker_simon_med_central = L.marker([33.4982, -112.0738], {icon: careBuilding}).bindPopup('SimonMed Imaging - Central Phoenix');
+var marker_valley_rad_downtown = L.marker([33.4789, -112.0731], {icon: careBuilding}).bindPopup('Valley Radiologists - Downtown Phoenix');
+var marker_arizona_diagnostic = L.marker([33.5081, -112.0731], {icon: careBuilding}).bindPopup('Arizona Diagnostic Radiology');
+var marker_simon_med_scottsdale = L.marker([33.5722, -111.9277], {icon: careBuilding}).bindPopup('SimonMed Imaging - Scottsdale');
+var marker_valley_rad_glendale = L.marker([33.5317, -112.1859], {icon: careBuilding}).bindPopup('Valley Radiologists - Glendale');
+
+// Update the hospitals layer group
+var hospitals = L.layerGroup([
+    marker_banner_university,
+    marker_st_josephs,
+    marker_banner_estrella,
+    marker_honor_health_deer_valley,
+    marker_mayo_clinic,
+    marker_simon_med_central,
+    marker_valley_rad_downtown,
+    marker_arizona_diagnostic,
+    marker_simon_med_scottsdale,
+    marker_valley_rad_glendale
+]);
+
+// Residence (own)
+var marker_3164891363374874266 = L.marker([39.955654, -104.801868], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2174-Farmlore-Dr_Brighton_CO_80601_M99752-70619\' target=\'_blank\'>$489K</a>');
+	var marker_6356970073918225306 = L.marker([39.9533, -104.789393], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/2305-Serenidad-St_Brighton_CO_80601_M92319-81314\' target=\'_blank\'>$471K</a>');
+	var marker_1366429735587325399 = L.marker([39.990665, -104.753292], {icon: houseBuilding}).bindPopup('<a href=\'https://www.realtor.com/realestateandhomes-detail/224-Kino-Ct_Brighton_CO_80601_M90467-75809\' target=\'_blank\'>$500K</a>');
+
+```
+
+### TODO
+
+1. ?
+
+### Roadmap
+
+- You could use this data structure to:
+  - Power a comparison tool between different metro areas
+  - Filter locations based on specific criteria (e.g., max home price, climate preferences)
+  - Calculate commute times from suburbs to hub cities
+  - Generate detailed reports for different locations
+  - Create interactive maps showing the relationship between hub cities and suburbs
+
+### Comparison Notes
+
+#### Denver, CO
+
+- ?
+
+#### Phoenix, AZ
+
+- ?
+
+#### Minneapolis, MN
 
 - Lower cost of living than Denver but higher than Phoenix.
 - Strong public transit score.
