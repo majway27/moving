@@ -143,6 +143,26 @@ def generate_map(
         facilities: List of healthcare facility data
         jobs: List of job posting data
     """
+    # Delete existing map file for this city
+    map_dir = Path(__file__).parent / "map"
+    city_map = map_dir / f"{city.lower()}.html"
+    
+    try:
+        if city_map.exists():
+            city_map.unlink()
+            # Verify deletion completed
+            while city_map.exists():
+                continue
+            print(f"Deleted existing map: {city_map.name}")
+    except Exception as e:
+        print(f"Warning: Could not delete {city_map.name}: {e}")
+        # If we can't delete the file, we should not proceed
+        raise
+
+    # Ensure file is deleted before proceeding
+    if city_map.exists():
+        raise RuntimeError(f"Could not delete existing map file for {city}")
+
     # Read template
     with open(template_path) as f:
         template = f.read()
@@ -160,21 +180,49 @@ def generate_map(
         }
     });
     
-    var careBuilding = new BuildingIcon({iconUrl: '../../../icon/hospital.png'});
-    var houseBuilding = new BuildingIcon({iconUrl: '../../../icon/house.png'});
-    var rentalBuilding = new BuildingIcon({iconUrl: '../../../icon/rental.png'});
-    var jobBuilding = new BuildingIcon({iconUrl: '../../../icon/job.png'});
+    var careBuilding = new BuildingIcon({iconUrl: 'icon/hospital.png'});
+    var houseBuilding = new BuildingIcon({iconUrl: 'icon/house.png'});
+    var rentalBuilding = new BuildingIcon({iconUrl: 'icon/rental.png'});
+    var jobBuilding = new BuildingIcon({iconUrl: 'icon/job.png'});
     """)
+
+    # Track used IDs to prevent duplicates
+    used_ids = set()
 
     # Add markers for facilities
     for facility in facilities:
         try:
+            # Convert coordinates to float if they're strings
+            try:
+                if isinstance(facility.get('latitude'), str):
+                    facility['latitude'] = float(facility['latitude'])
+                if isinstance(facility.get('longitude'), str):
+                    facility['longitude'] = float(facility['longitude'])
+            except (ValueError, TypeError):
+                print(f"Warning: Could not convert coordinates for facility: {facility.get('name', 'Unknown')}")
+                continue
+
+            if not (all(k in facility for k in ['latitude', 'longitude']) and
+                   facility['latitude'] is not None and 
+                   facility['longitude'] is not None and
+                   isinstance(facility['latitude'], (int, float)) and
+                   isinstance(facility['longitude'], (int, float))):
+                print(f"Warning: Skipping facility due to invalid coordinates: {facility.get('name', 'Unknown')}")
+                continue
+                
             if 'id' not in facility:
                 facility['id'] = generate_id(facility)
-            name = facility['name'].replace("'", "\\'")
+            
+            if facility['id'] in used_ids:
+                continue
+                
+            used_ids.add(facility['id'])
+            
+            # Double escape the name for JavaScript string
+            name = facility['name'].replace('"', '\\"').replace("'", "\\'")
             markers.append(f"""
             var marker_{facility['id']} = L.marker([{facility['latitude']}, {facility['longitude']}], {{icon: careBuilding}})
-                .bindPopup('{name}');
+                .bindPopup("{name}");
             """)
         except KeyError as e:
             print(f"Warning: Skipping facility due to missing data: {e}")
@@ -183,22 +231,42 @@ def generate_map(
     # Add markers for residences
     for residence in residences:
         try:
-            # Skip if missing required data
-            if not all(k in residence for k in ['latitude', 'longitude', 'price', 'url']):
-                print(f"Warning: Skipping residence due to missing required data")
+            # Convert coordinates to float if they're strings
+            try:
+                if isinstance(residence.get('latitude'), str):
+                    residence['latitude'] = float(residence['latitude'])
+                if isinstance(residence.get('longitude'), str):
+                    residence['longitude'] = float(residence['longitude'])
+            except (ValueError, TypeError):
+                print(f"Warning: Could not convert coordinates for residence: {residence.get('url', 'Unknown')}")
+                continue
+
+            if not (all(k in residence for k in ['latitude', 'longitude', 'price', 'url']) and
+                   residence['latitude'] is not None and 
+                   residence['longitude'] is not None and
+                   isinstance(residence['latitude'], (int, float)) and
+                   isinstance(residence['longitude'], (int, float))):
+                print(f"Warning: Skipping residence due to invalid coordinates: {residence.get('url', 'Unknown')}")
+                continue
+            
+            if 'id' not in residence:
+                residence['id'] = generate_id(residence)
+                
+            if residence['id'] in used_ids:
                 continue
                 
-            # Format price with commas but no decimal places
+            used_ids.add(residence['id'])
+                
             price = "{:,.0f}".format(float(residence['price']))
-            
-            # Determine icon based on type
             icon = 'rentalBuilding' if residence.get('type') == 'rent' else 'houseBuilding'
             
-            # Escape single quotes and create popup
-            popup = f"<a href=\'{residence['url']}\' target=\'_blank\'>${price}</a>"
+            # Double escape the URL for JavaScript string
+            url = residence['url'].replace('"', '\\"').replace("'", "\\'")
+            popup = f"<a href=\\'{url}\\' target=\\'_blank\\'>${price}</a>"
+            
             markers.append(f"""
             var marker_{residence['id']} = L.marker([{residence['latitude']}, {residence['longitude']}], {{icon: {icon}}})
-                .bindPopup('{popup}');
+                .bindPopup("{popup}");
             """)
         except (KeyError, ValueError) as e:
             print(f"Warning: Skipping residence due to invalid data: {e}")
@@ -207,32 +275,87 @@ def generate_map(
     # Add markers for jobs
     for job in jobs:
         try:
-            # Escape single quotes in strings
-            title = job['title'].replace("'", "\\'")
-            company = job['company'].replace("'", "\\'")
-            url = job['url'].replace("'", "\\'")
-            popup = f"<a href=\'{url}\' target=\'_blank\'>{title}<br>{company}</a>"
+            # Convert coordinates to float if they're strings
+            try:
+                if isinstance(job.get('latitude'), str):
+                    job['latitude'] = float(job['latitude'])
+                if isinstance(job.get('longitude'), str):
+                    job['longitude'] = float(job['longitude'])
+            except (ValueError, TypeError):
+                print(f"Warning: Could not convert coordinates for job: {job.get('title', 'Unknown')}")
+                continue
+
+            if not (all(k in job for k in ['latitude', 'longitude', 'title', 'company', 'url']) and
+                   job['latitude'] is not None and 
+                   job['longitude'] is not None and
+                   isinstance(job['latitude'], (int, float)) and
+                   isinstance(job['longitude'], (int, float))):
+                print(f"Warning: Skipping job due to invalid coordinates: {job.get('title', 'Unknown')}")
+                continue
+                
+            if 'id' not in job:
+                job['id'] = generate_id(job)
+                
+            if job['id'] in used_ids:
+                continue
+                
+            used_ids.add(job['id'])
+            
+            # Double escape all strings for JavaScript
+            title = job['title'].replace('"', '\\"').replace("'", "\\'")
+            company = job['company'].replace('"', '\\"').replace("'", "\\'")
+            url = job['url'].replace('"', '\\"').replace("'", "\\'")
+            popup = f"<a href=\\'{url}\\' target=\\'_blank\\'>{title}<br>{company}</a>"
+            
             markers.append(f"""
             var marker_{job['id']} = L.marker([{job['latitude']}, {job['longitude']}], {{icon: jobBuilding}})
-                .bindPopup('{popup}');
+                .bindPopup("{popup}");
             """)
         except KeyError as e:
             print(f"Warning: Skipping job due to missing data: {e}")
             continue
 
-    # Create layer groups - separate rentals and houses
-    facility_markers = [f"marker_{f['id']}" for f in facilities if 'id' in f]
-    house_markers = [f"marker_{r['id']}" for r in residences 
-                    if 'id' in r and r.get('type') == 'own']
-    rental_markers = [f"marker_{r['id']}" for r in residences 
-                     if 'id' in r and r.get('type') == 'rent']
-    job_markers = [f"marker_{j['id']}" for j in jobs if 'id' in j]
+    # Create layer groups with string-to-float conversion
+    facility_markers = list(set(f"marker_{f['id']}" for f in facilities 
+                              if 'id' in f and f['id'] in used_ids))
+    
+    house_markers = list(set(f"marker_{r['id']}" for r in residences 
+                           if 'id' in r and r['id'] in used_ids 
+                           and r.get('type') == 'own'))
+    
+    rental_markers = list(set(f"marker_{r['id']}" for r in residences 
+                            if 'id' in r and r['id'] in used_ids 
+                            and r.get('type') == 'rent'))
+    
+    job_markers = list(set(f"marker_{j['id']}" for j in jobs 
+                          if 'id' in j and j['id'] in used_ids))
 
-    # Add layer groups
-    markers.append(f"var hospitals = L.layerGroup([{', '.join(facility_markers) if facility_markers else ''}]);")
-    markers.append(f"var houses = L.layerGroup([{', '.join(house_markers) if house_markers else ''}]);")
-    markers.append(f"var rentals = L.layerGroup([{', '.join(rental_markers) if rental_markers else ''}]);")
-    markers.append(f"var jobs = L.layerGroup([{', '.join(job_markers) if job_markers else ''}]);")
+    # Sort markers for consistent ordering
+    facility_markers.sort()
+    house_markers.sort()
+    rental_markers.sort()
+    job_markers.sort()
+
+    # Add layer groups only if they have markers
+    if facility_markers:
+        markers.append(f"var hospitals = L.layerGroup([{', '.join(facility_markers)}]);")
+    else:
+        markers.append("var hospitals = L.layerGroup([]);")
+        
+    if house_markers:
+        markers.append(f"var houses = L.layerGroup([{', '.join(house_markers)}]);")
+    else:
+        markers.append("var houses = L.layerGroup([]);")
+        
+    if rental_markers:
+        markers.append(f"var rentals = L.layerGroup([{', '.join(rental_markers)}]);")
+    else:
+        markers.append("var rentals = L.layerGroup([]);")
+        
+    if job_markers:
+        markers.append(f"var jobs = L.layerGroup([{', '.join(job_markers)}]);")
+    else:
+        markers.append("var jobs = L.layerGroup([]);")
 
     # Insert markers into template
     marker_js = '\n'.join(markers)
