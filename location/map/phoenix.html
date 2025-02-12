@@ -53,6 +53,62 @@
     var jobBuilding = new BuildingIcon({iconUrl: '../../../icon/job.png'});
     
 
+            var marker_5 = L.marker([33.606944, -112.1675], {icon: careBuilding})
+                .bindPopup('Abrazo Arrowhead Campus');
+            
+
+            var marker_9 = L.marker([33.428056, -111.740278], {icon: careBuilding})
+                .bindPopup('Banner Desert Medical Center');
+            
+
+            var marker_4 = L.marker([33.639688, -112.184774], {icon: careBuilding})
+                .bindPopup('Banner Thunderbird Medical Center');
+            
+
+            var marker_11 = L.marker([32.221527, -110.969145], {icon: careBuilding})
+                .bindPopup('Banner University Medical Center Tucson');
+            
+
+            var marker_1 = L.marker([33.450397, -112.067537], {icon: careBuilding})
+                .bindPopup('Banner - University Medical Center Phoenix');
+            
+
+            var marker_10 = L.marker([33.304722, -111.842778], {icon: careBuilding})
+                .bindPopup('Chandler Regional Medical Center');
+            
+
+            var marker_6 = L.marker([33.589444, -112.098611], {icon: careBuilding})
+                .bindPopup('HonorHealth John C. Lincoln Medical Center');
+            
+
+            var marker_8 = L.marker([33.629167, -111.889167], {icon: careBuilding})
+                .bindPopup('HonorHealth Scottsdale Shea Medical Center');
+            
+
+            var marker_2 = L.marker([33.615286, -111.928373], {icon: careBuilding})
+                .bindPopup('Mayo Clinic Hospital (Phoenix)');
+            
+
+            var marker_13 = L.marker([35.195286, -111.651717], {icon: careBuilding})
+                .bindPopup('North Country Healthcare - Flagstaff Medical Center');
+            
+
+            var marker_3 = L.marker([33.494793, -112.061732], {icon: careBuilding})
+                .bindPopup('St. Joseph\'s Hospital and Medical Center');
+            
+
+            var marker_12 = L.marker([32.208154, -110.932975], {icon: careBuilding})
+                .bindPopup('Tucson Medical Center');
+            
+
+            var marker_7 = L.marker([33.448333, -112.074167], {icon: careBuilding})
+                .bindPopup('Valleywise Health Medical Center');
+            
+
+            var marker_14 = L.marker([32.701389, -114.629722], {icon: careBuilding})
+                .bindPopup('Yuma Regional Medical Center');
+            
+
             var marker_6e3e3c73916d = L.marker([33.66567, -111.91454], {icon: houseBuilding})
                 .bindPopup('<a href='https://www.zillow.com/homedetails/65437696_zpid/' target='_blank'>$479,999</a>');
             
@@ -4680,10 +4736,694 @@
             var marker_65a2a4793113 = L.marker([44.99176, -93.2331], {icon: rentalBuilding})
                 .bindPopup('<a href='https://www.zillow.com/homedetails/1812911_zpid/' target='_blank'>$1,850</a>');
             
-var hospitals = L.layerGroup([]);
+
+            var marker_32ce183bd989 = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/b115d5f54055445d02f9c1dcf8b17502?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Medical Imaging Associate<br>Intermountain Healthcare</a>');
+            
+
+            var marker_2d7ffd07d64c = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/e0d16e9acbc6279bbb61798f1a458fa4?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Medical Imaging Technologist<br>Intermountain Healthcare</a>');
+            
+
+            var marker_787ef27b9191 = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/eceea068c345acacf5e0ed2a82d990a4?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Computed Tomography Professional<br>CommonSpirit Health Mountain Region</a>');
+            
+
+            var marker_c955b29828da = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/4a358267cbbd87e1e0f4f44dc32329bd?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Computed Tomography Technologist<br>HealthCare Support</a>');
+            
+
+            var marker_117ac4d73a7b = L.marker([44.8547, -93.4708], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.tealhq.com/job/mri-technologist_d8185838-151a-4787-a06e-e5a43b87cb5e?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>Allina Health</a>');
+            
+
+            var marker_2bae137cc86e = L.marker([44.8547, -93.4708], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.linkedin.com/jobs/view/radiologic-technologist-outpatient-clinic-at-allina-health-4039206822?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiologic Technologist Outpatient Clinic<br>Allina Health</a>');
+            
+
+            var marker_1199579a58a9 = L.marker([44.8408, -93.2983], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.adzuna.com/details/4924321937?title=Nuclear_Medicine_Technologist_-_Full-time_-_Bloomington&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Nuclear Medicine Technologist - Full-time - Bloomington<br>Indiana University Health System</a>');
+            
+
+            var marker_a6a9b025e598 = L.marker([33.4152, -111.8315], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.tealhq.com/job/mri-technologist-chandler-outpatient-imaging-clinics_93333a06-8963-40b1-bd63-aedf142219ae?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist Chandler Outpatient Imaging Clinics<br>Banner Health</a>');
+            
+
+            var marker_557b97c486d5 = L.marker([33.4152, -111.8315], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=761b3be2a0fd18ff&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist- Weekends Required<br>SimonMed Imaging</a>');
+            
+
+            var marker_efa0d05aecae = L.marker([33.4152, -111.8315], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.snagajob.com/jobs/1042118857?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist - Now Hiring<br>SimonMed Imaging</a>');
+            
+
+            var marker_2e75df4ba90c = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=67fcf7af8722ca8b&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI TECHNICIAN - PRESCOTT ARIZONA<br>IYA Medical PLC</a>');
+            
+
+            var marker_713c4dd872e7 = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.honorhealth.com/jobs/75846?lang=en-us&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Cath Lab Rad Tech<br>HonorHealth</a>');
+            
+
+            var marker_34909d922761 = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.snagajob.com/jobs/1042118847?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist - Now Hiring<br>SimonMed Imaging</a>');
+            
+
+            var marker_37ef8f291fc5 = L.marker([33.4484, -112.074], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/k/l/AALcv0ntb3vi_bkWkY5zAFCWgr-44n9JTlgEe9Yk2LT7BizOpxE8vp5a5vAv5j62ZFopMgmhbtR_rXUfH1G3XUfydIvTw9DwYoTzGYsdAATxv4SLKaBy__RTyVT1tDLj2FSIXqOvPWceXQUnKqVLzJHFsyoZnUM1c8mzAfOjZQivkbEj1MchdLQLf_TrsQlMu8bByo9JRMuSNyehLtB3yy_3uoi2fQI7GEuHXH8k5qH2K4OqNoxIVHiTL6nbdc5zcf4jaCyVNFUeN4vyxwGi5JBGzvOfZ45VYdOjWLWkVUmfB3XRhsSon8o4eC1R37Y?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist - Full Time - Leading Outpatient Organization!<br>i4 Search Group</a>');
+            
+
+            var marker_c8444c8675b5 = L.marker([33.4484, -112.074], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.tenethealth.com/job/phoenix/ct-technologist-full-time-rotating/1127/75711655488?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist Full Time Rotating<br>Abrazo Central Hospital</a>');
+            
+
+            var marker_74abf7d655d9 = L.marker([33.4484, -112.074], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.tenethealth.com/job/phoenix/ct-technologist-ft-nights/1127/75804902016?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist FT Nights<br>Abrazo Central Hospital</a>');
+            
+
+            var marker_9139fff4b7de = L.marker([33.4484, -112.074], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=88c5044c62fc5e5c&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist<br>SimonMed Imaging</a>');
+            
+
+            var marker_6134e85ee769 = L.marker([33.4484, -112.074], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.commonspirit.careers/job/phoenix/ct-technologist/35300/75654261888?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist<br>CommonSpirit Health</a>');
+            
+
+            var marker_c1604003c3c5 = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=fed8abdc0ce0c1f2&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiology Tech<br>St. Anthony North Hospital</a>');
+            
+
+            var marker_e0b628cea895 = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/c/CommonSpirit-Health-Mountain-Region/Job/MRI-Tech/-in-Westminster,CO?jid=4d54b69af6229349&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech<br>CommonSpirit Health Mountain Region</a>');
+            
+
+            var marker_20cc854d24ab = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.womenforhire.com/job/westminster-co/mri-technologist-549071/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist - no experience required<br>HCA Healthcare</a>');
+            
+
+            var marker_7787a4529db1 = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://commonspirit-health-mountain-region.dejobs.org/westminster-co/mri-tech/00533DB0F65C46CBB6DEECC76F5912C9/job/?vs=28&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech<br>CommonSpirit Health Mountain Region</a>');
+            
+
+            var marker_63f3bdd4edf7 = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=7e54090c9cd48d39&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Tech Weekend Option<br>St. Anthony North Hospital</a>');
+            
+
+            var marker_6a348860924a = L.marker([39.868, -104.9719], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.learn4good.com/jobs/thornton/colorado/healthcare/3724722563/e/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Cat Scan Technologist<br>HCA HealthONE Mountain Ridge</a>');
+            
+
+            var marker_8ee1f78aff82 = L.marker([39.5186, -104.7613], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.womenforhire.com/job/parker-co/mri-technologist-72k-109k-per-year-001729/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist - $72K-109K per year - no experience required<br>Healthcare Support Permanent Placement</a>');
+            
+
+            var marker_8245bc22a165 = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.monster.com/job-openings/mri-technologist-mri-tech-longmont-co--a34f0e75-9b15-4340-b9d9-34c66e698ecd?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist - (MRI Tech)<br>ClubStaffing</a>');
+            
+
+            var marker_3fad88cfd272 = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/c/UC-Health/Job/MRI-Technologist/-in-Longmont,CO?jid=aeca63f7f885e66c&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>UCHealth</a>');
+            
+
+            var marker_8dd7edf13778 = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.clinicalmanagementconsultants.com/job?title=computed+tomography+technologist+ct&id=52024&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Computed Tomography Technologist (CT)<br>Clinical Management Consultants</a>');
+            
+
+            var marker_9a4930c1ce04 = L.marker([39.7047, -105.0814], {icon: jobBuilding})
+                .bindPopup('<a href='https://external-mountain-commonspirit.icims.com/jobs/85652/2025-85652/job?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech<br>CommonSpirit Health Mountain Region</a>');
+            
+
+            var marker_3f1d1fd61d7e = L.marker([39.7047, -105.0814], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.aarp.org/job/mri-technologist-lakewood-colorado-70408945?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>UCHealth</a>');
+            
+
+            var marker_70b2eeebd617 = L.marker([39.7047, -105.0814], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=681854c91a2f4309&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech<br>St. Anthony Hospital</a>');
+            
+
+            var marker_54338a241990 = L.marker([39.9994, -105.0897], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.adzuna.com/details/4908733791?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech<br>Sisters of Charity of Leavenworth Health System</a>');
+            
+
+            var marker_a17cc3db4144 = L.marker([39.9994, -105.0897], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.adzuna.com/details/4819339491?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Staff - MRI Technologist - UCHealth<br>UCHealth</a>');
+            
+
+            var marker_967f99f7dd0c = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=124f494419c71ab6&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech<br>St. Anthony North Hospital</a>');
+            
+
+            var marker_a7a6c9776d59 = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=b6524ef4c8d81d40&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Tech<br>St. Anthony North Hospital</a>');
+            
+
+            var marker_f9544468c669 = L.marker([40.0505, -105.0497], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.recruit.net/job/radiology-technologist-saint-vincent-orthopaedic-jobs/59A9E6ED6F872F67?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiology Technologist | Saint Vincent Orthopaedic Institute<br>Highmark Health</a>');
+            
+
+            var marker_5d0a720abca8 = L.marker([39.9994, -105.0897], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=e5fa86c17e8f40ed&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist<br>Intermountain Healthcare</a>');
+            
+
+            var marker_70f12eaeac12 = L.marker([39.5792, -104.8768], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobbio.com/companies/uchealth-2/jobs/radiology-x-ray-technologist-MIEAVKRSB6?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiology X Ray Technologist<br>UCHealth</a>');
+            
+
+            var marker_0fbd2a7a020d = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://uchealth.dejobs.org/broomfield-co/mri-technologist/B784BD0E3E0F4115B4DF24BF9A65ED1E/job/?utm_source=XMLFeed-DE&utm_medium=XMLFeed&utm_campaign=XMLFeed&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>UCHealth</a>');
+            
+
+            var marker_d3865aaa8a55 = L.marker([39.9852, -104.8205], {icon: jobBuilding})
+                .bindPopup('<a href='https://intermountain-healthcare.dejobs.org/brighton-co/ct-technologist-weekend/46B8A6EBAB0F4B1EB05A7F5DE5EEBE73/job/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist Weekend<br>Intermountain Healthcare</a>');
+            
+
+            var marker_426c8bed2270 = L.marker([39.7294, -104.8319], {icon: jobBuilding})
+                .bindPopup('<a href='https://universityofcolorado.dejobs.org/aurora-co/mri-research-technologist-diagnostic-technologist-ii-iii/0ED2CED53A0B4296A45F0CE576C8DF3C/job/?utm_source=.JOBS+XML+Feed-DE&utm_medium=.JOBS+Universe&utm_campaign=.JOBS+XML+Feed&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Research Technologist (Diagnostic Technologist II, III)<br>University of Colorado</a>');
+            
+
+            var marker_c8547d2e9cf3 = L.marker([39.7294, -104.8319], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=d8a613efe4922e3b&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>Children\'s Hospital Colorado</a>');
+            
+
+            var marker_9d8e5e4328b4 = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/c/St.-Anthony-Hospital/Job/MRI-Tech/-in-Denver,CO?jid=b91623992a2b8ada&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech<br>St. Anthony Hospital</a>');
+            
+
+            var marker_e93dcc7685eb = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/c/i4-Search-Group-Healthcare/Job/MRI-Tech-Magnetic-Resonance-Imaging-Technologist-Competitive-Comp-&-Great-Benefits/-in-Denver,CO?jid=5f040cb1ffa1522a&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech - Magnetic Resonance Imaging Technologist - Competitive Comp & Great Benefits<br>i4 Search Group</a>');
+            
+
+            var marker_f3ae5f0faf1d = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.monster.com/job-openings/mri-technologist-denver-co--6727f6ec-c9c5-423e-8df5-2186c389fa3e?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist.<br>Touchstone Medical Imaging</a>');
+            
+
+            var marker_d97238d513e3 = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=0de261b7eee537fa&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Float MRI Technologist<br>Touchstone Medical Imaging</a>');
+            
+
+            var marker_b39caca3566d = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.tealhq.com/job/CT-TECHNICIAN---CT-SCANNER_853cd2bb-b074-4f05-9e37-533dc91385d8?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT TECHNICIAN - CT SCANNER<br>UCHealth</a>');
+            
+
+            var marker_7ada209e01b3 = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.adventhealth.com/denver-co/ct-technician-free-standing-er-full-time/9BD6104D553742DCA8EA6DBB238CB676/job/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technician - Free Standing ER - Full Time<br>AdventHealth</a>');
+            
+
+            var marker_837eeb7da67d = L.marker([39.5186, -104.7613], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/626f5e9698e92349870b6553626d2da0?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiography Professional<br>UCHealth</a>');
+            
+
+            var marker_e46104b040cb = L.marker([39.9852, -104.8205], {icon: jobBuilding})
+                .bindPopup('<a href='https://monument.health/gfj/radiological-technologist-clinic-brighton-co-66ebd7eadad8f80343db1ceb?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiological Technologist Clinic<br>Monument Health</a>');
+            
+
+            var marker_c4db0ce61363 = L.marker([44.9778, -93.265], {icon: jobBuilding})
+                .bindPopup('<a href='https://careers.childrensmn.org/us/en/job/2402723E/Casual-CT-Tech?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Casual CT Tech<br>Children\'s Minnesota</a>');
+            
+
+            var marker_a45ea46c951e = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/1a6cd533fd3c0357b5b450c55d09c9b5?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Computed Tomography (CT) Technologist Position<br>SimonMed Imaging</a>');
+            
+
+            var marker_a2803af77151 = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/5ae2a859dbf605a5b06c5a7a874eb686?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Imaging Technologist<br>Intermountain Healthcare</a>');
+            
+
+            var marker_c0fea3334fb2 = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/808d2d2dc37065031c78d813314d1fac?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Computed Tomography Technician<br>Intermountain Healthcare</a>');
+            
+
+            var marker_6b98338263f7 = L.marker([33.4152, -111.8315], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/e9d1cd6967abbee7aed861889221cb5b?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist Leader<br>RadNet</a>');
+            
+
+            var marker_4564ac424f6a = L.marker([39.868, -104.9719], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.jobserve.com/us/en/extjob/RADIOLOGY-in-Thornton-Colorado-USA-A30976AA8B11B0261C/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiology (X-Ray) Technologist<br>UCHealth</a>');
+            
+
+            var marker_3f399cae3050 = L.marker([33.4152, -111.8315], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/916ee801042fe55077818158734db4e4?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist Lead<br>RadNet</a>');
+            
+
+            var marker_96bc8c9c8b0f = L.marker([39.868, -104.9719], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/c5b3b48f71e898b945b864f8aed8c952?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Diagnostic Imaging Technologist<br>MedPro Healthcare Allied Staffing</a>');
+            
+
+            var marker_0d98b03c724f = L.marker([44.8547, -93.4708], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/920d0db5ff87d0d25f726bfa9eeb4ecf?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Diagnostic Imaging Specialist<br>ADVENT</a>');
+            
+
+            var marker_4900b667da51 = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.jobserve.com/us/en/extjob/CT-TECHNOLOGIST-FLOAT-in-Denver-Colorado-USA-017AFA3DA16E4CA28D/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist- Float<br>Intermountain Healthcare</a>');
+            
+
+            var marker_33b7d6b7cdf7 = L.marker([39.9994, -105.0897], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/f11e60104b2b7e177f18d449c3f37ef0?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Magnetic Resonance Imaging Specialist<br>Sisters of Charity of Leavenworth Health System</a>');
+            
+
+            var marker_d2119825d7c0 = L.marker([39.9994, -105.0897], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/c5d97fb98636d5916b501621f4666884?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Imaging Technologist<br>Sisters of Charity of Leavenworth Health System</a>');
+            
+
+            var marker_0182c56f412e = L.marker([44.9778, -93.265], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/a0ae11a0d0d96a68dc5eccec455b31ea?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiological Technologist - Diagnostic Imaging<br>Superbeo</a>');
+            
+
+            var marker_2d7c25ef8bf6 = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.vivian.com/job/1706-260707/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Lead - MRI Technologist - $41-62 per hour<br>UCHealth</a>');
+            
+
+            var marker_ba0f3653b7d1 = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/e25a82154a74695cb78f26e235c635d8?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Computed Tomography Imaging Specialist<br>SimonMed Imaging</a>');
+            
+
+            var marker_fcf9ff0ece2a = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/df870c74473aa21a2dd072a886b9e0fe?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Magnetic Resonance Technologist<br>SimonMed Imaging</a>');
+            
+
+            var marker_de57870997da = L.marker([33.4484, -112.074], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/d32732b0a1cf3954720514eacceb13bc?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist Role<br>SimonMed Imaging</a>');
+            
+
+            var marker_9ff823f8d015 = L.marker([33.4484, -112.074], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/3d8912dc7f9a0ba12140316e2bd0fc0a?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist Position<br>SimonMed Imaging</a>');
+            
+
+            var marker_2dd8adb3f51d = L.marker([33.4484, -112.074], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/7e77ce6b99f3e0186df09c66c9f1e38e?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist Specialist<br>SimonMed Imaging</a>');
+            
+
+            var marker_0097abed2375 = L.marker([39.7047, -105.0814], {icon: jobBuilding})
+                .bindPopup('<a href='https://i4searchgroup.com/job/1561808-mri-tech-magnetic-resonance-imaging-technologist-competitive-comp-great-benefits-lakewood-co/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech – Magnetic Resonance Imaging Technologist – Competitive Comp & Great Benefits<br>i4 Search Group</a>');
+            
+
+            var marker_ebf60ee262aa = L.marker([44.9778, -93.265], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/cadfbde89c3f60d529e3c3143e9741da?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Board Certified Radiologist Opportunity<br>USA Clinics Group</a>');
+            
+
+            var marker_cc41d41ec4ea = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/e4d220abcdde880ab57c82b2524644d9?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Magnetic Resonance Technologist<br>CommonSpirit Health Mountain Region</a>');
+            
+
+            var marker_504e62ae38d0 = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/0fef9a24431b5d8999003396a5352be1?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiology Associate<br>CommonSpirit Health Mountain Region</a>');
+            
+
+            var marker_c41a84484598 = L.marker([39.9852, -104.8205], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.jobserve.com/us/en/extjob/CT-TECHNOLOGIST-in-Brighton-Colorado-USA-18FB04BB484D359261/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist<br>Intermountain Healthcare</a>');
+            
+
+            var marker_70827c79db63 = L.marker([39.9852, -104.8205], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.jobserve.com/us/en/extjob/CT-TECHNOLOGIST-FLOAT-in-Brighton-Colorado-USA-8C05479A8881CA8A58/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist- Float<br>Intermountain Healthcare</a>');
+            
+
+            var marker_3f03ea5e7ab4 = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.jobserve.com/us/en/extjob/CT-TECHNOLOGIST-in-Broomfield-Colorado-USA-3DF8BFCEF15A3206B3/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist<br>Intermountain Healthcare</a>');
+            
+
+            var marker_2e17facac78e = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.jobserve.com/us/en/extjob/CT-TECHNOLOGIST-FLOAT-in-Broomfield-Colorado-USA-AA151BF4AEED2EACFA/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist- Float<br>Intermountain Healthcare</a>');
+            
+
+            var marker_d8d99c4d3b1b = L.marker([44.8408, -93.2983], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.adzuna.com/details/5043832479?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Team Lead-Imaging Services<br>Indiana University Health System</a>');
+            
+
+            var marker_967b04c4ce7f = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.clinicalmanagementconsultants.com/lead-mri-technologist-jobid-55230.html?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Lead MRI Technologist<br>Clinical Management Consultants</a>');
+            
+
+            var marker_3dc37e02af9c = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.vivian.com/job/9741-1324113/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist - $47-59 per hour<br>Kaiser Permanente</a>');
+            
+
+            var marker_e23c7cfb6509 = L.marker([39.7047, -105.0814], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/83de8d694a21d042ae7fa9b3473e3660?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Diagnostic Technologist - CT Tech<br>Epic Travel Staffing Allied</a>');
+            
+
+            var marker_e6e189e87716 = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/7d08eea516361d4667cd2a3059dec975?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiologic Technologist - CT<br>SimonMed Imaging</a>');
+            
+
+            var marker_e3a43d9b3680 = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/e2f4e091289c2ca8d5505ed3e2245a4e?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Medical Imaging Technologist<br>UCHealth</a>');
+            
+
+            var marker_e7a863bc19a6 = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.trabajo.org/job-3035-bc9f48163046be3a26de622c93d5f769?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Diagnostic Radiology Technician<br>UCHealth</a>');
+            
+
+            var marker_a1212c8a11ae = L.marker([44.9778, -93.265], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/d732f86bf304413d1bd722bb2002dfc8?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Scan Technician<br>SimonMed Imaging</a>');
+            
+
+            var marker_72f2ddeaf88c = L.marker([39.5186, -104.7613], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/53a1d06dda6abbec334c2cde0708f5a0?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiologic Technologist - CT Scanner<br>UCHealth</a>');
+            
+
+            var marker_c830a836ce9c = L.marker([44.9778, -93.265], {icon: jobBuilding})
+                .bindPopup('<a href='https://careers.childrensmn.org/us/en/job/240270YK/Casual-MRI-Tech?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Casual MRI Tech<br>Children\'s Minnesota</a>');
+            
+
+            var marker_594aa2aed5bc = L.marker([39.9994, -105.0897], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/59a430a5cd74d99806bccdfbd03ff8ab?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist Role<br>Intermountain Healthcare</a>');
+            
+
+            var marker_91d087bed1c0 = L.marker([39.7294, -104.8319], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/799f17ad75368b5e041384a5ccd066b5?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Healthcare Professional MRI Technologist<br>HCA Healthcare</a>');
+            
+
+            var marker_1d5acb80f843 = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/d0835e65d0b8ace256be15608432a449?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Computed Tomography Specialist<br>CommonSpirit Health Mountain Region</a>');
+            
+
+            var marker_176d7079a606 = L.marker([44.8547, -93.4708], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobiak.rayusradiology.com/jobdetails/mr-technologist-eden-prairie-mn-675031279b7c03111257e3f8?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MR Technologist<br>RAYUS Radiology</a>');
+            
+
+            var marker_817296542b99 = L.marker([39.5186, -104.7613], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.jobserve.com/us/en/extjob/CT-XR-TECHNOLOGIST-in-Parker-Colorado-USA-D42E7121EDE8F7F11D/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT XR Technologist<br>UCHealth</a>');
+            
+
+            var marker_ddb2b461bcd1 = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.jobserve.com/us/en/extjob/CT-XR-TECHNOLOGIST-in-Denver-Colorado-USA-BF876533D633330330/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT XR Technologist<br>UCHealth</a>');
+            
+
+            var marker_dde72b9fb40d = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/d26cb6ebac57df476b2c94f56d7403ef?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Scan Technician Position<br>K.A. Recruiting</a>');
+            
+
+            var marker_bc005d616d6d = L.marker([44.9778, -93.265], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/726cc04ce71cdcc5603b6193089943e8?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Diagnostic Imaging Professional - Tech Opportunity<br>Della Infotech</a>');
+            
+
+            var marker_21d18b0b41af = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/a9e5d03300401188af3aef1761a1232f?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Physician MRI Technologist<br>Odyssey Staffing</a>');
+            
+
+            var marker_0daddfd877db = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/c/SMI-IMAGING-LLC/Job/MRI-Training-Manager/-in-Scottsdale,AZ?jid=522c18000e6ae41f&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Training Manager<br>SMI IMAGING LLC</a>');
+            
+
+            var marker_9e9283b59ab3 = L.marker([39.7047, -105.0814], {icon: jobBuilding})
+                .bindPopup('<a href='https://jooble.org/jdp/-6402033356882682233?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech - Magnetic Resonance Imaging Technologist - Competitive Comp & Great Benefits<br>i4 Search Group</a>');
+            
+
+            var marker_6351c616de6b = L.marker([39.5792, -104.8768], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/ab98bffa213a32a3bb69c8918563582f?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Healthcare Radiologic Technologist<br>HCA HealthONE Centennial</a>');
+            
+
+            var marker_048ec2ec04b0 = L.marker([39.5792, -104.8768], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/8f6107becfc1e0e33afba4e70ea8a47a?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Specialist Position<br>HCA HealthONE Centennial</a>');
+            
+
+            var marker_a5fefc44c057 = L.marker([39.5792, -104.8768], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/78cadb5738cf54b3b4c6330abfd4f98b?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Scanner Operator<br>HCA HealthONE Centennial</a>');
+            
+
+            var marker_e0c2fd0cbda8 = L.marker([39.7047, -105.0814], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.linkedin.com/jobs/view/ct-tech-inpatient-at-russell-tobin-4145135559?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Tech - Inpatient<br>Russell Tobin</a>');
+            
+
+            var marker_d7247330495b = L.marker([39.7047, -105.0814], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.nurse.com/jobs/ct-tech/3fafd5af-ba9f-4376-b6b8-76e44bf851a3/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Tech | Nurse.com<br>Trustaff</a>');
+            
+
+            var marker_ceadb4e1a6f8 = L.marker([39.7294, -104.8319], {icon: jobBuilding})
+                .bindPopup('<a href='https://careers.hcahealthcare.com/jobs/13514492-ct-technologist?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist<br>HCA Healthcare</a>');
+            
+
+            var marker_87de8a24d555 = L.marker([39.7294, -104.8319], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.linkedin.com/jobs/view/ct-tech-inpatient-at-russell-tobin-4145134634?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Tech - Inpatient<br>Russell Tobin</a>');
+            
+
+            var marker_ac872df2a1c7 = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.linkedin.com/jobs/view/ct-technologists-east-valley-outpatient-imaging-clinics-at-banner-health-4142565301?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologists East Valley Outpatient  Imaging Clinics<br>Banner Health</a>');
+            
+
+            var marker_d6c772463d8d = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/b2f1b0ee10cbacc08c7a63430d8ceee6?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Diagnostic Imaging Support<br>Mistras Group Inc. - Services</a>');
+            
+
+            var marker_d930b330a7d1 = L.marker([39.5792, -104.8768], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.benefitnews.com/job/staff-ct-technologist-X7S1k19pqU-at-uchealth-2?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Staff - CT Technologist<br>UCHealth</a>');
+            
+
+            var marker_c58a46ac0966 = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/33e8a7b49c0a4afc84202880ddb58823?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Medical Imaging Technologist<br>Intermountain Healthcare</a>');
+            
+
+            var marker_f6ed0fb32d3c = L.marker([39.9994, -105.0897], {icon: jobBuilding})
+                .bindPopup('<a href='https://jooble.org/jdp/-8695923054381913109?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech - In House Agency - Lafayette - Nights - Work at a Leading Healthcare Institution (Hiring Immediately)<br>Ochsner Health System</a>');
+            
+
+            var marker_00c173753f11 = L.marker([39.9994, -105.0897], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/03c7735ab95cb809a9a3195bd2d5b080?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Scanner Operator<br>Intermountain Healthcare</a>');
+            
+
+            var marker_e7435e0d20b9 = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.womenforhire.com/job/scottsdale-az/ct-technologist-29-38-per-hour-975418/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist - $29-38 per hour<br>Tenet-AZ Region</a>');
+            
+
+            var marker_a51e8c17d648 = L.marker([33.4484, -112.074], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.valleywisehealth.org/ct-tech/job/28603236?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Tech<br>Valleywise Health</a>');
+            
+
+            var marker_50fb7d243151 = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/c/St.-Anthony-North-Hospital/Job/MRI-Tech/-in-Broomfield,CO?jid=495ce05986ab0773&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech<br>St. Anthony North Hospital</a>');
+            
+
+            var marker_9fd1485e6a7c = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/c/St.-Anthony-North-Hospital/Job/CT-Tech/-in-Broomfield,CO?jid=cda68aad530cc0b1&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Tech<br>St. Anthony North Hospital</a>');
+            
+
+            var marker_a9f6a071dcb9 = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/c/St.-Anthony-North-Hospital/Job/CT-Tech-Weekend-Option/-in-Broomfield,CO?jid=0ff0bf84a0622383&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Tech Weekend Option<br>St. Anthony North Hospital</a>');
+            
+
+            var marker_926d8dc6647e = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.career.com/job/childrens-hospital-colorado/multi-modality-technologist-i/j202405141301250772943?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Multi Modality Technologist I<br>Childrens Hospital Colorado</a>');
+            
+
+            var marker_12860e1dc57f = L.marker([39.7047, -105.0814], {icon: jobBuilding})
+                .bindPopup('<a href='https://i4searchgroup.com/job/1036528-ct-technologist-ct-tech-full-time-variable-shift-great-benefits-relocation-assistance-lakewood-co/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist – CT Tech – Full Time/Variable Shift/Great Benefits/Relocation Assistance<br>i4 Search Group</a>');
+            
+
+            var marker_709a4cda560d = L.marker([39.7294, -104.8319], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.linkedin.com/jobs/view/ct-xray-technologist-at-uchealth-4143441930?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT XRay Technologist<br>UCHealth</a>');
+            
+
+            var marker_449e9723fdaf = L.marker([39.7047, -105.0814], {icon: jobBuilding})
+                .bindPopup('<a href='https://i4searchgroup.com/job/2973587-lead-mri-tech-magnetic-resonance-imaging-technologist-weekdays-only-competitive-comp-great-benefits-lakewood-co/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Lead MRI Tech – Magnetic Resonance Imaging Technologist – Weekdays Only/Competitive Comp & Great Benefits<br>i4 Search Group</a>');
+            
+
+            var marker_21d6cb07ef5b = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/022ad48f5167a42ecbac5539eb008f47?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Medical Imaging Professional<br>Healthcare Support Permanent Placement</a>');
+            
+
+            var marker_96df939893d3 = L.marker([44.8408, -93.2983], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.adzuna.com/details/5037615496?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist - Full-time - Bloomington<br>Indiana University Health System</a>');
+            
+
+            var marker_d82865c68328 = L.marker([39.868, -104.9719], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.whatjobs.com/gfj/1863333867?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>Children\'s Hospital Colorado</a>');
+            
+
+            var marker_a8a62777cbae = L.marker([44.8547, -93.4708], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/b8c2a1725f01e7282aaa723fc3f3d8ed?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Computed Tomography<br>RAYUS Radiology</a>');
+            
+
+            var marker_3dcea2025fce = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://careers.hcahealthcare.com/jobs/15402470-ct-technologist-weekends?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist Weekends<br>HCA Healthcare</a>');
+            
+
+            var marker_9d81682cb66d = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.trabajo.org/job-2850-1893c6ebb4a7f4b93ce9c7f5695ce786?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist I, Full Time, Night Shift<br>UCHealth</a>');
+            
+
+            var marker_83be386f0f67 = L.marker([39.7047, -105.0814], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.snagajob.com/jobs/1058028601?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist - Full-time<br>UCHealth</a>');
+            
+
+            var marker_e9ae1b53a99d = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/f9c5868b79a6a5470e29b4c2190972c6?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Medical Imaging Expert (MRI Technologist)<br>UCHealth</a>');
+            
+
+            var marker_bd5c0dca2a6f = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.monster.com/job-openings/staff-mri-technologist-broomfield-co--dc41d80a-9ead-4ca3-a28b-d351ed34e281?mstr_dist=true&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Staff - MRI Technologist<br>UCHealth</a>');
+            
+
+            var marker_6d121f7c333f = L.marker([40.0505, -105.0497], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.womenforhire.com/job/erie-co/level-i-radiology-technologist-26-39-per-hour-918068/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Level I - Radiology Technologist - $26-39 per hour<br>UCHealth</a>');
+            
+
+            var marker_ed2069955e2d = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.womenforhire.com/job/broomfield-co/ct-technologist-36-54-per-hour-699099/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist - $36-54 per hour<br>UCHealth</a>');
+            
+
+            var marker_94e3fab5761b = L.marker([39.9994, -105.0897], {icon: jobBuilding})
+                .bindPopup('<a href='https://starjobsearch.co.uk/jobs/mri-imaging-specialist-lafayette-colorado/1563312873-2/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Imaging Specialist<br>Intermountain Healthcare</a>');
+            
+
+            var marker_7839fc5b387c = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.monster.com/job-openings/staff-mri-technologist-denver-co--9175b7f9-2b2a-4e34-b606-1d0464db17a4?mstr_dist=true&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Staff - MRI Technologist<br>UCHealth</a>');
+            
+
+            var marker_0795a070faa5 = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/2f68b910ad9e5a04955bd960feb04503?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Magnetic Resonance and Computed Tomography Specialist<br>Southwest Medical Imaging</a>');
+            
+
+            var marker_3725abb311bd = L.marker([39.7294, -104.8319], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.healthecareers.com/job/staff-mri-technologist/7754193?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Staff - MRI Technologist<br>UCHealth</a>');
+            
+
+            var marker_60cbfac88883 = L.marker([39.7294, -104.8319], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/3105af3db0adbaefb910253d4d665984?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist - Full Time Position<br>UCHealth</a>');
+            
+
+            var marker_6f0dbe3bb82c = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/d5667d4d7cf2c6ffc67f2cce01e64a20?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Staff - MRI Technologist - UCHealth<br>UCHealth</a>');
+            
+
+            var marker_dd2967a135c3 = L.marker([39.5792, -104.8768], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.benefitnews.com/job/lead-ct-technologist-39-58-per-hour-BBz3Kgsuop-at-uchealth-2?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Lead - CT Technologist - $39-58 per hour<br>UCHealth</a>');
+            
+
+            var marker_f60d517a36a4 = L.marker([40.0505, -105.0497], {icon: jobBuilding})
+                .bindPopup('<a href='https://monument.health/gfj/radiological-technologist-clinic-erie-co-66ebdab1dad8f80343db1d78?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiological Technologist Clinic<br>Monument Health</a>');
+            
+
+            var marker_0ab5c81e867d = L.marker([39.5186, -104.7613], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ihire.com/jobs/view/463743700?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>UCHealth</a>');
+            
+
+            var marker_385bd1d4c9e4 = L.marker([33.4152, -111.8315], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.bebee.com/job/7d096e4d378a417f342bce674936b96b?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Magnetic Resonance Technologist<br>SimonMed Imaging</a>');
+            
+
+            var marker_b8c6f145cffb = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.trabajo.org/job-2850-7cd5cef5dd526e55d444c9e6c922f50e?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>3rd Shift Weekend MRI Technologist<br>Healthcare Support Permanent Placement</a>');
+            
+
+            var marker_69274cb82b1c = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://monument.health/gfj/radiological-technologist-clinic-longmont-co-66ebda26dad8f80343db1d5e?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiological Technologist Clinic<br>Monument Health</a>');
+            
+
+            var marker_54508d8c8d3d = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://monument.health/gfj/radiological-technologist-clinic-westminster-co-66ebda98dad8f80343db1d72?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiological Technologist Clinic<br>Monument Health</a>');
+            
+
+            var marker_6971cf5210b7 = L.marker([39.868, -104.9719], {icon: jobBuilding})
+                .bindPopup('<a href='https://monument.health/gfj/radiological-technologist-clinic-thornton-co-66ebd8cfdad8f80343db1d17?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiological Technologist Clinic<br>Monument Health</a>');
+            
+
+            var marker_7c45c27e3697 = L.marker([44.8547, -93.4708], {icon: jobBuilding})
+                .bindPopup('<a href='https://recruiting.paylocity.com/recruiting/jobs/Details/2946355/ADVENT/Radiologic-Technologist?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiologic Technologist<br>ADVENT</a>');
+            
+
+            var marker_38df96ce8758 = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://us.trabajo.org/job-2850-0e0611b1d3da461ac50b5879c6049ce9?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech<br>CommonSpirit Health Mountain Region</a>');
+            
+
+            var marker_fc38494d8a6b = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.kaiserpermanentejobs.org/job/denver/mri-technologist/641/76780251072?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>Kaiser Permanente</a>');
+            
+
+            var marker_d8dcbf506a5a = L.marker([39.5186, -104.7613], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.simplyhired.com/job/4vvq0IHwfdGKj9yrjyQJzpVgQjeCs0XhdgH2wIiSeKUcjLoR4CdlYw?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist Weekends<br>Sky Ridge South Parker ER</a>');
+            
+
+            var marker_3109b1280d94 = L.marker([39.9994, -105.0897], {icon: jobBuilding})
+                .bindPopup('<a href='https://intermountain-healthcare.dejobs.org/lafayette-co/mri-technologist/7D37FFE242F34C0BAE6A512FEE0B809B/job/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>Intermountain Healthcare</a>');
+            
+
+            var marker_679408882dbd = L.marker([39.7294, -104.8319], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=14f70cd2693b3d20&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist<br>HCA Healthcare</a>');
+            
+
+            var marker_60a2c5d71754 = L.marker([39.9852, -104.8205], {icon: jobBuilding})
+                .bindPopup('<a href='https://intermountain-healthcare.dejobs.org/brighton-co/mri-technologist/608451A19B9C4C6BBBE411AE7EB2B1D7/job/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>Intermountain Healthcare</a>');
+            
+
+            var marker_04e2e3227278 = L.marker([39.868, -104.9719], {icon: jobBuilding})
+                .bindPopup('<a href='https://careers.hcahealthcare.com/jobs/14619789-ct-lead-technologist?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Lead Technologist<br>HCA Healthcare</a>');
+            
+
+            var marker_2d6174832a93 = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.linkedin.com/jobs/view/ct-technologist-at-uchealth-4135846944?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist<br>UCHealth</a>');
+            
+
+            var marker_c891fec70e6e = L.marker([39.7392, -104.9903], {icon: jobBuilding})
+                .bindPopup('<a href='https://careers.hcahealthcare.com/jobs/14618530-ct-technologist?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist<br>HCA Healthcare</a>');
+            
+
+            var marker_d13a08327351 = L.marker([39.9994, -105.0897], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/c/Intermountain-Healthcare/Job/MRI-Technologist/-in-Lafayette,CO?jid=1055e47ed0505003&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>Intermountain Healthcare</a>');
+            
+
+            var marker_f44eb962079e = L.marker([40.1672, -105.1019], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.idrhealthcare.com/job/399015-ct-tech-longmont-co/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Tech<br>IDR Healthcare</a>');
+            
+
+            var marker_f8678c842cf4 = L.marker([40.0505, -105.0497], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/c/Boulder-Community-Health/Job/Radiology-Tech/-in-Erie,CO?jid=35e2c1c89c96cdb7&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Radiology Tech<br>Boulder Community Health</a>');
+            
+
+            var marker_8ec3d2e9d4e1 = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=55f203db5e6578e4&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>SimonMed Imaging</a>');
+            
+
+            var marker_6455a34c8378 = L.marker([33.4484, -112.074], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.mayoclinic.org/job/phoenix/mri-technologist-day-shift/33647/76394427744?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist - Day Shift<br>Mayo Clinic</a>');
+            
+
+            var marker_b0d53afcb59b = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.alliedhealthjobcafe.com/job/radiology-and-imaging/radiography/19446285/part-time-mri-technologist-in-colorado?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Part-Time MRI Technologist in Colorado!<br>KA Recruiting Inc.</a>');
+            
+
+            var marker_8ef376d3a0c5 = L.marker([44.9778, -93.265], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/c/Fairview-Health-Services/Job/Magnetic-Resonance-Imaging-(MRI)-Technologist/-in-Minneapolis,MN?jid=fd20dfd55f3283d2&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Magnetic Resonance Imaging (MRI) Technologist<br>Fairview Health Services</a>');
+            
+
+            var marker_1eaaf5e226da = L.marker([44.8408, -93.2983], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.adzuna.com/details/5017352883?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>Advanced Diagnostic Radiology Technologist - Neurosurgery<br>Indiana University Health System</a>');
+            
+
+            var marker_28f50a9ee8bc = L.marker([39.8366, -105.0372], {icon: jobBuilding})
+                .bindPopup('<a href='https://healthcarecareers.cha.com/jobs/20994464/mri-tech?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech<br>CommonSpirit Health Mountain Region</a>');
+            
+
+            var marker_b86a10c8f8b7 = L.marker([44.8547, -93.4708], {icon: jobBuilding})
+                .bindPopup('<a href='https://lensa.com/job-v1/allina-health/eden-prairie-mn/mri-technologist/e959bb8a004aa0b55c99249a58052a60?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist Casual<br>Allina Health</a>');
+            
+
+            var marker_9e4249a77a4c = L.marker([44.9778, -93.265], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.ziprecruiter.com/c/KURZ-Solutions/Job/MRI-Tech/-in-Minneapolis,MN?jid=a21c75ac3a45feb5&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Tech<br>Kurz Solutions</a>');
+            
+
+            var marker_97f145798670 = L.marker([33.4942, -111.9261], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.indeed.com/viewjob?jk=5a46d84531ead053&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>PET/CT Technologist<br>Arizona Center for Cancer Care</a>');
+            
+
+            var marker_f59fd8e2e7ab = L.marker([39.868, -104.9719], {icon: jobBuilding})
+                .bindPopup('<a href='https://hcahealthcare.dejobs.org/thornton-co/mri-technologist/8377901794F9494287C83BE2C7152193/job/?utm_source=USNLx.com-DE&utm_medium=NLX&utm_campaign=USNLx.com&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>HCA Healthcare</a>');
+            
+
+            var marker_e657f7af3061 = L.marker([33.4484, -112.074], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.mayoclinic.org/job/phoenix/ct-technologist-days-5k-sign-on-bonus/33647/76005942880?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist - Days - $5k Sign On Bonus<br>Mayo Clinic</a>');
+            
+
+            var marker_62d5c9315766 = L.marker([33.4484, -112.074], {icon: jobBuilding})
+                .bindPopup('<a href='https://jobs.mayoclinic.org/job/phoenix/ct-technologist-part-time-weekends/33647/76005942848?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>CT Technologist - Part Time Weekends<br>Mayo Clinic</a>');
+            
+
+            var marker_f87caf1382d7 = L.marker([39.9205, -105.0867], {icon: jobBuilding})
+                .bindPopup('<a href='https://www.clinicalmanagementconsultants.com/mri-technologist-jobid-53408.html?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic' target='_blank'>MRI Technologist<br>Clinical Management Consultants</a>');
+            
+var hospitals = L.layerGroup([marker_5, marker_9, marker_4, marker_11, marker_1, marker_10, marker_6, marker_8, marker_2, marker_13, marker_3, marker_12, marker_7, marker_14]);
 var houses = L.layerGroup([marker_6e3e3c73916d, marker_6e3e3c73916d, marker_da7d0e212fc7, marker_da7d0e212fc7, marker_974bba39677f, marker_974bba39677f, marker_a468ba7cc5ed, marker_a468ba7cc5ed, marker_216b2308ee16, marker_216b2308ee16, marker_1359eb60df18, marker_1359eb60df18, marker_7bd079719530, marker_7bd079719530, marker_db80d9a9aeed, marker_db80d9a9aeed, marker_f28696037063, marker_f28696037063, marker_d08b13498ba2, marker_d08b13498ba2, marker_2938cfefda1f, marker_2938cfefda1f, marker_07122d3429c3, marker_07122d3429c3, marker_1a3e603b2608, marker_1a3e603b2608, marker_e6cf456b2739, marker_e6cf456b2739, marker_890e162724d5, marker_890e162724d5, marker_b1d247a5760d, marker_b1d247a5760d, marker_7a47671cce4d, marker_7a47671cce4d, marker_1ca1bf6bcd3e, marker_1ca1bf6bcd3e, marker_9ecd08d09d1f, marker_9ecd08d09d1f, marker_45b8e39bec11, marker_45b8e39bec11, marker_d5ad07264167, marker_d5ad07264167, marker_2a98094cc06e, marker_2a98094cc06e, marker_9f6c4c9ee90c, marker_9f6c4c9ee90c, marker_236eeed91dc0, marker_236eeed91dc0, marker_f51d8907489d, marker_f51d8907489d, marker_aa4be83c2112, marker_aa4be83c2112, marker_abac97a00a51, marker_abac97a00a51, marker_3b98b8d78f14, marker_3b98b8d78f14, marker_fc7a5c4c0d28, marker_fc7a5c4c0d28, marker_605f722c987b, marker_605f722c987b, marker_78837866a912, marker_78837866a912, marker_2249bf3c1998, marker_2249bf3c1998, marker_78332eeed6cd, marker_78332eeed6cd, marker_5e5c27b05e49, marker_5e5c27b05e49, marker_2f0e2a9a62dd, marker_2f0e2a9a62dd, marker_4b7e4c04998e, marker_4b7e4c04998e, marker_36acc154b283, marker_36acc154b283, marker_1dba5c961452, marker_1dba5c961452, marker_041dbf65d752, marker_041dbf65d752, marker_bc2baae8bb34, marker_bc2baae8bb34, marker_70aa272b0987, marker_70aa272b0987, marker_0f2415a801a5, marker_0f2415a801a5, marker_4a55ba347995, marker_4a55ba347995, marker_858b9491e5fc, marker_858b9491e5fc, marker_2697873fe4b4, marker_2697873fe4b4, marker_fa98f68138ce, marker_fa98f68138ce, marker_60598a8352e6, marker_60598a8352e6, marker_f2680fe01006, marker_f2680fe01006, marker_70106a0577f8, marker_70106a0577f8, marker_0195309e8339, marker_0195309e8339, marker_085b370da1c8, marker_085b370da1c8, marker_79c4ddbfa7ca, marker_79c4ddbfa7ca, marker_e9d9ea19a9cf, marker_e9d9ea19a9cf, marker_0cb056579fb7, marker_0cb056579fb7, marker_1ecf7ded3091, marker_1ecf7ded3091, marker_e5cdc4fe08fe, marker_e5cdc4fe08fe, marker_8c4f73208a55, marker_8c4f73208a55, marker_d2e4b4a53b0d, marker_d2e4b4a53b0d, marker_71983ba88585, marker_71983ba88585, marker_ef7e55974e97, marker_ef7e55974e97, marker_be3f11191567, marker_be3f11191567, marker_fb49d6a9d2bc, marker_fb49d6a9d2bc, marker_57ec7300c9c7, marker_57ec7300c9c7, marker_f9cc9593c15b, marker_f9cc9593c15b, marker_9d1bf044ee02, marker_9d1bf044ee02, marker_25f6c8db7a17, marker_25f6c8db7a17, marker_c6206f253331, marker_c6206f253331, marker_f4d53b10a6f9, marker_f4d53b10a6f9, marker_a9e746c1ba32, marker_a9e746c1ba32, marker_95eab9aa9fa8, marker_95eab9aa9fa8, marker_b51ba0cf3574, marker_b51ba0cf3574, marker_7fcc134e5185, marker_7fcc134e5185, marker_b51fffe7cac2, marker_b51fffe7cac2, marker_430cf2ee105a, marker_430cf2ee105a, marker_ab9b4c2bb80b, marker_ab9b4c2bb80b, marker_1d82044b4a66, marker_1d82044b4a66, marker_ad31436b721a, marker_ad31436b721a, marker_b01e435299cf, marker_b01e435299cf, marker_0d951882256d, marker_0d951882256d, marker_c0f9adfa22f9, marker_c0f9adfa22f9, marker_4bb8c7425c5f, marker_4bb8c7425c5f, marker_2ae08da78657, marker_2ae08da78657, marker_4267abe74afa, marker_4267abe74afa, marker_fee3dca819b3, marker_fee3dca819b3, marker_931c71d13a17, marker_931c71d13a17, marker_c9cdfabe3e78, marker_c9cdfabe3e78, marker_9b6728e588e1, marker_9b6728e588e1, marker_dacaa0e921d6, marker_dacaa0e921d6, marker_08d3cd06eb29, marker_08d3cd06eb29, marker_9794ed5394cf, marker_9794ed5394cf, marker_bfa1ffb9ebff, marker_bfa1ffb9ebff, marker_6a1a71032a69, marker_6a1a71032a69, marker_41f7a61110e2, marker_41f7a61110e2, marker_1d548fd8f6b3, marker_1d548fd8f6b3, marker_0ade7c66a922, marker_0ade7c66a922, marker_62ef09673853, marker_62ef09673853, marker_d5945cd3ec7c, marker_d5945cd3ec7c, marker_a0db16918b98, marker_a0db16918b98, marker_667e6815e07d, marker_667e6815e07d, marker_4c19cc99b4b1, marker_4c19cc99b4b1, marker_0703feadc18e, marker_0703feadc18e, marker_7ab2c60a194b, marker_7ab2c60a194b, marker_2d0f4f19560f, marker_2d0f4f19560f, marker_54e9f20ff12a, marker_54e9f20ff12a, marker_807020b68a3b, marker_807020b68a3b, marker_c9fb9d59333c, marker_c9fb9d59333c, marker_b8681c2ba1e7, marker_b8681c2ba1e7, marker_6796c1c428e7, marker_6796c1c428e7, marker_6857fdc8f809, marker_6857fdc8f809, marker_ef359ed821ab, marker_ef359ed821ab, marker_03eb98c60e69, marker_03eb98c60e69, marker_c9e6e3810f9b, marker_c9e6e3810f9b, marker_64bb0391a586, marker_64bb0391a586, marker_0c9ea2d362e4, marker_0c9ea2d362e4, marker_f1a2005d4b17, marker_f1a2005d4b17, marker_41829f73b6f8, marker_41829f73b6f8, marker_1a69cc3a92c3, marker_1a69cc3a92c3, marker_dc3b4ba0a51e, marker_dc3b4ba0a51e, marker_27a788175d34, marker_27a788175d34, marker_ea6a430c02e5, marker_ea6a430c02e5, marker_9cb6c03e4d91, marker_9cb6c03e4d91, marker_0786c343f1aa, marker_0786c343f1aa, marker_79f55dbf061c, marker_79f55dbf061c, marker_fa42ac4c92db, marker_fa42ac4c92db, marker_821c4b6f89df, marker_821c4b6f89df, marker_232bb8cc0aa2, marker_232bb8cc0aa2, marker_ffe33e2bce70, marker_ffe33e2bce70, marker_85b3259b2057, marker_85b3259b2057, marker_7f0dc8a34818, marker_7f0dc8a34818, marker_cc7f14fde0e8, marker_cc7f14fde0e8, marker_5727565514cd, marker_791242f45286, marker_b9f28aca735f, marker_5e6e008ca6ec, marker_5727565514cd, marker_791242f45286, marker_b9f28aca735f, marker_5e6e008ca6ec, marker_9fc01fc2e145, marker_9fc01fc2e145, marker_935d8ca38eb2, marker_935d8ca38eb2, marker_5bec30182cf6, marker_5bec30182cf6, marker_5884e18b4da8, marker_5884e18b4da8, marker_97226c221894, marker_97226c221894, marker_5436202f76f8, marker_5436202f76f8, marker_cc8dc1ec5988, marker_cc8dc1ec5988, marker_52379844f94c, marker_52379844f94c, marker_1d03e6bb5ee2, marker_1d03e6bb5ee2, marker_af941114d3f0, marker_af941114d3f0, marker_b84721df171e, marker_b84721df171e, marker_28355bd26bf1, marker_28355bd26bf1, marker_60579d391d20, marker_60579d391d20, marker_bbb648e82774, marker_bbb648e82774, marker_ff0688ece90a, marker_ff0688ece90a, marker_e5f5e8b0818d, marker_e5f5e8b0818d, marker_86e1a4d67ddf, marker_86e1a4d67ddf, marker_f238b8aeb969, marker_f238b8aeb969, marker_3c82f691d2e7, marker_3c82f691d2e7, marker_0e4d89448165, marker_0e4d89448165, marker_b5e31974445a, marker_b5e31974445a, marker_7b7feb1c46d7, marker_7b7feb1c46d7, marker_7099fbb9c122, marker_7099fbb9c122, marker_dc10755bbf7f, marker_dc10755bbf7f, marker_a82772a8c683, marker_a82772a8c683, marker_a8d1f1d233ff, marker_a8d1f1d233ff, marker_c6fb4234f84a, marker_c6fb4234f84a, marker_72dea7003c03, marker_72dea7003c03, marker_57c6b448ceeb, marker_57c6b448ceeb, marker_8f3d2db9dfa1, marker_8f3d2db9dfa1, marker_0147dd831027, marker_0147dd831027, marker_c0b6078d15d8, marker_c0b6078d15d8, marker_03960a7948b3, marker_03960a7948b3, marker_aa95b7bca0e5, marker_aa95b7bca0e5, marker_a98383d10a10, marker_a98383d10a10, marker_96249613d85f, marker_96249613d85f, marker_93fc850b5e4b, marker_05d23d3f673c, marker_93fc850b5e4b, marker_05d23d3f673c, marker_f2bf7432eac3, marker_f2bf7432eac3, marker_2ae5b7801ea2, marker_2ae5b7801ea2, marker_9864441eabbf, marker_9864441eabbf, marker_70188b94fabc, marker_70188b94fabc, marker_271760579b2d, marker_271760579b2d, marker_5e435e23293d, marker_5e435e23293d, marker_4472386d83a7, marker_4472386d83a7, marker_bd1d765c1e9f, marker_bd1d765c1e9f, marker_a5091985c825, marker_a5091985c825, marker_1af7f50f5da2, marker_1af7f50f5da2, marker_1f64c5f46f4f, marker_1f64c5f46f4f, marker_09d5f4511b26, marker_09d5f4511b26, marker_c70aceae1930, marker_c70aceae1930, marker_2ae80a28dedf, marker_2ae80a28dedf, marker_1fee9b4ecf04, marker_1fee9b4ecf04, marker_cbf1a39bcbb5, marker_cbf1a39bcbb5, marker_730b35c243dc, marker_730b35c243dc, marker_08f9348331ce, marker_08f9348331ce, marker_24f58f900c91, marker_24f58f900c91, marker_1f687c29bb03, marker_1f687c29bb03, marker_8f19780673b7, marker_8f19780673b7, marker_e51d5eb95cf9, marker_e51d5eb95cf9, marker_a66bd0f1cf68, marker_a66bd0f1cf68, marker_539787553a65, marker_539787553a65, marker_f7de9ee07da1, marker_f7de9ee07da1, marker_55e4e57c0664, marker_55e4e57c0664, marker_148ba320ae74, marker_148ba320ae74, marker_c4d99d889609, marker_c4d99d889609, marker_d14527593b9c, marker_d14527593b9c, marker_0bac5c63fd03, marker_0bac5c63fd03, marker_210b9244c437, marker_210b9244c437, marker_d677de888a1a, marker_d677de888a1a, marker_1b60b947389f, marker_1b60b947389f, marker_3417caa08020, marker_3417caa08020, marker_bbf31a03b092, marker_bbf31a03b092, marker_055fa213a2ed, marker_055fa213a2ed, marker_a707a4d4dbba, marker_a707a4d4dbba, marker_3a92e0976d78, marker_3a92e0976d78, marker_cc3abd079055, marker_cc3abd079055, marker_acde47e95eb6, marker_acde47e95eb6, marker_40885522a4a0, marker_40885522a4a0, marker_bf66636922f2, marker_bf66636922f2, marker_2259fffeee54, marker_2259fffeee54, marker_4fd32024fac5, marker_4fd32024fac5, marker_86e9ac1a3d24, marker_86e9ac1a3d24, marker_8e4b41678e24, marker_8e4b41678e24, marker_4eb0929f41e8, marker_4eb0929f41e8, marker_2eb9666c95ba, marker_2eb9666c95ba, marker_717a52e659e6, marker_717a52e659e6, marker_606ab8ec10b1, marker_606ab8ec10b1, marker_add08518d6bb, marker_add08518d6bb, marker_d6a0fdf95c59, marker_d6a0fdf95c59, marker_ae5475f9c52e, marker_ae5475f9c52e, marker_cce28c5d76fb, marker_cce28c5d76fb, marker_3266c4154a69, marker_3266c4154a69, marker_3054f4717b96, marker_3054f4717b96, marker_eea1582bbb76, marker_eea1582bbb76, marker_18515d8cf794, marker_18515d8cf794, marker_d46c31d69072, marker_d46c31d69072, marker_26098cb03e55, marker_26098cb03e55, marker_05a0dbed2b80, marker_05a0dbed2b80, marker_e079b8352bbb, marker_e079b8352bbb, marker_f8aed50c7d90, marker_f8aed50c7d90, marker_d84f341ad6b7, marker_d84f341ad6b7, marker_f5dfdd8f446e, marker_f5dfdd8f446e, marker_f3ada208aaab, marker_f3ada208aaab, marker_3d11c272d969, marker_3d11c272d969, marker_618cb1eed546, marker_618cb1eed546, marker_d5b5fea3a77d, marker_d5b5fea3a77d, marker_8d8a6956932b, marker_8d8a6956932b, marker_cd06b399bcf6, marker_cd06b399bcf6, marker_716182078518, marker_716182078518, marker_e8d5b9443cb2, marker_e8d5b9443cb2, marker_be2971c9b355, marker_be2971c9b355, marker_e6400c68ef02, marker_e6400c68ef02, marker_c17441e9c0f9, marker_c17441e9c0f9, marker_aa05ce972903, marker_aa05ce972903, marker_09cc5de98773, marker_09cc5de98773, marker_2085b3ed4ab5, marker_2085b3ed4ab5, marker_086fe012662d, marker_086fe012662d, marker_12e40ad0e755, marker_12e40ad0e755, marker_ede97f906cf1, marker_ede97f906cf1, marker_159c18b2c0a6, marker_159c18b2c0a6, marker_6d9e9ded0e37, marker_6d9e9ded0e37, marker_63c59e6eed25, marker_63c59e6eed25, marker_8516c6416d92, marker_8516c6416d92, marker_7782374459c7, marker_7782374459c7, marker_c6c39d5bce4c, marker_c6c39d5bce4c, marker_f26fc4fa1653, marker_f26fc4fa1653, marker_5c5d58e0be0b, marker_5c5d58e0be0b, marker_13aebc10d81e, marker_13aebc10d81e, marker_637d840094ec, marker_637d840094ec, marker_28291392db97, marker_28291392db97, marker_3e1b24bc236a, marker_3e1b24bc236a, marker_0bbf852204f6, marker_0bbf852204f6, marker_02f31d6dfaa2, marker_02f31d6dfaa2, marker_06d474323233, marker_06d474323233, marker_532e12df257e, marker_532e12df257e, marker_1af8e2572416, marker_1af8e2572416, marker_5d5e56b58786, marker_5d5e56b58786, marker_7bc1b8030e7c, marker_7bc1b8030e7c, marker_ba98dea1085e, marker_ba98dea1085e, marker_57902b545412, marker_57902b545412, marker_b982a19d4992, marker_b982a19d4992, marker_8ed21d7c453d, marker_8ed21d7c453d, marker_9d40ca801d6d, marker_9d40ca801d6d, marker_7e44ea83cb8b, marker_7e44ea83cb8b, marker_cd2822217d29, marker_cd2822217d29, marker_6b9b1d034179, marker_6b9b1d034179, marker_4d699b363dca, marker_4d699b363dca, marker_aba3ca4d2954, marker_aba3ca4d2954, marker_788725651080, marker_788725651080, marker_ca59a80163f4, marker_ca59a80163f4, marker_2e8157f36537, marker_2e8157f36537, marker_055bb667d862, marker_055bb667d862, marker_9dc2df448c3b, marker_9dc2df448c3b, marker_8ac958d5fc73, marker_8ac958d5fc73, marker_f82f097b7109, marker_f82f097b7109, marker_924c79e7814f, marker_924c79e7814f, marker_18f4e08585e8, marker_18f4e08585e8, marker_188ef7a0d0e3, marker_188ef7a0d0e3, marker_148b6f9802c8, marker_148b6f9802c8, marker_22d0b52fdece, marker_22d0b52fdece, marker_30c275c67420, marker_30c275c67420, marker_66465154b3f8, marker_66465154b3f8, marker_55b446951fa9, marker_55b446951fa9, marker_66dbd2a2d63c, marker_66dbd2a2d63c, marker_769389dd8fae, marker_769389dd8fae, marker_9b907b3d6da4, marker_9b907b3d6da4, marker_7ad796a949c2, marker_7ad796a949c2, marker_24a6cee81fdc, marker_24a6cee81fdc, marker_a40ee529a26c, marker_a40ee529a26c, marker_974148017d31, marker_974148017d31, marker_f83a89631a8a, marker_f83a89631a8a, marker_838e20596d1e, marker_838e20596d1e, marker_be69984b67b0, marker_be69984b67b0, marker_54de83a49465, marker_54de83a49465, marker_26b37631de1a, marker_26b37631de1a, marker_41abb3b9d1f9, marker_41abb3b9d1f9, marker_0ae44f1b4c74, marker_0ae44f1b4c74, marker_3355d89476b9, marker_3355d89476b9, marker_219667d2191f, marker_219667d2191f, marker_9adf33b03c78, marker_9adf33b03c78, marker_d3ab3f7f0903, marker_d3ab3f7f0903, marker_d4f98dbd4a54, marker_d4f98dbd4a54, marker_62b0cd9acc60, marker_62b0cd9acc60, marker_5734f85353cc, marker_5734f85353cc, marker_630280d67fc6, marker_630280d67fc6, marker_9ea5a755cab8, marker_9ea5a755cab8, marker_254a70183b91, marker_254a70183b91, marker_f0c026c985af, marker_f0c026c985af, marker_e41273d49bb2, marker_e41273d49bb2, marker_7edb0204b647, marker_7edb0204b647, marker_b879413c994b, marker_b879413c994b, marker_5f3c75be8a13, marker_5f3c75be8a13, marker_61c69ed5bbd9, marker_61c69ed5bbd9, marker_1f51953396db, marker_1f51953396db, marker_3139fff4b7a3, marker_3139fff4b7a3, marker_5b8a299c19ab, marker_5b8a299c19ab, marker_39a592d442fd, marker_39a592d442fd, marker_fa5cc5a3e22c, marker_fa5cc5a3e22c, marker_6f4797509076, marker_6f4797509076, marker_95b8ab2cc24c, marker_95b8ab2cc24c, marker_888ab668823c, marker_888ab668823c, marker_98816e16a2cf, marker_98816e16a2cf, marker_a44bc15a5d8c, marker_a44bc15a5d8c, marker_b3434dce7058, marker_b3434dce7058, marker_593452a85867, marker_593452a85867, marker_35a8d85df0a9, marker_35a8d85df0a9, marker_8f100e5a72aa, marker_8f100e5a72aa, marker_002a7a2c7db4, marker_002a7a2c7db4, marker_267a8ec5b2ee, marker_267a8ec5b2ee, marker_bf5a443ca807, marker_bf5a443ca807, marker_ac0bda637a9a, marker_ac0bda637a9a, marker_ce458d7eb23a, marker_ce458d7eb23a, marker_dd45b252cae5, marker_dd45b252cae5, marker_4d7e208451fc, marker_4d7e208451fc, marker_4a844a03c0f0, marker_4a844a03c0f0, marker_54fcf7aebb98, marker_54fcf7aebb98, marker_d9d234f3d6e2, marker_d9d234f3d6e2, marker_968c60a8725e, marker_968c60a8725e, marker_b927b01b5410, marker_b927b01b5410, marker_783cf7bdf12a, marker_783cf7bdf12a, marker_4163a6718358, marker_4163a6718358, marker_b97252bcdedf, marker_b97252bcdedf, marker_544d2956ca9f, marker_544d2956ca9f, marker_f6a92c217067, marker_f6a92c217067, marker_e72a7bb070a6, marker_e72a7bb070a6, marker_bf39b1d73aeb, marker_bf39b1d73aeb, marker_d195bf5867a4, marker_d195bf5867a4, marker_b2ae954a1e6f, marker_b2ae954a1e6f, marker_b0418697f67d, marker_b0418697f67d, marker_b0314bcb3d55, marker_b0314bcb3d55, marker_806c9463a40b, marker_806c9463a40b, marker_45da83f81f89, marker_45da83f81f89, marker_ea1d2cd6116e, marker_ea1d2cd6116e, marker_876d38061c02, marker_876d38061c02, marker_08ed864044b1, marker_08ed864044b1, marker_9066d5010d7a, marker_9066d5010d7a, marker_ebb4b5e1d7a9, marker_ebb4b5e1d7a9, marker_4d8ed8ba313a, marker_4d8ed8ba313a, marker_7138f500986b, marker_7138f500986b, marker_a9bebb091669, marker_a9bebb091669, marker_f4e826b4216b, marker_f4e826b4216b, marker_b778290e1134, marker_b778290e1134, marker_44b1fcd4f3a6, marker_44b1fcd4f3a6, marker_87df9f922c82, marker_87df9f922c82, marker_8b86ee88c342, marker_8b86ee88c342, marker_229bf8d417c1, marker_229bf8d417c1, marker_1554b9e0456c, marker_1554b9e0456c, marker_0981fd24cf17, marker_0981fd24cf17, marker_034cd0bec3a6, marker_034cd0bec3a6, marker_7a671a5b6578, marker_7a671a5b6578, marker_3c6ef06112f4, marker_3c6ef06112f4, marker_720ce99da791, marker_720ce99da791, marker_0b94e51a985c, marker_0b94e51a985c, marker_895a1f3b46fa, marker_895a1f3b46fa, marker_a691dbe44e40, marker_a691dbe44e40, marker_647375ccb39b, marker_647375ccb39b, marker_f64bbbea8732, marker_f64bbbea8732, marker_c1a1ec3f390e, marker_c1a1ec3f390e, marker_9a24302efaba, marker_9a24302efaba, marker_bfed34342185, marker_bfed34342185, marker_b079824429ca, marker_b079824429ca, marker_d2d89d6ea39b, marker_d2d89d6ea39b, marker_663e3896e372, marker_663e3896e372, marker_517281698b7a, marker_517281698b7a, marker_e5d31f3b7076, marker_e5d31f3b7076, marker_a1a2b79abf6e, marker_a1a2b79abf6e, marker_e66253b8902d, marker_e66253b8902d, marker_4b2d4fbc45de, marker_16c85fb5b7fc, marker_4b2d4fbc45de, marker_16c85fb5b7fc, marker_51e26ed7811f, marker_51e26ed7811f, marker_9a7b1558337f, marker_9a7b1558337f, marker_5ef6e3401a12, marker_5ef6e3401a12, marker_c9d4a21dc460, marker_c9d4a21dc460, marker_dc5082d77990, marker_dc5082d77990, marker_3ae72b4ff91c, marker_3ae72b4ff91c, marker_09378591d3f0, marker_09378591d3f0, marker_d6731a67be9f, marker_d6731a67be9f, marker_ec7ee633a275, marker_ec7ee633a275, marker_2c2b5fda4693, marker_2c2b5fda4693, marker_fb7705777d34, marker_fb7705777d34, marker_37acb0d1decb, marker_37acb0d1decb, marker_fe97a3441be8, marker_fe97a3441be8, marker_f3197fef750e, marker_5ccca1a6a70c, marker_f3197fef750e, marker_5ccca1a6a70c, marker_4dac1b466ef0, marker_4dac1b466ef0, marker_10679378b42f, marker_10679378b42f, marker_2bd9edaf9062, marker_2bd9edaf9062, marker_68904151b419, marker_68904151b419, marker_c61ad0e731ec, marker_c61ad0e731ec, marker_3460bf8c96b1, marker_3460bf8c96b1, marker_81d080130de8, marker_81d080130de8, marker_853bdeafc40c, marker_853bdeafc40c, marker_d8ed219e8a30, marker_d8ed219e8a30, marker_8afba2dc6bb6, marker_8afba2dc6bb6, marker_7b2ad70956d4, marker_7b2ad70956d4, marker_206d72546e26, marker_206d72546e26, marker_0c1e68bd0804, marker_0c1e68bd0804, marker_1d4611e4ff97, marker_1d4611e4ff97, marker_83dc1238c8e8, marker_7519edac83e0, marker_cd3dfc70052e, marker_4bd26d699a3d, marker_83dc1238c8e8, marker_7519edac83e0, marker_cd3dfc70052e, marker_4bd26d699a3d, marker_7fc12007062c, marker_7fc12007062c, marker_1410039ffb14, marker_1410039ffb14, marker_82b16897d5b0, marker_82b16897d5b0, marker_46a22f3da5f9, marker_46a22f3da5f9, marker_63c0884824a7, marker_63c0884824a7, marker_9905adae80fe, marker_9905adae80fe, marker_3acc45a1c2ed, marker_3acc45a1c2ed, marker_0aecff718ce1, marker_0aecff718ce1, marker_a536233f70a0, marker_a536233f70a0, marker_4547467785a1, marker_4547467785a1, marker_cfe3b778ee13, marker_cfe3b778ee13, marker_b543cbfaee29, marker_fbb89be78835, marker_b543cbfaee29, marker_fbb89be78835, marker_0cc52e6d9ddc, marker_0cc52e6d9ddc, marker_a15fb6b34528, marker_a15fb6b34528, marker_e1c2bce4fd5c, marker_e1c2bce4fd5c, marker_25018ea7cb16, marker_25018ea7cb16, marker_780627046710, marker_780627046710, marker_fa3235538254, marker_fa3235538254, marker_ca1b375e1ae0, marker_ca1b375e1ae0, marker_4c4b7090bc08, marker_4c4b7090bc08, marker_31bc1f75c5bf, marker_31bc1f75c5bf, marker_6a31ffd7cf49, marker_6a31ffd7cf49, marker_8fe68d646b9e, marker_8fe68d646b9e, marker_b0332619104d, marker_b0332619104d, marker_03063aef1d60, marker_03063aef1d60, marker_c57e2e2cced6, marker_c57e2e2cced6, marker_9f66851475a8, marker_9f66851475a8, marker_f037456d8408, marker_f037456d8408, marker_c40ad121eeb1, marker_c40ad121eeb1, marker_294979bb475e, marker_294979bb475e, marker_0a31cf36fd3f, marker_0a31cf36fd3f, marker_e8ff70b1d0e3, marker_e8ff70b1d0e3, marker_828ee8fc1f3b, marker_828ee8fc1f3b, marker_5be954fefaa5, marker_5be954fefaa5, marker_72dc7e78c81e, marker_72dc7e78c81e, marker_4289d900b270, marker_4289d900b270, marker_4e12788e703e, marker_4e12788e703e, marker_ce2eec9c7985, marker_ce2eec9c7985, marker_365c82844c82, marker_365c82844c82, marker_05438208cad5, marker_05438208cad5, marker_ad4cbfff804a, marker_ad4cbfff804a, marker_621ce2bbdb77, marker_621ce2bbdb77, marker_eb9c7c503be9, marker_eb9c7c503be9, marker_ea9c2dfc1bfe, marker_ea9c2dfc1bfe, marker_cf5d6ceacf2f, marker_cf5d6ceacf2f, marker_1dd6e2d6d773, marker_1dd6e2d6d773, marker_3bbef2f705ac, marker_3bbef2f705ac]);
 var rentals = L.layerGroup([marker_229be0fe6043, marker_2a9fdf3dcd69, marker_76c2689a7d56, marker_b9119deccfaa, marker_723072976411, marker_f7c11821091f, marker_c95fd368eca4, marker_d8e7291875cc, marker_c1fa2fc8a50b, marker_a4a4ef256b12, marker_eb3375638987, marker_627ecd6703bb, marker_7c0f86908aa3, marker_f376e38439ce, marker_ca1686c46449, marker_cd34198b2285, marker_75118132ba4f, marker_f8f2bf296ad5, marker_49c7cfb9cbc5, marker_d310f3fdc3e2, marker_90f57df3c85e, marker_b37a61c00ef1, marker_83653c4f3974, marker_f78b9b693f28, marker_b2ef623932f3, marker_34c26b5e47dc, marker_f39fcf94e857, marker_43e4d4e0fcd9, marker_dc83f9541575, marker_ba2853a7472d, marker_4a3209ae5552, marker_7a96262f82d7, marker_9424880505e4, marker_6ed21354c31a, marker_7e0a1d356739, marker_ae98e145aa3b, marker_58bd36bc386d, marker_2579d6ec297f, marker_a0f3258e4799, marker_57356bd49665, marker_1ddf014d1a30, marker_73bb1ebaa9e3, marker_f0cf90e60398, marker_49b81e361383, marker_352fd98a4a9e, marker_2701950db368, marker_7b71578bbcf1, marker_f41776a5e424, marker_41d25354ad76, marker_cacf2f92bc48, marker_613085fbe7f4, marker_95a513d906b4, marker_1246aa838fb9, marker_ed2bc1cb523a, marker_8234cf02d541, marker_c43f80f4bc66, marker_162422131bf7, marker_0a8afab84ea4, marker_f9136f95f5c8, marker_183b93585403, marker_6a64c4923b0e, marker_cf88b8516442, marker_8389e302d365, marker_e63d2c5d4f3e, marker_29696d9ba061, marker_f4e38e3321fa, marker_c4ff56991334, marker_2b7e497b1bf7, marker_332a75d963f4, marker_edc617620fbb, marker_9b26d1f97f19, marker_483401cbd158, marker_0c0269e5b15d, marker_4c919fc0b381, marker_f2aafe0d08aa, marker_e1fe2ee129be, marker_53b17ccc54ab, marker_fa495632af29, marker_59d0f5fe9758, marker_16fc3dbe9c0d, marker_96618587ee84, marker_d175d3e7dd64, marker_c2c152fbf988, marker_a19c54662246, marker_fd41b620f52f, marker_9a762366ec9d, marker_5e172c62a1db, marker_8511f5f8c8b3, marker_92ce56a26ca9, marker_6ec0cfa49635, marker_03e67414407d, marker_97878d26215c, marker_0d5c6a75da1e, marker_37912deb53dd, marker_194e64eec55b, marker_2f0f8063421d, marker_573067d84e95, marker_098640f74faf, marker_2e5c077a166f, marker_b6c8eb5eb672, marker_def0c1de4102, marker_dbbd7bf2c80c, marker_6646e799faf8, marker_5bb7df6fd7f1, marker_0435d4eec7e4, marker_a2553744bcfe, marker_8e3f36b6f910, marker_dff4c7f8850c, marker_0ee699349602, marker_7215348bf5d5, marker_ed6134695130, marker_6f157dd2159e, marker_cf7e78a54ea0, marker_9a2371baf349, marker_9450650de42e, marker_99f7eae3b92f, marker_1010347d6dc6, marker_5a9e45f1ed82, marker_71fe6e51b525, marker_f4dca7ac8681, marker_f526ca5b4011, marker_5eab7e2ba251, marker_af731911a001, marker_abaeffb69b66, marker_9523bba8ed99, marker_6acf4a1f81f7, marker_5fa74a8ce568, marker_eaf3ecad7c1b, marker_70b64fa2ded3, marker_e4456f7ccb55, marker_c21f1a1d6b4f, marker_5596e52d45df, marker_bed37db67c74, marker_82d4f05f222f, marker_4ed9846365b7, marker_a1c9ecb79f86, marker_268f946466b4, marker_cdef6e4c9dd5, marker_a5689860f63e, marker_cdc17c91829a, marker_505978502017, marker_20727f2ff9d9, marker_51606bb87907, marker_7b7448689fe2, marker_0f461e892704, marker_c2e6acb488e8, marker_ba1127e890fb, marker_e2c2ef65ef4c, marker_badc546bf915, marker_cfa591ad76fa, marker_19c0767aef64, marker_68e62cfb77e2, marker_930b3597047d, marker_fe2a39ad5c0e, marker_d8fa8d825bef, marker_d753d9153992, marker_03c3a70dbf62, marker_44c4b601498d, marker_2803c015b640, marker_10c29f9c85bb, marker_6ddf0cffb999, marker_595fff8b11f0, marker_f83c7e1649cd, marker_58f2e048824f, marker_adce69abfb73, marker_e1dceb28df3a, marker_e9fcd345948b, marker_d111b8593fd5, marker_7e3590cb184f, marker_97eea489ebaa, marker_4baf6e1394fd, marker_58c2a6df866f, marker_572bf29ab29e, marker_0a2742b5e63e, marker_0fe6b8122ff7, marker_92bde0a35946, marker_26c0af3acec5, marker_86f968807686, marker_5edda9307e52, marker_352d8357cca7, marker_d18eca9643f5, marker_e601e51787bc, marker_79bb5a4de303, marker_ef03b3a82fd2, marker_929c52cc80d7, marker_586caed66877, marker_65a2a4793113]);
-var jobs = L.layerGroup([]);
+var jobs = L.layerGroup([marker_32ce183bd989, marker_2d7ffd07d64c, marker_787ef27b9191, marker_c955b29828da, marker_117ac4d73a7b, marker_2bae137cc86e, marker_1199579a58a9, marker_a6a9b025e598, marker_557b97c486d5, marker_efa0d05aecae, marker_2e75df4ba90c, marker_713c4dd872e7, marker_34909d922761, marker_37ef8f291fc5, marker_c8444c8675b5, marker_74abf7d655d9, marker_9139fff4b7de, marker_6134e85ee769, marker_c1604003c3c5, marker_e0b628cea895, marker_20cc854d24ab, marker_7787a4529db1, marker_63f3bdd4edf7, marker_6a348860924a, marker_8ee1f78aff82, marker_8245bc22a165, marker_3fad88cfd272, marker_8dd7edf13778, marker_9a4930c1ce04, marker_3f1d1fd61d7e, marker_70b2eeebd617, marker_54338a241990, marker_a17cc3db4144, marker_967f99f7dd0c, marker_a7a6c9776d59, marker_f9544468c669, marker_5d0a720abca8, marker_70f12eaeac12, marker_0fbd2a7a020d, marker_d3865aaa8a55, marker_426c8bed2270, marker_c8547d2e9cf3, marker_9d8e5e4328b4, marker_e93dcc7685eb, marker_f3ae5f0faf1d, marker_d97238d513e3, marker_b39caca3566d, marker_7ada209e01b3, marker_837eeb7da67d, marker_e46104b040cb, marker_c4db0ce61363, marker_a45ea46c951e, marker_a2803af77151, marker_c0fea3334fb2, marker_6b98338263f7, marker_4564ac424f6a, marker_3f399cae3050, marker_96bc8c9c8b0f, marker_0d98b03c724f, marker_4900b667da51, marker_33b7d6b7cdf7, marker_d2119825d7c0, marker_0182c56f412e, marker_2d7c25ef8bf6, marker_ba0f3653b7d1, marker_fcf9ff0ece2a, marker_de57870997da, marker_9ff823f8d015, marker_2dd8adb3f51d, marker_0097abed2375, marker_ebf60ee262aa, marker_cc41d41ec4ea, marker_504e62ae38d0, marker_c41a84484598, marker_70827c79db63, marker_3f03ea5e7ab4, marker_2e17facac78e, marker_d8d99c4d3b1b, marker_967b04c4ce7f, marker_3dc37e02af9c, marker_e23c7cfb6509, marker_e6e189e87716, marker_e3a43d9b3680, marker_e7a863bc19a6, marker_a1212c8a11ae, marker_72f2ddeaf88c, marker_c830a836ce9c, marker_594aa2aed5bc, marker_91d087bed1c0, marker_1d5acb80f843, marker_176d7079a606, marker_817296542b99, marker_ddb2b461bcd1, marker_dde72b9fb40d, marker_bc005d616d6d, marker_21d18b0b41af, marker_0daddfd877db, marker_9e9283b59ab3, marker_6351c616de6b, marker_048ec2ec04b0, marker_a5fefc44c057, marker_e0c2fd0cbda8, marker_d7247330495b, marker_ceadb4e1a6f8, marker_87de8a24d555, marker_ac872df2a1c7, marker_d6c772463d8d, marker_d930b330a7d1, marker_c58a46ac0966, marker_f6ed0fb32d3c, marker_00c173753f11, marker_e7435e0d20b9, marker_a51e8c17d648, marker_50fb7d243151, marker_9fd1485e6a7c, marker_a9f6a071dcb9, marker_926d8dc6647e, marker_12860e1dc57f, marker_709a4cda560d, marker_449e9723fdaf, marker_21d6cb07ef5b, marker_96df939893d3, marker_d82865c68328, marker_a8a62777cbae, marker_3dcea2025fce, marker_9d81682cb66d, marker_83be386f0f67, marker_e9ae1b53a99d, marker_bd5c0dca2a6f, marker_6d121f7c333f, marker_ed2069955e2d, marker_94e3fab5761b, marker_7839fc5b387c, marker_0795a070faa5, marker_3725abb311bd, marker_60cbfac88883, marker_6f0dbe3bb82c, marker_dd2967a135c3, marker_f60d517a36a4, marker_0ab5c81e867d, marker_385bd1d4c9e4, marker_b8c6f145cffb, marker_69274cb82b1c, marker_54508d8c8d3d, marker_6971cf5210b7, marker_7c45c27e3697, marker_38df96ce8758, marker_fc38494d8a6b, marker_d8dcbf506a5a, marker_3109b1280d94, marker_679408882dbd, marker_60a2c5d71754, marker_04e2e3227278, marker_2d6174832a93, marker_c891fec70e6e, marker_d13a08327351, marker_f44eb962079e, marker_f8678c842cf4, marker_8ec3d2e9d4e1, marker_6455a34c8378, marker_b0d53afcb59b, marker_8ef376d3a0c5, marker_1eaaf5e226da, marker_28f50a9ee8bc, marker_b86a10c8f8b7, marker_9e4249a77a4c, marker_97f145798670, marker_f59fd8e2e7ab, marker_e657f7af3061, marker_62d5c9315766, marker_f87caf1382d7]);
 
     var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,

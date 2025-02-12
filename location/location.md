@@ -8,49 +8,53 @@
 
 ### Technical Design (by layer)
 
-1. *Data Management* `location/location.py`
+1. *Client*  `location/client/nominatim_client.py`
+    - This is the client for the Nominatim API. It provides cooridinate lookups and address searches for a given location.
+    - Additional clients could be defined here.
+
+2. *Data Management* `location/location.py`
     - Handles loading and saving of location data
     - Writing to `location/maps/*.html` maps.
     - General geo-orriented utility functions.
 
-2. *Data Files*
+3. *Data Files*
     - `location/location.json` - Stores location data
     - `icon/*.png` - Icon files for map markers.
 
-2A. *Data Files*
+3A. *Data Files*
     - `employer/facility/facilities-colorado.json` - source data for healthcare facilities in Colorado.
     - [TODO]  `employer/facility/facilities-minnesota.json` - source data for healthcare facilities in Minnesota.
     - [TODO]  `employer/facility/facilities-arizona.json` - source data for healthcare facilities in Arizona.
 
-2B. *Data Files*
+3B. *Data Files*
     - `residence/own/own_results/own_data.json` - home sale listings source data for all locations.
     - `residence/rent/rent_results/rent_data.json` - rental listings source data for all locations.
 
-2C. *Data Files*
+3C. *Data Files*
     - job_data.json has a location string.  This can be matched to location.json, which contains a location string and coordinates pair.
     - `job/job_data.json` - job postings source data, a posting has a location.
     - `location/location.json` - location data, a location has a name, state, and coordinates.
 
-3. *View*  `location/location.html` - The responsibility of this file is:
+4. *View*  `location/location.html` - The responsibility of this file is:
     - This is the end user view of the combined residence and job data.
     - This html file is directly altered by the pipeline, showing calculated metro profile scores.
 
-3A. *View*  `location/map/denver.html` - The responsibility of this file is:
+4A. *View*  `location/map/denver.html` - The responsibility of this file is:
     - This is the *output* file; the end user view of the combined residence and job data for location: *Denver, CO*.
     - `location/map/template/base-denver.html` is the base map for Denver, CO.  The base map is used as a *template* for `location/map/denver.html` during pipeline map generation.
     - This html file is directly altered by the pipeline, coordinates are plotted on a map for for residence (rent|own), healthcare facilities, and job postings.
 
-3B. *View*  `location/map/phoenix.html` - The responsibility of this file is:
+4B. *View*  `location/map/phoenix.html` - The responsibility of this file is:
     - This is the *output* file; the end user view of the combined residence and job data for location: *Phoenix, AZ*.
     - `location/map/template/base-phoenix.html` is the base map for Phoenix, AZ.  The base map is used as a *template* for `location/map/phoenix.html` during pipeline map generation.
     - This html file is directly altered by the pipeline, coordinates are plotted on a map for for residence (rent|own), healthcare facilities, and job postings.
 
-3C. *View*  `location/map/minneapolis.html` - The responsibility of this file is:
+4C. *View*  `location/map/minneapolis.html` - The responsibility of this file is:
     - This is the *output* file; the end user view of the combined residence and job data for location: *Minneapolis, MN*.
     - `location/map/template/base-minneapolis.html` is the base map for Minneapolis, MN.  The base map is used as a *template* for `location/map/minneapolis.html` during pipeline map generation.
     - This html file is directly altered by the pipeline, coordinates are plotted on a map for for residence (rent|own), healthcare facilities, and job postings.
 
-4. *Control* `location/runner-location.py`
+5. *Control* `location/runner-location.py`
     - Execution & pipeline management logic
     - Abstract surface for overarching orchestration
     - Set the last-refreshed timestamp in `index.html` via `shared/utility.py`

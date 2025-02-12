@@ -2,7 +2,17 @@ import json
 from pathlib import Path
 import re
 import hashlib
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Optional
+import sys
+from pathlib import Path
+
+# Change the import to use relative path from current file location
+from client.nominatim_client import RateLimitedNominatim
+
+# Add project root to Python path
+project_root = str(Path(__file__).parent.parent)
+if project_root not in sys.path:
+    sys.path.append(project_root)
 
 # State abbreviation to full name mapping
 STATE_MAPPING = {
@@ -58,6 +68,16 @@ STATE_MAPPING = {
     'WV': 'West Virginia',
     'WY': 'Wyoming'
 }
+
+# Add this after the existing imports but before other code
+_nominatim = None
+
+def get_nominatim_client() -> RateLimitedNominatim:
+    """Get or create the Nominatim client singleton"""
+    global _nominatim
+    if _nominatim is None:
+        _nominatim = RateLimitedNominatim(user_agent="healthcare_housing_search")
+    return _nominatim
 
 def load_locations() -> List[Dict]:
     """Load and parse the location.json file"""
@@ -189,7 +209,7 @@ def generate_map(
         try:
             # Escape single quotes in strings
             title = job['title'].replace("'", "\\'")
-            company = job['company'].replace("'" "\\'")
+            company = job['company'].replace("'", "\\'")
             url = job['url'].replace("'", "\\'")
             popup = f"<a href=\'{url}\' target=\'_blank\'>{title}<br>{company}</a>"
             markers.append(f"""
@@ -215,7 +235,8 @@ def generate_map(
     markers.append(f"var jobs = L.layerGroup([{', '.join(job_markers) if job_markers else ''}]);")
 
     # Insert markers into template
-    template = template.replace('// coordinate data is inserted here', '\n'.join(markers))
+    marker_js = '\n'.join(markers)
+    template = template.replace('// coordinate data is inserted here', marker_js)
     
     # Write output file
     with open(output_path, 'w') as f:
@@ -223,12 +244,34 @@ def generate_map(
 
 def load_facilities(metro_name: str) -> List[Dict]:
     """Load healthcare facility data for a specific metro area"""
-    # Look in the employer/facility directory from project root
-    facility_path = Path(__file__).parent.parent / "employer" / "facility" / f"facilities-{metro_name}.json"
+    # Build state mapping from location.json
+    state_mapping = {}
+    try:
+        metro_areas = load_locations()
+        for metro in metro_areas:
+            hub = metro["hub_city"]
+            # Get full state name and convert to lowercase
+            state = get_state_from_location(f"City, {hub['state']}")
+            state_mapping[hub["name"].lower()] = state.lower()
+    except Exception as e:
+        print(f"Warning: Error building state mapping: {e}")
+        return []
     
-    with open(facility_path) as f:
-        facilities = json.load(f)
-    return facilities
+    state = state_mapping.get(metro_name.lower())
+    if not state:
+        print(f"Warning: No state mapping found for {metro_name}")
+        return []
+    
+    # Look in the employer/facility directory from project root
+    facility_path = Path(__file__).parent.parent / "employer" / "facility" / f"facilities-{state}.json"
+    
+    try:
+        with open(facility_path) as f:
+            facilities = json.load(f)
+        return facilities
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"Warning: Could not load facilities for {state}: {e}")
+        return []
 
 def load_residences() -> List[Dict]:
     """Load residence data from own and rent JSON files"""
@@ -264,19 +307,193 @@ def load_residences() -> List[Dict]:
     
     return residences
 
+def get_coordinates_from_location(location: str, metro_areas: List[Dict]) -> Tuple[float, float]:
+    """
+    Get coordinates for a location from metro_areas data.
+    
+    Args:
+        location: Location string (e.g. "Denver, CO" or "Denver, Colorado")
+        metro_areas: List of metro area dictionaries from location.json
+        
+    Returns:
+        Tuple of (latitude, longitude) or None if not found
+    """
+    if not location or ',' not in location:
+        return None
+        
+    city, state = [part.strip() for part in location.split(',')]
+    
+    # Convert full state name to abbreviation if needed
+    state_abbrev = state
+    for abbrev, full_name in STATE_MAPPING.items():
+        if state.upper() == full_name.upper():
+            state_abbrev = abbrev
+            break
+    
+    # Check hub cities
+    for metro in metro_areas:
+        hub = metro["hub_city"]
+        if city.lower() == hub["name"].lower() and state_abbrev.upper() == hub["state"].upper():
+            return hub["coordinates"]["lat"], hub["coordinates"]["lng"]
+            
+        # Check suburbs
+        for suburb in metro["suburbs"]:
+            if city.lower() == suburb["name"].lower() and state_abbrev.upper() == suburb["state"].upper():
+                return suburb["coordinates"]["lat"], suburb["coordinates"]["lng"]
+    
+    return None
+
+def save_to_location_json(city: str, state: str, lat: float, lng: float) -> None:
+    """
+    Save a new location to location.json under the appropriate metro area
+    
+    Args:
+        city: City name
+        state: State abbreviation
+        lat: Latitude
+        lng: Longitude
+    """
+    location_path = Path(__file__).parent / "location.json"
+    try:
+        # Load current data
+        with open(location_path) as f:
+            data = json.load(f)
+            
+        # Find the appropriate metro area
+        state_full = STATE_MAPPING.get(state.upper(), state)
+        found_metro = None
+        
+        for metro in data["metro_areas"]:
+            hub_state = metro["hub_city"]["state"]
+            if hub_state == state:
+                found_metro = metro
+                break
+                
+        if found_metro:
+            # Check if city already exists
+            all_cities = ([found_metro["hub_city"]] + 
+                         found_metro.get("suburbs", []))
+            
+            for existing_city in all_cities:
+                if (existing_city["name"].lower() == city.lower() and 
+                    existing_city["state"].upper() == state.upper()):
+                    return  # City already exists, don't add duplicate
+            
+            # Add as new suburb
+            new_suburb = {
+                "name": city,
+                "state": state.upper(),
+                "coordinates": {
+                    "lat": lat,
+                    "lng": lng
+                }
+            }
+            
+            if "suburbs" not in found_metro:
+                found_metro["suburbs"] = []
+            found_metro["suburbs"].append(new_suburb)
+            
+            # Save updated data
+            with open(location_path, 'w') as f:
+                json.dump(data, f, indent=2)
+                
+    except Exception as e:
+        print(f"Warning: Failed to save location to JSON: {e}")
+
+def lookup_coordinates(location: str) -> Optional[Tuple[float, float]]:
+    """
+    Get coordinates for a location using multiple methods.
+    First tries the metro areas data, then falls back to Nominatim.
+    If Nominatim succeeds, saves the result to location.json.
+    
+    Args:
+        location: Location string (e.g. "Denver, CO" or "Denver, Colorado")
+        
+    Returns:
+        Tuple of (latitude, longitude) or None if not found
+    """
+    if not location or ',' not in location:
+        return None
+        
+    # Parse city and state
+    city, state = [part.strip() for part in location.split(',')]
+    
+    # Convert state to abbreviation if needed
+    state_abbrev = state
+    for abbrev, full_name in STATE_MAPPING.items():
+        if state.upper() == full_name.upper():
+            state_abbrev = abbrev
+            break
+
+    # First try getting coordinates from our metro areas data
+    metro_areas = load_locations()
+    coords = get_coordinates_from_location(location, metro_areas)
+    if coords:
+        return coords
+        
+    # If not found in metro areas, try Nominatim
+    try:
+        nominatim = get_nominatim_client()
+        # Try with state abbreviation first
+        search_location = f"{city}, {state_abbrev}"
+        result = nominatim.geocode(search_location)
+        
+        # If that fails, try with full state name
+        if not result and state_abbrev in STATE_MAPPING:
+            search_location = f"{city}, {STATE_MAPPING[state_abbrev]}, United States"
+            result = nominatim.geocode(search_location)
+        
+        if result:
+            # Save to location.json
+            save_to_location_json(city, state_abbrev, result.latitude, result.longitude)
+            return (result.latitude, result.longitude)
+            
+    except Exception as e:
+        print(f"Warning: Nominatim geocoding failed for {location}: {e}")
+    
+    return None
+
 def load_jobs() -> List[Dict]:
-    """Load job postings data"""
+    """Load job postings data and add coordinates"""
     # Look in the job directory from project root
     job_path = Path(__file__).parent.parent / "job" / "job_data.json"
     
     try:
+        # Load jobs and metro areas
         with open(job_path) as f:
             jobs = json.load(f)
-            # Add IDs if they don't exist
-            for job in jobs:
+            
+        metro_areas = load_locations()
+        
+        # Process each job
+        for job in jobs:
+            try:
+                # Generate ID if needed
                 if 'id' not in job:
                     job['id'] = generate_id(job)
-        return jobs
+                
+                # Add coordinates if missing
+                if 'latitude' not in job or 'longitude' not in job:
+                    if 'location' in job:
+                        coords = get_coordinates_from_location(job['location'], metro_areas)
+                        if coords:
+                            job['latitude'], job['longitude'] = coords
+                        else:
+                            print(f"Warning: Could not find coordinates for location: {job['location']}")
+                    else:
+                        print(f"Warning: Job missing location field: {job.get('title', 'Unknown title')}")
+                        
+            except Exception as e:
+                print(f"Warning: Error processing job: {e}")
+                continue
+                
+        # Return only jobs with coordinates
+        valid_jobs = [job for job in jobs if 'latitude' in job and 'longitude' in job]
+        if len(valid_jobs) < len(jobs):
+            print(f"Note: {len(jobs) - len(valid_jobs)} jobs skipped due to missing coordinates")
+            
+        return valid_jobs
+        
     except (FileNotFoundError, json.JSONDecodeError) as e:
         print(f"Warning: Could not load job postings: {e}")
         return []

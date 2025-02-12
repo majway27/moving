@@ -13,6 +13,7 @@
 ### Python VENV
 
 1. `pip install folium`
+2. `pip install geopy`
 
 Optional: `pip install -U homeharvest`
 
@@ -24,17 +25,17 @@ Optional: `pip install -U homeharvest`
 
 - https://cha.com/find-a-hospital/
 
-### Google Maps
-
-- https://www.google.com/maps/d/u/0/edit?hl=en&mid=1SwUVhSDn-FrbsdcOgQBo0W9CkoCZmQw&ll=40.18451415415679%2C-105.13961781809083&z=13
-  - [Denver, CO](denver.kml)
-
 ### Icons
 
 - https://www.iconfinder.com/search?q=apartment&price=free
 - https://favicon.io/favicon-generator/
 
 ## Tools
+
+### Nominatim (via geopy)
+
+- https://geopy.readthedocs.io/en/stable/
+- https://nominatim.org/release-docs/develop/api/Search/
 
 ### RapidAPI
 

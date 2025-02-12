@@ -1,0 +1,119 @@
+[
+  {
+    "id": "2",
+    "name": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "44.947497",
+    "longitude": "-93.282581"
+  },
+  {
+    "id": "9",
+    "name": "Children's Hospitals and Clinics of Minnesota - Minneapolis",
+    "city": "Minneapolis",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "44.965278",
+    "longitude": "-93.266667"
+  },
+  {
+    "id": "7",
+    "name": "Essentia Health-St. Mary's Medical Center",
+    "city": "Duluth",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "46.788889",
+    "longitude": "-92.097222"
+  },
+  {
+    "id": "11",
+    "name": "Fairview Southdale Hospital",
+    "city": "Edina",
+    "serviceType": "Hospital",
+    "locationType": "Suburban",
+    "latitude": "44.881944",
+    "longitude": "-93.341667"
+  },
+  {
+    "id": "5",
+    "name": "Hennepin County Medical Center",
+    "city": "Minneapolis",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "44.972778",
+    "longitude": "-93.277778"
+  },
+  {
+    "id": "13",
+    "name": "Maple Grove Hospital",
+    "city": "Maple Grove",
+    "serviceType": "Hospital",
+    "locationType": "Suburban",
+    "latitude": "45.074444",
+    "longitude": "-93.448333"
+  },
+  {
+    "id": "1",
+    "name": "Mayo Clinic Hospital - Rochester",
+    "city": "Rochester",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "44.026175",
+    "longitude": "-92.463403"
+  },
+  {
+    "id": "10",
+    "name": "North Memorial Health Hospital",
+    "city": "Robbinsdale",
+    "serviceType": "Hospital",
+    "locationType": "Suburban",
+    "latitude": "45.011667",
+    "longitude": "-93.328333"
+  },
+  {
+    "id": "4",
+    "name": "Regions Hospital",
+    "city": "St. Paul",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "44.953888",
+    "longitude": "-93.102778"
+  },
+  {
+    "id": "6",
+    "name": "St. Cloud Hospital",
+    "city": "St. Cloud",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "45.551111",
+    "longitude": "-94.175"
+  },
+  {
+    "id": "8",
+    "name": "United Hospital",
+    "city": "St. Paul",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "44.949722",
+    "longitude": "-93.099722"
+  },
+  {
+    "id": "3",
+    "name": "University of Minnesota Medical Center",
+    "city": "Minneapolis",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "44.977776",
+    "longitude": "-93.239353"
+  },
+  {
+    "id": "12",
+    "name": "Woodwinds Health Campus",
+    "city": "Woodbury",
+    "serviceType": "Hospital",
+    "locationType": "Suburban",
+    "latitude": "44.920278",
+    "longitude": "-92.956944"
+  }
+]

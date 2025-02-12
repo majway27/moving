@@ -146,6 +146,30 @@
             "lat": 33.4152,
             "lng": -111.8315
           }
+        },
+        {
+          "name": "Chandler",
+          "state": "AZ",
+          "coordinates": {
+            "lat": 33.3062,
+            "lng": -111.8413
+          }
+        },
+        {
+          "name": "Tempe",
+          "state": "AZ",
+          "coordinates": {
+            "lat": 33.4255,
+            "lng": -111.9400
+          }
+        },
+        {
+          "name": "Queen Creek",
+          "state": "AZ",
+          "coordinates": {
+            "lat": 33.2487,
+            "lng": -111.6343
+          }
         }
       ],
       "metrics": {
@@ -202,6 +226,54 @@
           "coordinates": {
             "lat": 44.8547,
             "lng": -93.4708
+          }
+        },
+        {
+          "name": "Fridley",
+          "state": "MN",
+          "coordinates": {
+            "lat": 45.0853,
+            "lng": -93.2629
+          }
+        },
+        {
+          "name": "Burnsville",
+          "state": "MN",
+          "coordinates": {
+            "lat": 44.7677,
+            "lng": -93.2777
+          }
+        },
+        {
+          "name": "Apple Valley",
+          "state": "MN",
+          "coordinates": {
+            "lat": 44.7319,
+            "lng": -93.2172
+          }
+        },
+        {
+          "name": "Osseo",
+          "state": "MN",
+          "coordinates": {
+            "lat": 45.1196,
+            "lng": -93.4017
+          }
+        },
+        {
+          "name": "North St Paul",
+          "state": "MN",
+          "coordinates": {
+            "lat": 45.0120,
+            "lng": -93.0002
+          }
+        },
+        {
+          "name": "Shakopee",
+          "state": "MN",
+          "coordinates": {
+            "lat": 44.7974,
+            "lng": -93.5272
           }
         }
       ],

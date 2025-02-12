@@ -1,0 +1,128 @@
+[
+  {
+    "id": "5",
+    "name": "Abrazo Arrowhead Campus",
+    "city": "Glendale",
+    "serviceType": "Hospital",
+    "locationType": "Suburban",
+    "latitude": "33.606944",
+    "longitude": "-112.1675"
+  },
+  {
+    "id": "9",
+    "name": "Banner Desert Medical Center",
+    "city": "Mesa",
+    "serviceType": "Hospital",
+    "locationType": "Suburban",
+    "latitude": "33.428056",
+    "longitude": "-111.740278"
+  },
+  {
+    "id": "4",
+    "name": "Banner Thunderbird Medical Center",
+    "city": "Glendale",
+    "serviceType": "Hospital",
+    "locationType": "Suburban",
+    "latitude": "33.639688",
+    "longitude": "-112.184774"
+  },
+  {
+    "id": "11",
+    "name": "Banner University Medical Center Tucson",
+    "city": "Tucson",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "32.221527",
+    "longitude": "-110.969145"
+  },
+  {
+    "id": "1",
+    "name": "Banner - University Medical Center Phoenix",
+    "city": "Phoenix",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "33.450397",
+    "longitude": "-112.067537"
+  },
+  {
+    "id": "10",
+    "name": "Chandler Regional Medical Center",
+    "city": "Chandler",
+    "serviceType": "Hospital",
+    "locationType": "Suburban",
+    "latitude": "33.304722",
+    "longitude": "-111.842778"
+  },
+  {
+    "id": "6",
+    "name": "HonorHealth John C. Lincoln Medical Center",
+    "city": "Phoenix",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "33.589444",
+    "longitude": "-112.098611"
+  },
+  {
+    "id": "8",
+    "name": "HonorHealth Scottsdale Shea Medical Center",
+    "city": "Scottsdale",
+    "serviceType": "Hospital",
+    "locationType": "Suburban",
+    "latitude": "33.629167",
+    "longitude": "-111.889167"
+  },
+  {
+    "id": "2",
+    "name": "Mayo Clinic Hospital (Phoenix)",
+    "city": "Phoenix",
+    "serviceType": "Hospital",
+    "locationType": "Suburban",
+    "latitude": "33.615286",
+    "longitude": "-111.928373"
+  },
+  {
+    "id": "13",
+    "name": "North Country Healthcare - Flagstaff Medical Center",
+    "city": "Flagstaff",
+    "serviceType": "Hospital",
+    "locationType": "Rural",
+    "latitude": "35.195286",
+    "longitude": "-111.651717"
+  },
+  {
+    "id": "3",
+    "name": "St. Joseph's Hospital and Medical Center",
+    "city": "Phoenix",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "33.494793",
+    "longitude": "-112.061732"
+  },
+  {
+    "id": "12",
+    "name": "Tucson Medical Center",
+    "city": "Tucson",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "32.208154",
+    "longitude": "-110.932975"
+  },
+  {
+    "id": "7",
+    "name": "Valleywise Health Medical Center",
+    "city": "Phoenix",
+    "serviceType": "Hospital",
+    "locationType": "Urban",
+    "latitude": "33.448333",
+    "longitude": "-112.074167"
+  },
+  {
+    "id": "14",
+    "name": "Yuma Regional Medical Center",
+    "city": "Yuma",
+    "serviceType": "Hospital",
+    "locationType": "Rural",
+    "latitude": "32.701389",
+    "longitude": "-114.629722"
+  }
+]
