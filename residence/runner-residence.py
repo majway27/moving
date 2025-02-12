@@ -130,12 +130,8 @@ def main():
     
     print("\nResidence search pipeline complete!")
     
-    # Update the last-refreshed timestamp
-    try:
-        update_last_refreshed('residence')
-        print("Updated last-refreshed timestamp")
-    except Exception as e:
-        print(f"Error updating last-refreshed timestamp: {e}")
+    # Update the last-refreshed timestamp in index.html
+    update_last_refreshed()
 
 if __name__ == "__main__":
     main() 

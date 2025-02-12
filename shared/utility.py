@@ -2,14 +2,15 @@ from datetime import datetime
 import re
 import os
 
-def update_last_refreshed(index_html_path):
+def update_last_refreshed():
     """
     Updates the last-refreshed timestamp in index.html
-    
-    Args:
-        index_html_path (str): Path to index.html file
     """
     try:
+        # Get path to index.html in parent directory
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        index_html_path = os.path.join(os.path.dirname(current_dir), 'index.html')
+        
         # Read the current content of index.html
         with open(index_html_path, 'r', encoding='utf-8') as file:
             content = file.read()
@@ -34,7 +35,4 @@ def update_last_refreshed(index_html_path):
         print(f"Error updating last-refreshed timestamp: {str(e)}")
 
 if __name__ == "__main__":
-    # When run directly, use relative path to index.html in parent directory
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    index_path = os.path.join(os.path.dirname(current_dir), 'index.html')
-    update_last_refreshed(index_path) 
+    update_last_refreshed() 

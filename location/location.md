@@ -17,6 +17,20 @@
     - `location/location.json` - Stores location data
     - `icon/*.png` - Icon files for map markers.
 
+2A. *Data Files*
+    - `employer/facility/facilities-colorado.json` - source data for healthcare facilities in Colorado.
+    - [TODO]  `employer/facility/facilities-minnesota.json` - source data for healthcare facilities in Minnesota.
+    - [TODO]  `employer/facility/facilities-arizona.json` - source data for healthcare facilities in Arizona.
+
+2B. *Data Files*
+    - `residence/own/own_results/own_data.json` - home sale listings source data for all locations.
+    - `residence/rent/rent_results/rent_data.json` - rental listings source data for all locations.
+
+2C. *Data Files*
+    - job_data.json has a location string.  This can be matched to location.json, which contains a location string and coordinates pair.
+    - `job/job_data.json` - job postings source data, a posting has a location.
+    - `location/location.json` - location data, a location has a name, state, and coordinates.
+
 3. *View*  `location/location.html` - The responsibility of this file is:
     - This is the end user view of the combined residence and job data.
     - This html file is directly altered by the pipeline, showing calculated metro profile scores.
@@ -93,7 +107,8 @@ var marker_3164891363374874266 = L.marker([39.955654, -104.801868], {icon: house
 
 ### TODO
 
-1. ?
+1. Enhanced matching of job location, from coarse location.json coordinates to exact facility coordinates (ie from employer/facility/facilities-colorado.json)
+2. ?
 
 ### Roadmap
 

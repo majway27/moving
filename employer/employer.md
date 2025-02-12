@@ -50,14 +50,9 @@
 
 ### TODO
 
-1. Add validation for employer data formats
-2. Implement employer name fuzzy matching
-3. Add facility location geocoding
-4. Create API for employer data queries
+1. Enhanced matching of job location, from coarse location.json coordinates to exact facility coordinates (ie from employer/facility/facilities-colorado.json)
+2. ?
 
 ### Roadmap
 
-- Implement employer data versioning
-- Add support for facility types and specialties
-- Create employer data visualization tools
-- Develop employer relationship mapping 
+- ?

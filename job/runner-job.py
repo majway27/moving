@@ -84,12 +84,8 @@ def main() -> None:
     print("\nGenerating jobs formatted data...")
     generate_jobs_data()
     
-    # Update the last-refreshed timestamp
-    try:
-        update_last_refreshed('job')
-        print("Updated last-refreshed timestamp")
-    except Exception as e:
-        print(f"Error updating last-refreshed timestamp: {e}")
+    # Update the last-refreshed timestamp in index.html
+    update_last_refreshed()
 
 if __name__ == "__main__":
     main() 
