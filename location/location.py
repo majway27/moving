@@ -307,9 +307,9 @@ def load_residences() -> List[Dict]:
     
     return residences
 
-def get_coordinates_from_location(location: str, metro_areas: List[Dict]) -> Tuple[float, float]:
+def get_coordinates_from_location_local(location: str, metro_areas: List[Dict]) -> Tuple[float, float]:
     """
-    Get coordinates for a location from metro_areas data.
+    Get coordinates for a location from local metro_areas data only.
     
     Args:
         location: Location string (e.g. "Denver, CO" or "Denver, Colorado")
@@ -322,6 +322,9 @@ def get_coordinates_from_location(location: str, metro_areas: List[Dict]) -> Tup
         return None
         
     city, state = [part.strip() for part in location.split(',')]
+    
+    # Normalize city name (handle St. vs St)
+    city = city.replace('St ', 'St. ')
     
     # Convert full state name to abbreviation if needed
     state_abbrev = state
@@ -427,7 +430,7 @@ def lookup_coordinates(location: str) -> Optional[Tuple[float, float]]:
 
     # First try getting coordinates from our metro areas data
     metro_areas = load_locations()
-    coords = get_coordinates_from_location(location, metro_areas)
+    coords = get_coordinates_from_location_local(location, metro_areas)
     if coords:
         return coords
         
@@ -459,11 +462,9 @@ def load_jobs() -> List[Dict]:
     job_path = Path(__file__).parent.parent / "job" / "job_data.json"
     
     try:
-        # Load jobs and metro areas
+        # Load jobs
         with open(job_path) as f:
             jobs = json.load(f)
-            
-        metro_areas = load_locations()
         
         # Process each job
         for job in jobs:
@@ -475,11 +476,11 @@ def load_jobs() -> List[Dict]:
                 # Add coordinates if missing
                 if 'latitude' not in job or 'longitude' not in job:
                     if 'location' in job:
-                        coords = get_coordinates_from_location(job['location'], metro_areas)
+                        coords = lookup_coordinates(job['location'])  # Use lookup_coordinates instead
                         if coords:
                             job['latitude'], job['longitude'] = coords
                         else:
-                            print(f"Warning: Could not find coordinates for location: {job['location']}")
+                            print(f"Warning: Could not find coordinates for job posting location: {job['location']}")
                     else:
                         print(f"Warning: Job missing location field: {job.get('title', 'Unknown title')}")
                         

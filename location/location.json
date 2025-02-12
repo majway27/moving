@@ -97,6 +97,54 @@
             "lat": 39.8366,
             "lng": -105.0372
           }
+        },
+        {
+          "name": "Louisville",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.9778,
+            "lng": -105.1319
+          }
+        },
+        {
+          "name": "Boulder",
+          "state": "CO",
+          "coordinates": {
+            "lat": 40.0150,
+            "lng": -105.2705
+          }
+        },
+        {
+          "name": "Englewood",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.6478,
+            "lng": -104.9878
+          }
+        },
+        {
+          "name": "Littleton",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.6133,
+            "lng": -105.0166
+          }
+        },
+        {
+          "name": "Highlands Ranch",
+          "state": "CO",
+          "coordinates": {
+            "lat": 39.5419,
+            "lng": -104.9708
+          }
+        },
+        {
+          "name": "Loveland",
+          "state": "CO",
+          "coordinates": {
+            "lat": 40.3978,
+            "lng": -105.0750
+          }
         }
       ],
       "metrics": {
