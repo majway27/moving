@@ -357,6 +357,16 @@ def generate_map(
     else:
         markers.append("var jobs = L.layerGroup([]);")
 
+    # Create overlay maps with all layers
+    markers.append("""
+    var overlayMaps = {
+        "Care Facilities": hospitals,
+        "Houses": houses,
+        "Rentals": rentals,
+        "Jobs": jobs
+    };
+    """)
+
     # Insert markers into template
     marker_js = '\n'.join(markers)
     template = template.replace('// coordinate data is inserted here', marker_js)
