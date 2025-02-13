@@ -125,6 +125,79 @@ def generate_id(data: Dict) -> str:
     # Create a hash of the string
     return hashlib.md5(id_string.encode()).hexdigest()[:12]
 
+def find_facility_coordinates(job_data: Dict, facilities: List[Dict]) -> Optional[Tuple[float, float]]:
+    """
+    Try to find facility coordinates by matching job posting details against known facilities.
+    
+    Args:
+        job_data: Job posting data containing company and description
+        facilities: List of healthcare facilities to search through
+        
+    Returns:
+        Tuple of (latitude, longitude) if match found, None otherwise
+    """
+    if not job_data.get('company') or not facilities:
+        return None
+        
+    # Normalize company name for comparison
+    company_name = job_data['company'].lower()
+    
+    # Common healthcare system name mappings
+    system_mappings = {
+        'centura': 'commonspirit',
+        'adventhealth': 'advent',
+        'uchealth': 'uc',
+        'banner health': 'banner',
+        'healthone': 'hca',
+        'hca healthcare': 'hca',
+        'va ': 'veterans',
+    }
+    
+    # Apply system name mappings
+    for old_name, new_name in system_mappings.items():
+        if old_name in company_name:
+            company_name = company_name.replace(old_name, new_name)
+    
+    # First try exact company name match
+    for facility in facilities:
+        if not facility.get('name'):
+            continue
+            
+        facility_name = facility['name'].lower()
+        if company_name in facility_name or facility_name in company_name:
+            try:
+                return (float(facility['latitude']), float(facility['longitude']))
+            except (ValueError, KeyError):
+                continue
+    
+    # If no match found and we have a job description, try matching facility names in the description
+    if job_data.get('description'):
+        description = job_data['description'].lower()
+        
+        # Sort facilities by name length (longest first) to prefer more specific matches
+        sorted_facilities = sorted(facilities, 
+                                 key=lambda x: len(x.get('name', '')), 
+                                 reverse=True)
+                                 
+        for facility in sorted_facilities:
+            if not facility.get('name'):
+                continue
+                
+            # Remove common words that might cause false matches
+            facility_name = facility['name'].lower()
+            facility_name = facility_name.replace('hospital', '').replace('medical center', '').strip()
+            
+            if len(facility_name) < 4:  # Skip very short names to avoid false matches
+                continue
+                
+            if facility_name in description:
+                try:
+                    return (float(facility['latitude']), float(facility['longitude']))
+                except (ValueError, KeyError):
+                    continue
+    
+    return None
+
 def generate_map(
     city: str,
     template_path: Path,
@@ -302,15 +375,21 @@ def generate_map(
     # Add markers for jobs
     for job in jobs:
         try:
-            # Convert coordinates to float if they're strings
-            try:
-                if isinstance(job.get('latitude'), str):
-                    job['latitude'] = float(job['latitude'])
-                if isinstance(job.get('longitude'), str):
-                    job['longitude'] = float(job['longitude'])
-            except (ValueError, TypeError):
-                print(f"Warning: Could not convert coordinates for job: {job.get('title', 'Unknown')}")
-                continue
+            # First try to get coordinates from facility matching
+            facility_coords = find_facility_coordinates(job, facilities)
+            
+            if facility_coords:
+                job['latitude'], job['longitude'] = facility_coords
+            else:
+                # Convert coordinates to float if they're strings
+                try:
+                    if isinstance(job.get('latitude'), str):
+                        job['latitude'] = float(job['latitude'])
+                    if isinstance(job.get('longitude'), str):
+                        job['longitude'] = float(job['longitude'])
+                except (ValueError, TypeError):
+                    print(f"Warning: Could not convert coordinates for job: {job.get('title', 'Unknown')}")
+                    continue
 
             if not (all(k in job for k in ['latitude', 'longitude', 'title', 'company', 'url']) and
                    job['latitude'] is not None and 
