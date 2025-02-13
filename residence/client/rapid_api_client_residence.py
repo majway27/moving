@@ -98,6 +98,13 @@ class ZillowClient:
                 querystring["onlyRentalLargeDogsAllowed"] = "true"
             else:  # sale
                 querystring["status"] = "forSale"
+                # Add filters for single-family homes only
+                querystring["isMultiFamily"] = "false"
+                querystring["isApartment"] = "false"
+                querystring["isCondo"] = "false"
+                querystring["isManufactured"] = "false"
+                querystring["isTownhouse"] = "false"
+                querystring["home_type"] = "Houses"
             
             try:
                 response = requests.get(

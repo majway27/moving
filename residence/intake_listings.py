@@ -145,7 +145,7 @@ class ResidenceSearch:
             
             # Apply price range filters
             if modality == "rent":
-                if not (1500 <= price <= 2700):  # Hard-coded for now, could be parameterized
+                if not (1500 <= price <= 2700):
                     continue
             else:  # own
                 if not (450000 <= price <= 500000):
@@ -161,6 +161,15 @@ class ResidenceSearch:
             if exclude_new_construction:
                 if result.get('isNewConstruction', False):
                     continue
+                
+            # Filter for single-family homes
+            home_type = result.get('homeType', '').upper()
+            if modality == "own" and not (
+                home_type == 'SINGLE_FAMILY' or 
+                home_type == 'HOUSE' or 
+                'HOUSE' in home_type
+            ):
+                continue
                 
             filtered.append(result)
         
