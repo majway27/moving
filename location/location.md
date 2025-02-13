@@ -122,6 +122,7 @@ var marker_3164891363374874266 = L.marker([39.955654, -104.801868], {icon: house
   - Calculate commute times from suburbs to hub cities
   - Generate detailed reports for different locations
   - Create interactive maps showing the relationship between hub cities and suburbs
+- Political leanings mapping
 
 ### Comparison Notes
 

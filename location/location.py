@@ -5,6 +5,7 @@ import hashlib
 from typing import Dict, List, Tuple, Optional
 import sys
 from pathlib import Path
+import math
 
 # Change the import to use relative path from current file location
 from shared.client.nominatim_client import RateLimitedNominatim
@@ -186,8 +187,28 @@ def generate_map(
     var jobBuilding = new BuildingIcon({iconUrl: 'icon/job.png'});
     """)
 
-    # Track used IDs to prevent duplicates
+    # Track used IDs and coordinates to prevent duplicates and overlaps
     used_ids = set()
+    used_coordinates = {}  # Format: {(lat, lon): count}
+    
+    def get_adjusted_coordinates(lat: float, lon: float) -> Tuple[float, float]:
+        """
+        Get coordinates with a small offset if the location is already used.
+        Offset is approximately 10-30 meters depending on count.
+        """
+        coord_key = (lat, lon)
+        if coord_key in used_coordinates:
+            count = used_coordinates[coord_key]
+            # Calculate offset based on count (spiral pattern)
+            angle = count * 2.0944  # 120 degrees in radians
+            radius = 0.0002 * (1 + (count - 1) // 3)  # Increase radius every 3 points
+            offset_lat = radius * math.cos(angle)
+            offset_lon = radius * math.sin(angle)
+            used_coordinates[coord_key] += 1
+            return lat + offset_lat, lon + offset_lon
+        else:
+            used_coordinates[coord_key] = 1
+            return lat, lon
 
     # Add markers for facilities
     for facility in facilities:
@@ -218,10 +239,13 @@ def generate_map(
                 
             used_ids.add(facility['id'])
             
+            # Apply coordinate adjustment
+            adj_lat, adj_lon = get_adjusted_coordinates(facility['latitude'], facility['longitude'])
+            
             # Double escape the name for JavaScript string
             name = facility['name'].replace('"', '\\"').replace("'", "\\'")
             markers.append(f"""
-            var marker_{facility['id']} = L.marker([{facility['latitude']}, {facility['longitude']}], {{icon: careBuilding}})
+            var marker_{facility['id']} = L.marker([{adj_lat}, {adj_lon}], {{icon: careBuilding}})
                 .bindPopup("{name}");
             """)
         except KeyError as e:
@@ -256,6 +280,9 @@ def generate_map(
                 continue
                 
             used_ids.add(residence['id'])
+            
+            # Apply coordinate adjustment
+            adj_lat, adj_lon = get_adjusted_coordinates(residence['latitude'], residence['longitude'])
                 
             price = "{:,.0f}".format(float(residence['price']))
             icon = 'rentalBuilding' if residence.get('type') == 'rent' else 'houseBuilding'
@@ -265,7 +292,7 @@ def generate_map(
             popup = f"<a href=\\'{url}\\' target=\\'_blank\\'>${price}</a>"
             
             markers.append(f"""
-            var marker_{residence['id']} = L.marker([{residence['latitude']}, {residence['longitude']}], {{icon: {icon}}})
+            var marker_{residence['id']} = L.marker([{adj_lat}, {adj_lon}], {{icon: {icon}}})
                 .bindPopup("{popup}");
             """)
         except (KeyError, ValueError) as e:
@@ -301,6 +328,9 @@ def generate_map(
                 
             used_ids.add(job['id'])
             
+            # Apply coordinate adjustment
+            adj_lat, adj_lon = get_adjusted_coordinates(job['latitude'], job['longitude'])
+            
             # Double escape all strings for JavaScript
             title = job['title'].replace('"', '\\"').replace("'", "\\'")
             company = job['company'].replace('"', '\\"').replace("'", "\\'")
@@ -308,7 +338,7 @@ def generate_map(
             popup = f"<a href=\\'{url}\\' target=\\'_blank\\'>{title}<br>{company}</a>"
             
             markers.append(f"""
-            var marker_{job['id']} = L.marker([{job['latitude']}, {job['longitude']}], {{icon: jobBuilding}})
+            var marker_{job['id']} = L.marker([{adj_lat}, {adj_lon}], {{icon: jobBuilding}})
                 .bindPopup("{popup}");
             """)
         except KeyError as e:
