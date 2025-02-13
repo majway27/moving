@@ -1,11 +1,31 @@
+import os
 from intake_listings import ResidenceSearch
 from format_listings import generate_listings_data, save_filtered_listings
 from pathlib import Path
 from datetime import datetime
+from shared.client.nominatim_client import RateLimitedNominatim
 from location.location import load_locations, format_location
 from shared.utility import update_last_refreshed
 
+def setup_shared_directory():
+    project_root = Path(__file__).parent.parent
+    
+    # Create shared directory and its subdirectories
+    shared_dir = project_root / "shared"
+    client_dir = shared_dir / "client"
+    
+    # Create directories if they don't exist
+    shared_dir.mkdir(exist_ok=True)
+    client_dir.mkdir(exist_ok=True)
+    
+    # Create __init__.py files if they don't exist
+    (shared_dir / "__init__.py").touch()
+    (client_dir / "__init__.py").touch()
+
 def main():
+    # Create required directories and __init__.py files
+    setup_shared_directory()
+    
     # Create residence search instance
     residence_search = ResidenceSearch()
     

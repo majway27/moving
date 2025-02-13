@@ -1,0 +1,50 @@
+[
+  {
+    "address": "1705 Stone Meadow Blvd, Shakopee, MN",
+    "price": 1945.0,
+    "beds": 2.0,
+    "baths": 2.0,
+    "sqft": 1422.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/2191645_zpid/",
+    "location": "Shakopee, MN",
+    "list_date": 679323000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/228e702dbc49aeb433ed79385f336da5-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 44.7784,
+    "longitude": -93.54903
+  },
+  {
+    "address": "1091 Van Buren St S, Shakopee, MN",
+    "price": 1790.0,
+    "beds": 3.0,
+    "baths": 2.0,
+    "sqft": 1000.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/2077097403_zpid/",
+    "location": "Shakopee, MN",
+    "list_date": 3118708000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/1c9abbbf9441bf25cb131e25ec755808-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 44.78631,
+    "longitude": -93.5479
+  },
+  {
+    "address": "7471 Devin Ln, Shakopee, MN",
+    "price": 2295.0,
+    "beds": 3.0,
+    "baths": 2.0,
+    "sqft": 1721.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/2192425_zpid/",
+    "location": "Shakopee, MN",
+    "list_date": 5105936000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/acbd458af45af1688bd41e54cb96a346-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 44.780666,
+    "longitude": -93.42206
+  }
+]

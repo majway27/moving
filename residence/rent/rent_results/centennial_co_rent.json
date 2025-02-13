@@ -1,5 +1,21 @@
 [
   {
+    "address": "2648 E Geddes Pl, Centennial, CO",
+    "price": 2500.0,
+    "beds": 2.0,
+    "baths": 2.0,
+    "sqft": 1320.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/13161932_zpid/",
+    "location": "Centennial, CO",
+    "list_date": 171349000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/ceaabcdeb84d552641be18407fde0b2b-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 39.583755,
+    "longitude": -104.95703
+  },
+  {
     "address": "7293 S Sherman St, Centennial, CO",
     "price": 2700.0,
     "beds": 4.0,
@@ -9,7 +25,7 @@
     "description": "",
     "url": "https://www.zillow.com/homedetails/13165750_zpid/",
     "location": "Centennial, CO",
-    "list_date": 17475712000,
+    "list_date": 17867332000,
     "primary_photo": "https://photos.zillowstatic.com/fp/b3fa41d00c2fdbdb9fe4d9c95999dc94-p_e.jpg",
     "alt_photos": [],
     "latitude": 39.585064,

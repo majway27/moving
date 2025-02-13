@@ -1,0 +1,18 @@
+[
+  {
+    "address": "1440 Braewood Ave, Highlands Ranch, CO",
+    "price": 2550.0,
+    "beds": 3.0,
+    "baths": 2.0,
+    "sqft": 1277.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/13440998_zpid/",
+    "location": "Highlands Ranch, CO",
+    "list_date": 197309000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/4daead2bbc2b7ab09deadfd510498ef1-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 39.541737,
+    "longitude": -105.00669
+  }
+]

@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 # Change the import to use relative path from current file location
-from client.nominatim_client import RateLimitedNominatim
+from shared.client.nominatim_client import RateLimitedNominatim
 
 # Add project root to Python path
 project_root = str(Path(__file__).parent.parent)

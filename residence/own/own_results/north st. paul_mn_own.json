@@ -1,0 +1,34 @@
+[
+  {
+    "address": "2211 Jennifer Ct, North Saint Paul, MN",
+    "price": 499000.0,
+    "beds": 4.0,
+    "baths": 3.0,
+    "sqft": 3538.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/2072679_zpid/",
+    "location": "North Saint Paul, MN",
+    "list_date": 11368784000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/3f4fe62d96e258026aed48c55e5bb3c2-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 45.007626,
+    "longitude": -93.014244
+  },
+  {
+    "address": "2184 17th Ave E, North Saint Paul, MN",
+    "price": 450000.0,
+    "beds": 4.0,
+    "baths": 3.0,
+    "sqft": 1964.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/2072207_zpid/",
+    "location": "North Saint Paul, MN",
+    "list_date": 2898085000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/049a377b77fe81fd53425f187aa847ac-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 45.02062,
+    "longitude": -93.00767
+  }
+]

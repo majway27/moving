@@ -1,0 +1,34 @@
+[
+  {
+    "address": "13249 Humboldt Ave S, Burnsville, MN",
+    "price": 2570.0,
+    "beds": 4.0,
+    "baths": 2.0,
+    "sqft": 2466.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/1606544_zpid/",
+    "location": "Burnsville, MN",
+    "list_date": 2392513000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/ee3c86d5cc01975a1572832b19f5142a-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 44.76167,
+    "longitude": -93.29597
+  },
+  {
+    "address": "100 Crystal Lake Rd W, Burnsville, MN",
+    "price": 2660.0,
+    "beds": 3.0,
+    "baths": 1.0,
+    "sqft": 1624.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/1608093_zpid/",
+    "location": "Burnsville, MN",
+    "list_date": 2244567000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/eedb8b9e336c5b1ff7fd2b838c04e49f-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 44.730434,
+    "longitude": -93.28002
+  }
+]

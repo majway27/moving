@@ -20,6 +20,12 @@ def load_listing_file(listing_file):
 def format_listing(listing):
     """Format a single listing entry for the table."""
     # Map the incoming data fields to our expected fields
+    
+    # Check for undisclosed address first
+    if listing.get('streetAddress', '').lower().strip() == '(undisclosed address)':
+        print("Rejecting listing with undisclosed address")
+        return None
+        
     address = f"{listing.get('streetAddress', '')}, {listing.get('city', '')}, {listing.get('state', '')}"
     
     # Only format if we have actual data
@@ -82,7 +88,7 @@ def generate_listings_data(modality):
         return
     
     # Process all listing files
-    all_listings = []
+    all_listings = {}  # Use dict to track unique listings by address
     max_retries = 3
     retry_delay = 1  # seconds
     
@@ -112,30 +118,35 @@ def generate_listings_data(modality):
         listing_data = load_listing_file(listing_file)
         print(f"Found {len(listing_data)} entries in {listing_file}")
         
-        formatted_listings = []
         for listing in listing_data:
             fmt = format_listing(listing)
             if fmt is not None:
-                formatted_listings.append(fmt)
+                # Use address as key to prevent duplicates
+                # If same address exists, keep the one with the newer list date
+                key = fmt['address']
+                if key not in all_listings or (
+                    fmt.get('list_date', '') > all_listings[key].get('list_date', '')
+                ):
+                    all_listings[key] = fmt
         
-        print(f"Formatted {len(formatted_listings)} valid listings from {listing_file}")
-        all_listings.extend(formatted_listings)
+        print(f"Processed listings from {listing_file}, current unique count: {len(all_listings)}")
 
     if not all_listings:
         print(f"Warning: No valid listings found in CSV files for {modality}")
         return
 
-    # Sort listings by date (newest first), handling missing dates
-    all_listings.sort(
+    # Convert dictionary values to list and sort by date
+    unique_listings = list(all_listings.values())
+    unique_listings.sort(
         key=lambda x: x.get('list_date', '') or '',  # Use empty string if date is None
         reverse=True
     )
     
     # Write the combined listing data to a JSON file
     with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(all_listings, f, ensure_ascii=False, indent=2)
+        json.dump(unique_listings, f, ensure_ascii=False, indent=2)
     
-    print(f"Generated {modality} data file with {len(all_listings)} listings at {output_file}")
+    print(f"Generated {modality} data file with {len(unique_listings)} unique listings at {output_file}")
 
 def save_filtered_listings(filtered_listings, modality, location):
     """

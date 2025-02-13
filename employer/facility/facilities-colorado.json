@@ -131,8 +131,8 @@
     "city": "Aurora",
     "serviceType": "Acute Hospital",
     "locationType": "Urban",
-    "latitude": "",
-    "longitude": ""
+    "latitude": "39.7285",
+    "longitude": "-104.8327"
   },
   {
     "id": "1136",
@@ -140,8 +140,8 @@
     "city": "Colorado Springs",
     "serviceType": "Acute Hospital",
     "locationType": "Urban",
-    "latitude": "",
-    "longitude": ""
+    "latitude": "38.8687",
+    "longitude": "-104.7954"
   },
   {
     "id": "1485",
@@ -248,8 +248,8 @@
     "city": "Colorado Springs",
     "serviceType": "Acute Hospital",
     "locationType": "Urban",
-    "latitude": "",
-    "longitude": ""
+    "latitude": "38.868292",
+    "longitude": "-104.799378"
   },
   {
     "id": "173",
@@ -473,8 +473,8 @@
     "city": "Estes Park",
     "serviceType": "",
     "locationType": "Rural",
-    "latitude": "",
-    "longitude": ""
+    "latitude": "40.457718",
+    "longitude": "-105.521394"
   },
   {
     "id": "122",
@@ -1067,8 +1067,8 @@
     "city": "Westminster",
     "serviceType": "Psychiatric Hospital",
     "locationType": "Urban",
-    "latitude": "",
-    "longitude": ""
+    "latitude": "39.837682",
+    "longitude": "-105.032202"
   },
   {
     "id": "315",

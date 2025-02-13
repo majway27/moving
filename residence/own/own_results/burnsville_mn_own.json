@@ -1,0 +1,18 @@
+[
+  {
+    "address": "1608 Viewcrest Cir, Burnsville, MN",
+    "price": 460000.0,
+    "beds": 4.0,
+    "baths": 4.0,
+    "sqft": 3194.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/1614813_zpid/",
+    "location": "Burnsville, MN",
+    "list_date": 991283000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/989c9c4002e41d12aa617c74a0590057-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 44.731583,
+    "longitude": -93.30078
+  }
+]

@@ -1,5 +1,21 @@
 [
   {
+    "address": "7430 E Minnezona Ave, Scottsdale, AZ",
+    "price": 2350.0,
+    "beds": 3.0,
+    "baths": 2.0,
+    "sqft": 1559.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/7845534_zpid/",
+    "location": "Scottsdale, AZ",
+    "list_date": 109565000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/2b2c2ac7ac28fb35a36a5c462a0aab8a-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 33.503136,
+    "longitude": -111.92058
+  },
+  {
     "address": "2034 N 87th Pl, Scottsdale, AZ",
     "price": 2549.0,
     "beds": 3.0,
@@ -9,42 +25,10 @@
     "description": "",
     "url": "https://www.zillow.com/homedetails/7582791_zpid/",
     "location": "Scottsdale, AZ",
-    "list_date": 268920000,
+    "list_date": 660545000,
     "primary_photo": "https://photos.zillowstatic.com/fp/85030e9c67133dc93f568f2417314b5b-p_e.jpg",
     "alt_photos": [],
     "latitude": 33.47066,
     "longitude": -111.89385
-  },
-  {
-    "address": "9300 E Kalil Dr, Scottsdale, AZ",
-    "price": 2599.0,
-    "beds": 3.0,
-    "baths": 2.0,
-    "sqft": 1369.0,
-    "year_built": "N/A",
-    "description": "",
-    "url": "https://www.zillow.com/homedetails/8048931_zpid/",
-    "location": "Scottsdale, AZ",
-    "list_date": 1831361000,
-    "primary_photo": "https://photos.zillowstatic.com/fp/f27c26ee2ee14413466821242b467275-p_e.jpg",
-    "alt_photos": [],
-    "latitude": 33.59129,
-    "longitude": -111.88053
-  },
-  {
-    "address": "6620 E Latham St, Scottsdale, AZ",
-    "price": 2295.0,
-    "beds": 4.0,
-    "baths": 2.0,
-    "sqft": 1550.0,
-    "year_built": "N/A",
-    "description": "",
-    "url": "https://www.zillow.com/homedetails/7570534_zpid/",
-    "location": "Scottsdale, AZ",
-    "list_date": 1299815000,
-    "primary_photo": "https://photos.zillowstatic.com/fp/2903cc40511cbb64c817000b8078b4be-p_e.jpg",
-    "alt_photos": [],
-    "latitude": 33.460686,
-    "longitude": -111.938194
   }
 ]

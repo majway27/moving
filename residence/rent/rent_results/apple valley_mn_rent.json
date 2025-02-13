@@ -1,0 +1,34 @@
+[
+  {
+    "address": "900 Whitney Dr, Apple Valley, MN",
+    "price": 2610.0,
+    "beds": 4.0,
+    "baths": 2.0,
+    "sqft": 1474.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/1586033_zpid/",
+    "location": "Apple Valley, MN",
+    "list_date": 1639686000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/f78b7693c84d9c6df3c2e431b1bf5bcd-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 44.72492,
+    "longitude": -93.230095
+  },
+  {
+    "address": "14723 Endicott Way, Apple Valley, MN",
+    "price": 2199.0,
+    "beds": 2.0,
+    "baths": 2.0,
+    "sqft": 1532.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/1599037_zpid/",
+    "location": "Apple Valley, MN",
+    "list_date": 1869231000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/b4134d5d96ba40ca78b8d4ba92ff4fc2-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 44.735123,
+    "longitude": -93.17612
+  }
+]

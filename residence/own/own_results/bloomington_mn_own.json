@@ -1,21 +1,5 @@
 [
   {
-    "address": "8333 Beard Rd, Bloomington, MN",
-    "price": 475000.0,
-    "beds": 4.0,
-    "baths": 3.0,
-    "sqft": 2792.0,
-    "year_built": "N/A",
-    "description": "",
-    "url": "https://www.zillow.com/homedetails/1724989_zpid/",
-    "location": "Bloomington, MN",
-    "list_date": 699782000,
-    "primary_photo": "https://photos.zillowstatic.com/fp/034eb1e768946f655a84af5af52f7a0e-p_e.jpg",
-    "alt_photos": [],
-    "latitude": 44.852547,
-    "longitude": -93.32384
-  },
-  {
     "address": "9904 Xerxes Curv S, Minneapolis, MN",
     "price": 454900.0,
     "beds": 3.0,
@@ -25,26 +9,10 @@
     "description": "",
     "url": "https://www.zillow.com/homedetails/443834457_zpid/",
     "location": "Minneapolis, MN",
-    "list_date": 203878000,
+    "list_date": 595518000,
     "primary_photo": "https://photos.zillowstatic.com/fp/db824dd0d97fbd308ae58ebbc1709432-p_e.jpg",
     "alt_photos": [],
     "latitude": 44.824512,
     "longitude": -93.318375
-  },
-  {
-    "address": "1211 W 106th St, Bloomington, MN",
-    "price": 500000.0,
-    "beds": 4.0,
-    "baths": 2.0,
-    "sqft": 3072.0,
-    "year_built": "N/A",
-    "description": "",
-    "url": "https://www.zillow.com/homedetails/1894959_zpid/",
-    "location": "Bloomington, MN",
-    "list_date": 5964330000,
-    "primary_photo": "https://photos.zillowstatic.com/fp/9ef65c7ba4fe9c45b03eb046a638ffcd-p_e.jpg",
-    "alt_photos": [],
-    "latitude": 44.811577,
-    "longitude": -93.29567
   }
 ]

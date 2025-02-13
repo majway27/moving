@@ -1,0 +1,34 @@
+[
+  {
+    "address": "504 Sunset Dr, Louisville, CO",
+    "price": 2400.0,
+    "beds": 3.0,
+    "baths": 1.0,
+    "sqft": 1100.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/13190295_zpid/",
+    "location": "Louisville, CO",
+    "list_date": 1322048000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/c10feab39200a75ecf3d3bf4de31cf91-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 39.985313,
+    "longitude": -105.136765
+  },
+  {
+    "address": "543 W Lois Way, Louisville, CO",
+    "price": 2650.0,
+    "beds": 3.0,
+    "baths": 1.0,
+    "sqft": 912.0,
+    "year_built": "N/A",
+    "description": "",
+    "url": "https://www.zillow.com/homedetails/442031350_zpid/",
+    "location": "Louisville, CO",
+    "list_date": 7248761000,
+    "primary_photo": "https://photos.zillowstatic.com/fp/078f1e17a9097c61ccf8247f494daeae-p_e.jpg",
+    "alt_photos": [],
+    "latitude": 39.970806,
+    "longitude": -105.14895
+  }
+]
